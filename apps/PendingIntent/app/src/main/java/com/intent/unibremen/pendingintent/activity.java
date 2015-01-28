@@ -27,7 +27,6 @@ public class activity extends Activity {
 
             @Override
             public void onClick(View v) {
-                // TODO Auto-generated method stub
                 Intent intent = new Intent();
                 try {
                     pendingIntent.send(mContext, 0, intent);

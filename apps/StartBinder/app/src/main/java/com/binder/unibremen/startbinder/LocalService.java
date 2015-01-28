@@ -30,7 +30,7 @@ public class LocalService extends Service {
     }
 
     /** method for clients */
-    public int getRandomNumber() {
+    public int getRandomNumber() { //aufrufbar?
         return mGenerator.nextInt(100);
     }
 }

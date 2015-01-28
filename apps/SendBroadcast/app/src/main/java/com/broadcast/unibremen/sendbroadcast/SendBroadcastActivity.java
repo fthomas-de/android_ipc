@@ -45,6 +45,7 @@ public class SendBroadcastActivity extends Activity {
         //PendingIntent intent = new PendingIntent();
         intent.setAction("com.example.SendBroadcast");
         intent.addFlags(Intent.FLAG_INCLUDE_STOPPED_PACKAGES);
+        intent.putExtra("myString", "infosblabla");
         sendBroadcast(intent);
     }
 }
