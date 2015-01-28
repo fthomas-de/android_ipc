@@ -13,7 +13,7 @@ public class activity2 extends Activity{
         setContentView(R.layout.main);
         v1 = (TextView)findViewById(R.id.text);
         v1.setTextSize(30);
-        v1.setText("Welcome to pendingIntent");
+        v1.setText("Welcome to pendinIntent");
     }
 
 }

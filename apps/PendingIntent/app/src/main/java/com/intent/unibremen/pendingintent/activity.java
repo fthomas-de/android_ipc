@@ -9,7 +9,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-
+// http://iserveandroid.blogspot.de/2011/03/how-to-launch-pending-intent.html
 public class activity extends Activity {
     Button b1;
     PendingIntent pendingIntent;
@@ -27,6 +27,7 @@ public class activity extends Activity {
 
             @Override
             public void onClick(View v) {
+                // TODO Auto-generated method stub
                 Intent intent = new Intent();
                 try {
                     pendingIntent.send(mContext, 0, intent);
