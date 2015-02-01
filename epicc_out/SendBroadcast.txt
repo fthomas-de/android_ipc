@@ -1,0 +1,39 @@
+[Call Graph] For information on where the call graph may be incomplete, use the verbose option to the cg phase.
+[Call Graph] For information on where the call graph may be incomplete, use the verbose option to the cg phase.
+[Spark] Pointer Assignment Graph in 0.0 seconds.
+[Spark] Type masks in 0.0 seconds.
+[Spark] Pointer Graph simplified in 0.0 seconds.
+[Spark] Propagation in 0.0 seconds.
+[Spark] Solution found in 0.0 seconds.
+Solving ICC problem
+Composing values
+Transforming com.broadcast.unibremen.sendbroadcast.R... 
+Transforming com.broadcast.unibremen.sendbroadcast.R$id... 
+Transforming com.broadcast.unibremen.sendbroadcast.R$attr... 
+Transforming com.broadcast.unibremen.sendbroadcast.R$dimen... 
+Transforming com.broadcast.unibremen.sendbroadcast.R$string... 
+Transforming com.broadcast.unibremen.sendbroadcast.BuildConfig... 
+Transforming com.broadcast.unibremen.sendbroadcast.R$layout... 
+Transforming com.broadcast.unibremen.sendbroadcast.SendBroadcastActivity... 
+Transforming com.broadcast.unibremen.sendbroadcast.R$style... 
+Transforming com.broadcast.unibremen.sendbroadcast.R$drawable... 
+Transforming com.broadcast.unibremen.sendbroadcast.R$menu... 
+
+Manifest file for com.broadcast.unibremen.sendbroadcast version 1
+  Activities:
+    com.broadcast.unibremen.sendbroadcast.SendBroadcastActivity
+      Intent filter:
+        Actions: [android.intent.action.MAIN]
+        Categories: [android.intent.category.LAUNCHER]
+
+  Activity Aliases:
+  Services:
+  Receivers:
+  Providers:
+
+
+The following ICC values were found:
+  - com/broadcast/unibremen/sendbroadcast/SendBroadcastActivity/broadcastIntent(Landroid/view/View;)
+Intent value: 1 possible value(s):
+Action: com.example.SendBroadcast, Extras: [myString], Flags: 32
+
