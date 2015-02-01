@@ -2,6 +2,7 @@
 from subprocess import Popen, PIPE
 import os, time
 
+#writes content into file_name
 def write_to_file(content, file_name):
 	prefix = './epicc_out/'
 	suffix = '.txt'
@@ -10,7 +11,13 @@ def write_to_file(content, file_name):
 	print '[Tool] writing: ' + file_name + suffix
 	f.close() 
 
-def main(debug=False):
+#parse epicc output and find ICC hints
+def parse(epicc_file):
+	#TODO
+	pass
+
+#starts the epicc analysis
+def initialize(debug=False):
     pass
     print '[Tool] starting...'
     print '[Tool]'
