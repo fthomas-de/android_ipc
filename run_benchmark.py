@@ -16,12 +16,45 @@ def parse(epicc_file):
 	#TODO
 	pass
 
+#runs dare before strting with epicc
+def run_dare(debug=False):
+	print '[Tool] running: all dare scripts'
+	t_1 = time.time()
+	succ = 0
+	err = 0
+	done = False
+	for root, dirs, files in os.walk("./apps"):
+		for file in files:
+			if file.endswith(".sh") and 'dare' in file:
+				file_path = os.path.join(root, file)
+				p = Popen(['/usr/bin/bash', file_path], stdout=PIPE)
+				res = p.stdout.read()
+				return_value = p.wait()
+				if return_value == 0:
+					succ+=1
+				else:
+					err+=1
+
+				if debug:
+					done = True
+					break
+			if debug and done:
+				break
+
+	t_2 = time.time()
+	print '[Tool] finished after ' + str(int(t_2 - t_1)) + ' seconds'
+	print '[Tool] overall: ' + str(succ) + ' successful scripts (' + str(err) + ' error(s))'
+	print '[Tool]'
+
 #starts the epicc analysis
-def initialize(debug=False):
+def initialize(runDare=False, debug=False):
     pass
-    print '[Tool] starting...'
+    print '[Tool] starting: runDare=' + str(runDare) + ', debug=' + str(debug)
     print '[Tool]'
-    count = 0
+
+    if runDare: run_dare(debug)
+
+    succ = 0
     err = 0
     done = False
     for root, dirs, files in os.walk("./apps"):
@@ -39,7 +72,7 @@ def initialize(debug=False):
                 return_value = p.wait()
 
                 if return_value == 0:
-                    count += 1
+                    succ += 1
                     write_to_file(res, file_name)
                 else:
                     err += 1
@@ -55,7 +88,7 @@ def initialize(debug=False):
             if debug and done:
                 break
 
-    print '[Tool] overall: ' + str(count) + ' successful scripts (' + str(err) + ' error(s))'
+    print '[Tool] overall: ' + str(succ) + ' successful scripts (' + str(err) + ' error(s))'
 
 if __name__ == "__main__":
-    main(debug=False)
+	initialize(runDare=True, debug=True)

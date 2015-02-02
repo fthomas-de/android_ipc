@@ -12,3 +12,17 @@ com.broadcast.unibremen.broadcastreceiver.R$drawable
 com.broadcast.unibremen.broadcastreceiver.R$string
 com.broadcast.unibremen.broadcastreceiver.R$style
 com.broadcast.unibremen.broadcastreceiver.R
+com.broadcast.unibremen.broadcastreceiver.BuildConfig
+com.broadcast.unibremen.broadcastreceiver.MyReceiver
+com.broadcast.unibremen.broadcastreceiver.R$attr
+com.broadcast.unibremen.broadcastreceiver.R$drawable
+com.broadcast.unibremen.broadcastreceiver.R$string
+com.broadcast.unibremen.broadcastreceiver.R$style
+com.broadcast.unibremen.broadcastreceiver.R
+com.broadcast.unibremen.broadcastreceiver.BuildConfig
+com.broadcast.unibremen.broadcastreceiver.MyReceiver
+com.broadcast.unibremen.broadcastreceiver.R$attr
+com.broadcast.unibremen.broadcastreceiver.R$drawable
+com.broadcast.unibremen.broadcastreceiver.R$string
+com.broadcast.unibremen.broadcastreceiver.R$style
+com.broadcast.unibremen.broadcastreceiver.R

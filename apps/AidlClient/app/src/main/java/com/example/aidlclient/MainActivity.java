@@ -23,7 +23,7 @@ import com.example.aidlserver.IRemote;
 public class MainActivity extends Activity implements OnClickListener  {
 
 	EditText mFirst,mSecond;
-	Button mAdd,mSubtract,mClear;
+	Button mAdd;
 	TextView mResultText;
 	protected IRemote mService;
 	ServiceConnection mServiceConnection;
@@ -59,7 +59,7 @@ public class MainActivity extends Activity implements OnClickListener  {
 				public void onServiceConnected(ComponentName name, IBinder service)
 				{
 					// TODO Auto-generated method stub
-					mService = IRemote.Stub.asInterface((IBinder) service);
+					mService = IRemote.Stub.asInterface(service);
 					Toast.makeText(getApplicationContext(), "yes", Toast.LENGTH_SHORT).show();
 					Log.d("IRemote", "Binding is done - Service connected");
 				}
@@ -76,9 +76,9 @@ public class MainActivity extends Activity implements OnClickListener  {
 
 		super.onDestroy();
 		unbindService(mServiceConnection);
-	};
-	
-	@Override
+	}
+
+    @Override
 	public void onClick(View v) {
 		// TODO Auto-generated method stub
 		switch(v.getId()){

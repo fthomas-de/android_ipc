@@ -54,7 +54,7 @@ Warning: android.hardware.display.DisplayManager is a phantom class!
 [Spark] Pointer Assignment Graph in 0.0 seconds.
 [Spark] Type masks in 0.0 seconds.
 [Spark] Pointer Graph simplified in 0.0 seconds.
-[Spark] Propagation in 0.0 seconds.
+[Spark] Propagation in 0.1 seconds.
 [Spark] Solution found in 0.1 seconds.
 Solving ICC problem
 Composing values

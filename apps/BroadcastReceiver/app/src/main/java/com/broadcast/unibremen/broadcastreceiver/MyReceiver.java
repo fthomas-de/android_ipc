@@ -11,7 +11,7 @@ public class MyReceiver extends BroadcastReceiver {
     @Override
     public void onReceive(Context context, Intent intent) {
         Bundle e = intent.getExtras();
-        String s = e.getString("myString");
+        String s = e.getString("_myIdentifier_");
         Toast.makeText(context, "Broadcast Intent Detected: " + s,
 
                 Toast.LENGTH_LONG).show();
