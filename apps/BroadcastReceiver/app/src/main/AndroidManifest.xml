@@ -7,8 +7,9 @@
 
         <receiver android:name="MyReceiver" >
             <intent-filter>
-                <action android:name="com.example.SendBroadcast" >
+                <action android:name="_myAction_" >
                 </action>
+                <category android:name="_myCategory_" />
             </intent-filter>
         </receiver>
 

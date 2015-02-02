@@ -18,7 +18,7 @@ def parse(epicc_file):
 
 #runs dare before strting with epicc
 def run_dare(debug=False):
-	print '[Tool] running: all dare scripts'
+	print '[Dare] running: all dare scripts'
 	t_1 = time.time()
 	succ = 0
 	err = 0
@@ -42,15 +42,15 @@ def run_dare(debug=False):
 				break
 
 	t_2 = time.time()
-	print '[Tool] finished after ' + str(int(t_2 - t_1)) + ' seconds'
-	print '[Tool] overall: ' + str(succ) + ' successful scripts (' + str(err) + ' error(s))'
-	print '[Tool]'
+	print '[Dare] finished after ' + str(int(t_2 - t_1)) + ' seconds'
+	print '[Dare] overall: ' + str(succ) + ' successful scripts (' + str(err) + ' error(s))'
+	print '[----]'
 
 #starts the epicc analysis
-def initialize(runDare=False, debug=False):
+def initialize(runDare=False, debug=False, benchmark=None):
     pass
-    print '[Tool] starting: runDare=' + str(runDare) + ', debug=' + str(debug)
-    print '[Tool]'
+    print '[Tool] starting: runDare=' + str(runDare) + ', debug=' + str(debug) + ', benchmark=' + benchmark
+    print '[----]'
 
     if runDare: run_dare(debug)
 
@@ -63,7 +63,9 @@ def initialize(runDare=False, debug=False):
                 file_path = os.path.join(root, file)
                 file_short = file_path[7:]
                 file_name = file_short.split('/')[0]
-                print '[Tool] runnig: ' + file_short
+                
+                if not benchmark in file_short: break
+                print '[Epic] runnig: ' + file_short
 
                 t_1 = time.time()
 
@@ -79,8 +81,8 @@ def initialize(runDare=False, debug=False):
 
                 t_2 = time.time()
 
-                print '[Tool] finished after ' + str(int(t_2 - t_1)) + ' seconds'
-                print '[Tool]'
+                print '[Epic] finished after ' + str(int(t_2 - t_1)) + ' seconds'
+                print '[----]'
 
                 if debug:
                 	done = True
@@ -88,7 +90,10 @@ def initialize(runDare=False, debug=False):
             if debug and done:
                 break
 
-    print '[Tool] overall: ' + str(succ) + ' successful scripts (' + str(err) + ' error(s))'
+    print '[Epic] overall: ' + str(succ) + ' successful scripts (' + str(err) + ' error(s))'
 
 if __name__ == "__main__":
-	initialize(runDare=True, debug=True)
+	#TODO parse input
+	initialize(runDare=True, debug=True, benchmark="SendBroadcast")
+	#BroadcastReceiver
+	#SendBroadcast

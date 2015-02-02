@@ -35,5 +35,5 @@ Manifest file for com.broadcast.unibremen.sendbroadcast version 1
 The following ICC values were found:
   - com/broadcast/unibremen/sendbroadcast/SendBroadcastActivity/broadcastIntent(Landroid/view/View;)
 Intent value: 1 possible value(s):
-Action: com.example.SendBroadcast, Extras: [_myIdentifier_], Flags: 32
+Action: _myAction_, Categories: [_myCategory_], Extras: [_myIdentifier_], Flags: 32
 

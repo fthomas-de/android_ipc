@@ -23,7 +23,8 @@ Manifest file for com.broadcast.unibremen.broadcastreceiver version 1
   Receivers:
     com.broadcast.unibremen.broadcastreceiver.MyReceiver
       Intent filter:
-        Actions: [com.example.SendBroadcast]
+        Actions: [_myAction_]
+        Categories: [_myCategory_]
   Providers:
 
 

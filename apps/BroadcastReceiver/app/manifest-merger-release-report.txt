@@ -27,12 +27,16 @@ receiver#com.broadcast.unibremen.broadcastreceiver.MyReceiver
 ADDED from AndroidManifest.xml:8:9
 	android:name
 		ADDED from AndroidManifest.xml:8:19
-intent-filter#com.example.SendBroadcast
+intent-filter#_myAction_+_myCategory_
 ADDED from AndroidManifest.xml:9:13
-action#com.example.SendBroadcast
+action#_myAction_
 ADDED from AndroidManifest.xml:10:17
 	android:name
 		ADDED from AndroidManifest.xml:10:25
+category#_myCategory_
+ADDED from AndroidManifest.xml:12:17
+	android:name
+		ADDED from AndroidManifest.xml:12:27
 uses-sdk
 INJECTED from AndroidManifest.xml:0:0 reason: use-sdk injection requested
 	android:targetSdkVersion

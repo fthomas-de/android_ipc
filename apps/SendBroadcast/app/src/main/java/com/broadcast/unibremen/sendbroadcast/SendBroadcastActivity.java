@@ -19,7 +19,8 @@ public class SendBroadcastActivity extends Activity {
     public void broadcastIntent(View view)
     {
         Intent intent = new Intent();
-        intent.setAction("com.example.SendBroadcast");
+        intent.setAction("_myAction_");
+        intent.addCategory("_myCategory_");
         intent.addFlags(Intent.FLAG_INCLUDE_STOPPED_PACKAGES);
         intent.putExtra("_myIdentifier_", "infosblabla");
         sendBroadcast(intent);
