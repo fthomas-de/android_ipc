@@ -8,7 +8,9 @@ public class MyReceiver extends BroadcastReceiver {
 
     @Override
     public void onReceive(Context context, Intent intent) {
-        // Implement code here to be performed when
-        // broadcast is detected
+        /*
+        Implement code here to be performed when
+        broadcast is detected
+        */
     }
 }

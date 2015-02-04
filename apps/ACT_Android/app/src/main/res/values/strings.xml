@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">ACT Android</string>
+    <string name="header_gps">ACT GPS</string>
+    <string name="header_wlan">ACT WLAN</string>
+    <string name="header_upload">ACT Upload</string>
+
+    <!-- Main -->
+    <string name="start_session">Start session</string>
+    <string name="stop_session">Stop session</string>
+    <string name="session_label">Notiz</string>
+    <string name="session_id_label">Session-ID</string>
+    <string name="subject_label">Subject</string>
+    <string name="position_label">Position</string>
+    <string-array name="positions_array">
+        <item>armrechts</item>
+        <item>armlinks</item>
+        <item>beinrechts</item>
+        <item>beinlinks</item>
+        <item>brust</item>
+    </string-array>
+    <string name="show_gps">GPS</string>
+    <string name="show_wlan">WLAN</string>
+    <string name="show_acce">Show acceleration</string>
+    <string name="show_gyro">Show gyroscope</string>
+    <string name="show_upload">Upload</string>
+    <string name="labeling_label">Labeling</string>
+    <string name="labeling_save_start">Save start label</string>
+    <string name="labeling_save_stop">Save stop label</string>
+    <string name="sync_time">Sync Time</string>
+    <string name="sync_time_done">Time synchronized</string>
+    <string name="sync_time_not_done">Not synchronized</string>
+
+    <!-- Location -->
+    <string name="save_location">Save location</string>
+    <string name="latitude">Latitude</string>
+    <string name="longitude">Longitude</string>
+    <string name="time">Time</string>
+    <string name="nettime">NetTime</string>
+    <string name="label">Label</string>
+
+    <!-- Upload -->
+    <string name="upload_data">Upload</string>
+    <string name="size">Size (Byte)</string>
+    <string name="delete_data">Delete</string>
+    <string name="convert_data">Convert</string>
+    <string name="toggle_checked">Toggle checked items</string>
+    <string name="modify_id">Modify ID</string>
+    
+    <!-- Others -->
+    <string name="action_settings">Settings</string>
+    
+    
+    
+</resources>

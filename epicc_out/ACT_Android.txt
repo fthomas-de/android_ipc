@@ -1,0 +1,40 @@
+[Call Graph] For information on where the call graph may be incomplete, use the verbose option to the cg phase.
+[Call Graph] For information on where the call graph may be incomplete, use the verbose option to the cg phase.
+[Spark] Pointer Assignment Graph in 0.1 seconds.
+[Spark] Type masks in 0.0 seconds.
+[Spark] Pointer Graph simplified in 0.0 seconds.
+[Spark] Propagation in 1.4 seconds.
+[Spark] Solution found in 1.5 seconds.
+Solving ICC problem
+Composing values
+
+Manifest file for de.uni_bremen.informatik.act13.android version 1
+  Activities:
+    de.uni_bremen.informatik.act13.android.MainActivity
+      Intent filter:
+        Actions: [android.intent.action.MAIN]
+        Categories: [android.intent.category.LAUNCHER]
+    de.uni_bremen.informatik.act13.android.location.GPSActivity
+    de.uni_bremen.informatik.act13.android.location.WLANActivity
+    de.uni_bremen.informatik.act13.android.upload.UploadActivity
+
+  Activity Aliases:
+  Services:
+  Receivers:
+  Providers:
+
+
+The following ICC values were found:
+  - de/uni_bremen/informatik/act13/android/MainActivity$2/onClick(Landroid/view/View;)
+Intent value: 1 possible value(s):
+Package: de/uni_bremen/informatik/act13/android, Class: de/uni_bremen/informatik/act13/android/location/GPSActivity, 
+
+  - de/uni_bremen/informatik/act13/android/MainActivity$3/onClick(Landroid/view/View;)
+Intent value: 1 possible value(s):
+Package: de/uni_bremen/informatik/act13/android, Class: de/uni_bremen/informatik/act13/android/location/WLANActivity, 
+
+  - de/uni_bremen/informatik/act13/android/MainActivity$4/onClick(Landroid/view/View;)
+Intent value: 1 possible value(s):
+Package: de/uni_bremen/informatik/act13/android, Class: de/uni_bremen/informatik/act13/android/upload/UploadActivity, 
+
+

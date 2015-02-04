@@ -115,9 +115,10 @@ def initialize(rundare=False, debug=False, benchmark=None):
 if __name__ == "__main__":
     #initialize(rundare=False, debug=False)
     #TODO parse input
-    initialize(rundare=True, debug=False, benchmark="rasp")
+    initialize(rundare=True, debug=False, benchmark="ACT_Android")
     #BroadcastReceiver
     #SendBroadcast
+    #ACT_Android
     #StartActivity
     #PendingIntent
     #ACT

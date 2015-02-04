@@ -7,13 +7,12 @@ package com.broadcast.unibremen.broadcastreceiver;
         import android.widget.Toast;
 
 public class MyReceiver extends BroadcastReceiver {
-
+    //manifest filter
     @Override
     public void onReceive(Context context, Intent intent) {
         Bundle e = intent.getExtras();
         String s = e.getString("_myIdentifier_");
         Toast.makeText(context, "Broadcast Intent Detected: " + s,
-
                 Toast.LENGTH_LONG).show();
     }
 }
