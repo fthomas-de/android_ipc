@@ -2,57 +2,65 @@
 from subprocess import Popen, PIPE
 import os, time
 
-#writes content into file_name
+# writes content into file_name
 def write_to_file(content, file_name):
-	prefix = './epicc_out/'
-	suffix = '.txt'
-	f = open(prefix + file_name + suffix,'w')
-	f.write(content)
-	print '[Tool] writing: ' + file_name + suffix
-	f.close() 
+    prefix = './epicc_out/'
+    suffix = '.txt'
+    f = open(prefix + file_name + suffix, 'w')
+    f.write(content)
+    print '[Tool] writing: ' + file_name + suffix
+    f.close()
 
-#parse epicc output and find ICC hints
+
+# parse epicc output and find ICC hints
 def parse(epicc_file):
-	#TODO
-	pass
+    #TODO
+    pass
+
 
 #runs dare before strting with epicc
-def run_dare(debug=False):
-	print '[Dare] running: all dare scripts'
-	t_1 = time.time()
-	succ = 0
-	err = 0
-	done = False
-	for root, dirs, files in os.walk("./apps"):
-		for file in files:
-			if file.endswith(".sh") and 'dare' in file:
-				file_path = os.path.join(root, file)
-				p = Popen(['/usr/bin/bash', file_path], stdout=PIPE)
-				res = p.stdout.read()
-				return_value = p.wait()
-				if return_value == 0:
-					succ+=1
-				else:
-					err+=1
+def run_dare(debug=False, benchmark=None):
+    print '[Dare] running: all dare scripts'
+    t_1 = time.time()
+    succ = 0
+    err = 0
+    done = False
+    for root, dirs, files in os.walk("./apps"):
+        for file in files:
+            if file.endswith(".sh") and 'dare' in file:
+                file_path = os.path.join(root, file)
 
-				if debug:
-					done = True
-					break
-			if debug and done:
-				break
+                if benchmark != None:
+                    if not benchmark in file_path: break
 
-	t_2 = time.time()
-	print '[Dare] finished after ' + str(int(t_2 - t_1)) + ' seconds'
-	print '[Dare] overall: ' + str(succ) + ' successful scripts (' + str(err) + ' error(s))'
-	print '[----]'
+                p = Popen(['/usr/bin/bash', file_path], stdout=PIPE)
+                res = p.stdout.read()
+                return_value = p.wait()
+                if return_value == 0:
+                    succ += 1
+                else:
+                    err += 1
 
-#starts the epicc analysis
-def initialize(runDare=False, debug=False, benchmark=None):
-    pass
-    print '[Tool] starting: runDare=' + str(runDare) + ', debug=' + str(debug) + ', benchmark=' + benchmark
+                if debug:
+                    done = True
+                    break
+            if debug and done:
+                break
+
+    t_2 = time.time()
+    print '[Dare] finished after ' + str(int(t_2 - t_1)) + ' seconds'
+    print '[Dare] overall: ' + str(succ) + ' successful scripts (' + str(err) + ' error(s))'
     print '[----]'
 
-    if runDare: run_dare(debug)
+
+#starts the epicc analysis
+def initialize(rundare=False, debug=False, benchmark=None):
+    pass
+    print '[Tool] starting: rundare=' + str(rundare) + ', debug=' + str(debug) + ', benchmark=' + str(benchmark)
+    print '[----]'
+
+    if rundare:
+        run_dare(debug, benchmark)
 
     succ = 0
     err = 0
@@ -63,15 +71,26 @@ def initialize(runDare=False, debug=False, benchmark=None):
                 file_path = os.path.join(root, file)
                 file_short = file_path[7:]
                 file_name = file_short.split('/')[0]
-                
-                if not benchmark in file_short: break
+
+                if benchmark != None:
+                    if not benchmark in file_short: break
                 print '[Epic] runnig: ' + file_short
 
                 t_1 = time.time()
 
-                p = Popen(['/usr/bin/bash', file_path], stdout=PIPE, stderr=PIPE)
+                p = Popen([file_path], stdout=PIPE, stderr=PIPE)
                 res = p.stdout.read()
+                res_tmp = res.split('\n')
+                res_tmp_1 = filter(lambda k: 'Warning' not in k, res_tmp)
+                res_tmp_2 = filter(lambda k: 'Transforming' not in k, res_tmp_1)
+                res = ""
+
+                for line in res_tmp_2:
+                    res += line
+                    res += '\n'
+
                 return_value = p.wait()
+                #print return_value
 
                 if return_value == 0:
                     succ += 1
@@ -85,15 +104,21 @@ def initialize(runDare=False, debug=False, benchmark=None):
                 print '[----]'
 
                 if debug:
-                	done = True
-                	break
+                    done = True
+                    break
             if debug and done:
                 break
 
     print '[Epic] overall: ' + str(succ) + ' successful scripts (' + str(err) + ' error(s))'
 
+
 if __name__ == "__main__":
-	#TODO parse input
-	initialize(runDare=True, debug=True, benchmark="SendBroadcast")
-	#BroadcastReceiver
-	#SendBroadcast
+    #initialize(rundare=False, debug=False)
+    #TODO parse input
+    initialize(rundare=True, debug=False, benchmark="rasp")
+    #BroadcastReceiver
+    #SendBroadcast
+    #StartActivity
+    #PendingIntent
+    #ACT
+    #rasp

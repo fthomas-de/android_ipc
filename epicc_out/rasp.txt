@@ -1,0 +1,25 @@
+[Call Graph] For information on where the call graph may be incomplete, use the verbose option to the cg phase.
+[Call Graph] For information on where the call graph may be incomplete, use the verbose option to the cg phase.
+[Spark] Pointer Assignment Graph in 0.0 seconds.
+[Spark] Type masks in 0.0 seconds.
+[Spark] Pointer Graph simplified in 0.0 seconds.
+[Spark] Propagation in 1.2 seconds.
+[Spark] Solution found in 1.2 seconds.
+Solving ICC problem
+Composing values
+
+Manifest file for com.example.rasp_home version 1
+  Activities:
+    com.example.rasp_home.Home
+      Intent filter:
+        Actions: [android.intent.action.MAIN]
+        Categories: [android.intent.category.LAUNCHER]
+
+  Activity Aliases:
+  Services:
+  Receivers:
+  Providers:
+
+
+The following ICC values were found:
+

@@ -8,6 +8,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 
+import java.util.Random;
+
 
 public class MainActivity extends ActionBarActivity {
 
