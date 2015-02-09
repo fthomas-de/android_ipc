@@ -6,8 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Toast;
 
-public class ConnectivityChangeReceiver extends BroadcastReceiver {
-    public ConnectivityChangeReceiver() {
+public class MyReceiver extends BroadcastReceiver {
+    public MyReceiver() {
     }
 
     @Override

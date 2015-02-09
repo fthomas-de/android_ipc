@@ -6,7 +6,7 @@ import android.os.Bundle;
 
 public class MainActivity extends ActionBarActivity {
 
-    private ConnectivityChangeReceiver myReceiver;
+    private MyReceiver myReceiver;
     private IntentFilter intentFilter;
 
     @Override
@@ -14,7 +14,7 @@ public class MainActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        myReceiver = new ConnectivityChangeReceiver();
+        myReceiver = new MyReceiver();
         intentFilter = new IntentFilter("_myAction_");
         intentFilter.addCategory("_myCategory_");
 

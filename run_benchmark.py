@@ -83,9 +83,11 @@ def initialize(rundare=False, debug=False, benchmark=None):
                 res_tmp = res.split('\n')
                 res_tmp_1 = filter(lambda k: 'Warning' not in k, res_tmp)
                 res_tmp_2 = filter(lambda k: 'Transforming' not in k, res_tmp_1)
+                res_tmp_3 = filter(lambda k: 'Call Graph' not in k, res_tmp_2)
+                res_tmp_4 = filter(lambda k: 'Spark' not in k, res_tmp_3)
                 res = ""
 
-                for line in res_tmp_2:
+                for line in res_tmp_4:
                     res += line
                     res += '\n'
 
@@ -113,13 +115,16 @@ def initialize(rundare=False, debug=False, benchmark=None):
 
 
 if __name__ == "__main__":
-    #initialize(rundare=False, debug=False)
+    #initialize(rundare=True, debug=False)
     #TODO parse input
-    initialize(rundare=True, debug=False, benchmark="ACT_Android")
+    initialize(rundare=True, debug=False, benchmark="StartService")
     #BroadcastReceiver
+    #BroadcastReceiver2
     #SendBroadcast
+    #StartService
     #ACT_Android
     #StartActivity
     #PendingIntent
+    #PendingIntent2
     #ACT
     #rasp
