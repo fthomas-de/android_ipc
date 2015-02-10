@@ -18,6 +18,7 @@ public class SendBroadcastActivity extends Activity {
     {
         Intent intent = new Intent();
         intent.setAction("_myAction_");
+        intent.setAction("_myAction-2_");
         intent.addCategory("_myCategory_");
         intent.putExtra("_myIdentifier_", "geheime infos");
         sendBroadcast(intent);
