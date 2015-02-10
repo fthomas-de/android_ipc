@@ -115,3 +115,16 @@ com.service.unibremen.startservice.R
 com.service.unibremen.startservice.StartService
 com.service.unibremen.startservice.mService$ServiceHandler
 com.service.unibremen.startservice.mService
+com.service.unibremen.startservice.BuildConfig
+com.service.unibremen.startservice.R$attr
+com.service.unibremen.startservice.R$dimen
+com.service.unibremen.startservice.R$drawable
+com.service.unibremen.startservice.R$id
+com.service.unibremen.startservice.R$layout
+com.service.unibremen.startservice.R$menu
+com.service.unibremen.startservice.R$string
+com.service.unibremen.startservice.R$style
+com.service.unibremen.startservice.R
+com.service.unibremen.startservice.StartService
+com.service.unibremen.startservice.mService$ServiceHandler
+com.service.unibremen.startservice.mService

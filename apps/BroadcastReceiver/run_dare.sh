@@ -1,1 +1,1 @@
-dare -d ~/Dokumente/BA/android_ipc/apps/BroadcastReceiver/dare_output/ ~/Dokumente/BA/android_ipc/apps/BroadcastReceiver/app/app-release.apk
+dare -d ~/git/android_ipc/apps/BroadcastReceiver/dare_output/ ~/git/android_ipc/apps/BroadcastReceiver/app/app-release.apk

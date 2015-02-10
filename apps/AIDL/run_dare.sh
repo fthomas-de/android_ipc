@@ -1,1 +1,1 @@
-dare -d ~/Dokumente/BA/android_ipc/apps/AIDL/dare_output/ ~/Dokumente/BA/android_ipc/apps/AIDL/app/app-release.apk
+dare -d ~/git/android_ipc/apps/AIDL/dare_output/ ~/git/android_ipc/apps/AIDL/app/app-release.apk

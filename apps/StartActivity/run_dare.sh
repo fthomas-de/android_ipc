@@ -1,1 +1,1 @@
-dare -d ~/Dokumente/BA/android_ipc/apps/StartActivity/dare_output/ ~/Dokumente/BA/android_ipc/apps/StartActivity/app/app-release.apk
+dare -d ~/git/android_ipc/apps/StartActivity/dare_output/ ~/git/android_ipc/apps/StartActivity/app/app-release.apk
