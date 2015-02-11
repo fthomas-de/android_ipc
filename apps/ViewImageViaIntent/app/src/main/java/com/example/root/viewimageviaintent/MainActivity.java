@@ -22,7 +22,8 @@ public class MainActivity extends ActionBarActivity {
     public void startImageViewer(View view) {
         Intent intent = new Intent();
         intent.setAction(android.content.Intent.ACTION_VIEW);
-        intent.setDataAndType(Uri.fromFile(new File("res/drawable/icon.png")), "image/png");
+        File file = new File("drawable-hdpi/icon.png");
+        intent.setDataAndType(Uri.fromFile(file), "image/png");
         startActivity(intent);
     }
 }

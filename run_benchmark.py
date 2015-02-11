@@ -117,9 +117,10 @@ def initialize(rundare=False, debug=False, benchmark=None):
 if __name__ == "__main__":
     #initialize(rundare=True, debug=False)
     #TODO parse input
-    initialize(rundare=True, debug=False, benchmark="StartService")
+    initialize(rundare=True, debug=False, benchmark="BroadcastReceiver3")
     #BroadcastReceiver
     #BroadcastReceiver2
+    #BroadcastReceiver3
     #SendBroadcast
     #StartService
     #ACT_Android
@@ -127,4 +128,7 @@ if __name__ == "__main__":
     #PendingIntent
     #PendingIntent2
     #ACT
+    #StartLinkedActivity
+    #StartLinkedActivity2
+    #ViewImageViaIntent
     #rasp
