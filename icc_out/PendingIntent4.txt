@@ -1,0 +1,5 @@
+Possible Activity Hijacking: android/support/v7/widget/SearchView/launchQuerySearch(ILjava/lang/String;Ljava/lang/String;)@0, Source Line: 0, hasExtras=true, hasRead=false, hasWrite=false
+Possible Activity Hijacking: android/support/v7/widget/ShareActionProvider$ShareMenuItemOnMenuItemClickListener/onMenuItemClick(Landroid/view/MenuItem;)@0, Source Line: 0, hasExtras=false, hasRead=false, hasWrite=false
+Possible Activity Hijacking: android/support/v7/widget/SearchView/onVoiceClicked()@0, Source Line: 0, hasExtras=true, hasRead=false, hasWrite=false
+Possible Activity Hijacking: android/support/v7/widget/SearchView/onVoiceClicked()@0, Source Line: 0, hasExtras=true, hasRead=false, hasWrite=false
+Possible Activity Hijacking: android/support/v7/widget/SearchView/launchIntent(Landroid/content/Intent;)@0, Source Line: 0, hasExtras=true, hasRead=false, hasWrite=false
