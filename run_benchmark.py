@@ -117,7 +117,9 @@ def initialize(rundare=False, debug=False, benchmark=None):
 if __name__ == "__main__":
     #initialize(rundare=True, debug=False)
     #TODO parse input
-    initialize(rundare=True, debug=False, benchmark="PendingIntent4")
+    initialize(rundare=True, debug=False, benchmark="BroadcastReceiverWithPermission2") #reminder: APK neu kompiliert?
+    #SendBroadcastWithPermission
+    #BroadcastReceiverWithPermission
     #BroadcastReceiver
     #BroadcastReceiver2
     #BroadcastReceiver3
