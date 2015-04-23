@@ -13,6 +13,7 @@ Manifest file for com.example.aidlserver version 1
     com.example.aidlserver.ArithmeticService
       Intent filter:
         Actions: [com.remote.service.CALCULATOR]
+        Categories: [android.intent.category.LAUNCHER]
   Receivers:
   Providers:
 

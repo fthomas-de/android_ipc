@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 from subprocess import Popen, PIPE
-import os, time
+import os, time, sys
+from PySide.QtCore import *
+from PySide.QtGui import *
 
 # writes content into file_name
 def write_to_file(content, file_name):
@@ -117,7 +119,12 @@ def initialize(rundare=False, debug=False, benchmark=None):
 if __name__ == "__main__":
     #initialize(rundare=True, debug=False)
     #TODO parse input
-    initialize(rundare=True, debug=False, benchmark="BroadcastReceiverWithPermission2") #reminder: APK neu kompiliert?
+    initialize(rundare=True, debug=False, benchmark="test") #reminder: APK neu kompiliert?
+    qt_app = QApplication(sys.argv)
+    label = QLabel('Hello, world!')
+    label.show()
+    qt_app.exec_()
+
     #SendBroadcastWithPermission
     #BroadcastReceiverWithPermission
     #BroadcastReceiver
