@@ -3,18 +3,24 @@ package ba_parse;
 import java.util.ArrayList;
 
 public class Communication {
-	
+
 	private boolean explicite = false;
 	private int values;
 	private String src;
 	private String method;
 	private String methodClass;
-	private ArrayList<ArrayList<String>> icc; // package/class or action/category/extras (idx = 0..2)
-	
+	private String parameter;
+	private String type;
+	private String typePackage;
+
+	private ArrayList<ArrayList<String>> icc; // package/class or
+												// action/category/extras (idx =
+												// 0..2)
+
 	public Communication(String src) {
 		this.src = src;
 	}
-	
+
 	public ArrayList<ArrayList<String>> getIcc() {
 		return icc;
 	}
@@ -33,15 +39,15 @@ public class Communication {
 	public String getMethod() {
 		String[] lst = method.split("/");
 		int size = lst.length;
-		String m = lst[size-1];
-		
+		String m = lst[size - 1];
+
 		return m;
 	}
 
 	public void setMethod(String method) {
 		this.method = method;
 	}
-	
+
 	public boolean isExplicite() {
 		return explicite;
 	}
@@ -64,6 +70,30 @@ public class Communication {
 
 	public void setValues(int values) {
 		this.values = values;
+	}
+
+	public String getParameter() {
+		return parameter;
+	}
+
+	public void setParameter(String parameter) {
+		this.parameter = parameter;
+	}
+
+	public String getTypePackage() {
+		return typePackage;
+	}
+
+	public void setTypePackage(String typePackage) {
+		this.typePackage = typePackage;
+	}
+
+	public String getType() {
+		return type;
+	}
+
+	public void setType(String type) {
+		this.type = type;
 	}
 
 	public String getSrc() {

@@ -52,13 +52,13 @@ public class FileParser {
 						intentfilter = new ArrayList<String>();
 						intentfilter.add(action);
 						curr_activity.addIntentFilter(intentfilter);
-						
+
 					} else if (line.startsWith("Categories:")) { // TODO was
 																	// wenn
 																	// keine cat
 						String cat = line.split(" ")[1];
 						intentfilter.add(cat);
-						
+
 					} else {
 						curr_activity = new Activity(line);
 						result.add(curr_activity);
@@ -86,7 +86,7 @@ public class FileParser {
 			int state = START;
 			Service curr_service = null;
 			ArrayList<String> intentfilter = null;
-			
+
 			while ((line = br.readLine()) != null) {
 				line = line.trim();
 
@@ -111,13 +111,13 @@ public class FileParser {
 						intentfilter = new ArrayList<String>();
 						intentfilter.add(action);
 						curr_service.addIntentFilter(intentfilter);
-						
+
 					} else if (line.startsWith("Categories:")) { // TODO was
 																	// wenn
 																	// keine cat
 						String cat = line.split(" ")[1];
 						intentfilter.add(cat);
-						
+
 					} else {
 						curr_service = new Service(line);
 						result.add(curr_service);
@@ -165,7 +165,9 @@ public class FileParser {
 						String action = line.split(" ")[1].trim();
 						curr_receiver.setAction(action);
 
-					} else if (line.startsWith("Categories:")) { //TODO was wenn keine cat
+					} else if (line.startsWith("Categories:")) { // TODO was
+																	// wenn
+																	// keine cat
 						String category = line.split(" ")[1].trim();
 						curr_receiver.setCategory(category);
 
@@ -184,6 +186,7 @@ public class FileParser {
 	}
 
 	public ArrayList<Communication> getCommunications() {
+		StringParser sp = new StringParser();
 		final int START = -1;
 		final int INIT = 0;
 		boolean running = false;
@@ -217,18 +220,27 @@ public class FileParser {
 							curr_communication = new Communication(line);
 
 							String method;
-							// String[] s = line.split("\\(")[0].split("/");
-							// int len = s.length - 1;
-							// method = s[len];
 							method = line.split("\\(")[0];
 							curr_communication.setMethod(method);
 
 							String methodClass = line.split("\\(")[0];
 							String[] s = methodClass.split("/");
 							int size = s.length;
-							methodClass = s[size-2];
+							methodClass = s[size - 2];
 							curr_communication.setMethodClass(methodClass);
+
+							String[] parameterLst = line.split("\\(")[1].split("\\)");
+							String parameter;
 							
+							if(parameterLst.length > 0) {
+								 parameter = parameterLst[0];
+								
+							} else {
+								parameter = "";
+							}
+							
+							curr_communication.setParameter(parameter);
+
 							running = true;
 							first = true;
 						} else {
@@ -241,7 +253,17 @@ public class FileParser {
 							continue;
 
 						} else if (line.contains("Type:")) {
-							continue;
+							String type = "";
+							String typePackage;
+							String s;
+
+							s = line.split(":")[1].trim();
+							type = sp.getParts(s, "\\.").get(1);
+							curr_communication.setType(type);
+
+							int start = s.length() - type.length();
+							typePackage = s.trim().substring(0, start - 1);
+							curr_communication.setTypePackage(typePackage);
 
 						} else if (line.trim().equals("") && first) {
 							result.add(curr_communication);
@@ -272,7 +294,8 @@ public class FileParser {
 							action = action.replace("]", "");
 							icc.add(action);
 
-							if (line.contains("Categories:")) { //TODO was wenn keine cat
+							if (line.contains("Categories:")) { // TODO was wenn
+																// keine cat
 								String cat = line.split("Categories:")[1]
 										.trim();
 								cat = cat.split(",")[0];
@@ -306,7 +329,8 @@ public class FileParser {
 							action = action.replace("]", "");
 							icc.add(action);
 
-							if (line.contains("Categories:")) { //TODO was wenn keine cat
+							if (line.contains("Categories:")) { // TODO was wenn
+																// keine cat
 								String cat = line.split("Categories:")[1]
 										.trim();
 								cat = cat.split(",")[0];
