@@ -25,6 +25,7 @@ import de.uni_bremen.st.model.android.device.Category;
 import de.uni_bremen.st.model.android.device.Component;
 import de.uni_bremen.st.model.android.device.DeviceFactory;
 import de.uni_bremen.st.model.android.device.DevicePackage;
+import de.uni_bremen.st.model.android.device.DynamicReceiver;
 import de.uni_bremen.st.model.android.device.ExplicitIntent;
 import de.uni_bremen.st.model.android.device.ImplicitIntent;
 import de.uni_bremen.st.model.android.device.Intent;
@@ -43,7 +44,7 @@ public class Main {
 
 		// hier die app-realese.device
 		final URI modelURI = URI
-				.createFileURI("/home/fthomas/workspace_ba/android_ipc/aidl/app-release.device");
+				.createFileURI("/home/fthomas/workspace_ba/android_ipc/bcr2/app-release.device");
 
 		final ResourceSet modelResourceSet = new ResourceSetImpl();
 		final Resource modelResource = modelResourceSet.getResource(modelURI,
@@ -57,12 +58,11 @@ public class Main {
 		String path = "/home/fthomas/git/android_ipc/epicc_out/";
 		String file;
 
-		// file = "ACT_Android";
-		file = "AIDL";
+		// file = "AIDL";
 		// file = "AidlClient";
 		// file = "AidlServer";
-		// file = "BroadcastReceiver";
-		// file = "BroadcastReceiverWithPermission";
+		file = "BroadcastReceiver2"; // dyn rec
+		// file = "BroadcastReceiverWithPermission"; //dyn rec
 		// file = "IntentFilter";
 		// file = "PendingIntent";
 		// file = "RandomIntent";
@@ -77,38 +77,66 @@ public class Main {
 		StringParser sp = new StringParser();
 		FileParser fp = new FileParser(path + file + ".txt");
 		ArrayList<Communication> clst = fp.getCommunications();
-		ArrayList<Intent> allIntents = new ArrayList<Intent>();
-		if (clst.size() == 0) {
-			System.out.println("Keine Kommunikation gefunden");
-		}
-
 		ArrayList<IntentCall> ipcLst = new ArrayList<IntentCall>();
+
+		if (clst.size() == 0) {
+			System.out.println("no communication found");
+		}
 
 		// intents and its containing data
 		for (Communication communication : clst) {
-			System.out.println("Processing: " + communication);
+			System.out.println("processing: " + communication);
 
+			// get component that belongs to the current communication
+			EList<Component> componentLst = device.getActiveApp()
+					.getComponents();
+			String cmp = communication.getMethodClass();
+			System.out.println("matche: " + cmp); //TODO nullpointer bei normalen java klassen!
+			Component c = null;
+			for (Component item : componentLst) {
+				String implCls = item.getImplementationClass();
+				ArrayList<String> res = sp.getParts(implCls, "\\.");
+				String cls = res.get(1);
+
+				if (cmp.equals(cls)) {
+					c = item;
+					break;
+				}
+			}
+			
+			// method
 			Method method = DeviceFactory.eINSTANCE.createMethod();
 			method.setName(communication.getMethod());
-
-			// TODO dynamic receiver
-
+			c.getMethods().add(method);
 			System.out.println("initial method: " + communication.getMethod()
 					+ " in " + communication.getMethodClass());
 
-			// TODO aufruf über mehrere klassen hinweg
+			// dynamic receiver
+			if (communication.getType() != null
+					&& !communication.getType().equals("")) {
+				System.out.println("dynamic receiver found ("
+						+ method.getName() + " in " + cmp + ")");
 
+				DynamicReceiver dynamicReceiver = DeviceFactory.eINSTANCE
+						.createDynamicReceiver();
+				dynamicReceiver.setRegistration(method);
+				dynamicReceiver.setLabel(cmp);
+				device.getActiveApp().getComponents().add(dynamicReceiver);
+
+			}
+
+			// TODO aufruf über mehrere klassen hinweg - geht noch nicht richtig
+			// da man java klassen noch nicht erkennt
+			// sollte sowas wie der ursprung sein:
 			System.out.println("method parameter: "
-					+ communication.getParameter()); // sollte sowas wie der
-														// ursprung sein
-
+					+ communication.getParameter());
 			System.out.println("");
 
 			if (communication.isExplicite()) { // explicit
 				System.out.println("intent: explicit");
 
 				for (ArrayList<String> iccValue : communication.getIcc()) {
-					// package / class
+					// scheme: package / class
 
 					IntentCall ipc = DeviceFactory.eINSTANCE.createIntentCall();
 					ipc.setCaller(method);
@@ -127,82 +155,72 @@ public class Main {
 					System.out.println("cls: " + cls);
 					intent.setComponent(cls);
 
-					allIntents.add(intent);
+					c.getAnalysisInformation().add(intent);
 					ipc.setIntent(intent);
 					ipcLst.add(ipc);
 				}
 
 			} else { // implicit
 				System.out.println("intent: implicit");
+				System.out.println("");
 
-				for (ArrayList<String> iccValue : communication.getIcc()) { // action/category/extras
-					ImplicitIntent intent = DeviceFactory.eINSTANCE
-							.createImplicitIntent();
+				for (ArrayList<String> iccValue : communication.getIcc()) {
+					// scheme: action/category/extras
 
 					IntentCall ipc = DeviceFactory.eINSTANCE.createIntentCall();
 					ipc.setCaller(method);
 
+					ImplicitIntent intent = DeviceFactory.eINSTANCE
+							.createImplicitIntent();
+
 					for (int i = 0; i < iccValue.size(); i++) {
-						// action
 						if (i == 0) {
-							Action action = DeviceFactory.eINSTANCE
-									.createAction();
+							// action
 							String name = iccValue.get(i);
-							action.setName(name);
-							System.out.println("action: " + name);
-							intent.setAction(action);
 
-							// category
+							if (name != null) {
+								Action action = DeviceFactory.eINSTANCE
+										.createAction();
+								action.setName(name);
+								System.out.println("action: " + name);
+								intent.setAction(action);
+								device.getActions().add(action);
+							}
+
 						} else if (i == 1) {
-							Category category = DeviceFactory.eINSTANCE
-									.createCategory();
+							// category
 							String name = iccValue.get(i);
-							category.setName(name);
-							System.out.println("category: " + name);
-							intent.setCategory(category);
 
-							// extras
+							if (name != null) {
+								Category category = DeviceFactory.eINSTANCE
+										.createCategory();
+								category.setName(name);
+								System.out.println("category: " + name);
+								intent.setCategory(category);
+								device.getCategories().add(category);
+							}
+
 						} else if (i == 2) {
-							// TODO extras hinzufügen?
-							String extra = iccValue.get(i);
-							System.out.println("extras: " + extra);
-							// ipc.getExtras().put();
-							// map entry erzeugen mit key/value
+							// extras
+							String name = iccValue.get(i);
+
+							if (name != null) {
+								System.out.println("extras: " + name);
+								ipc.getExtras().put(name, name);
+								// TODO map entry erzeugen mit key/value ???
+							}
 						}
 					}
-
-					allIntents.add(intent);
+					
+					System.out.println("");
+					c.getAnalysisInformation().add(intent);
 					ipc.setIntent(intent);
 					ipcLst.add(ipc);
 				}
 			}
 
-			System.out.println("");
 			System.out.println("got " + ipcLst.size() + " intent object(s)");
 			System.out.println("");
-
-			EList<Component> test = device.getActiveApp().getComponents();
-			String cmp = communication.getMethodClass();
-
-			Component c = null;
-			for (Component item : test) {
-				String implCls = item.getImplementationClass();
-				ArrayList<String> res = sp.getParts(implCls, "\\.");
-				String cls = res.get(1);
-
-				if (cmp.equals(cls)) {
-					c = item;
-					break;
-				}
-			}
-			
-			//TODO an entsprechender Stelle
-			c.getMethods().add(method);
-			
-			//TODO for kann wieder raus
-			for (Intent intent : allIntents) {
-				c.getAnalysisInformation().add(intent);
-			}
 
 			// add all Analysisinformation to the corresponding
 			if (c != null) {
@@ -211,8 +229,9 @@ public class Main {
 				}
 			}
 		}
-		
-		//neue resource erzeugen und unter neuem namen speichern, damit die sich nicht überschreiben/voll schreiben
+
+		// neue resource erzeugen und unter neuem namen speichern, damit die
+		// sich nicht überschreiben/voll schreiben
 
 		try {
 			Map<String, String> saveOptions = new HashMap<>();
@@ -221,7 +240,7 @@ public class Main {
 		} catch (IOException e) {
 			LOG.severe("Failed to save model." + e);
 		}
-		
+
 		// nach dem abspeichern ist die ~.device ne "neue" datei
 	}
 }
