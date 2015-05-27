@@ -4,6 +4,7 @@ package de.uni_bremen.device.main;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.logging.Logger;
@@ -28,7 +29,6 @@ import de.uni_bremen.st.model.android.device.DevicePackage;
 import de.uni_bremen.st.model.android.device.DynamicReceiver;
 import de.uni_bremen.st.model.android.device.ExplicitIntent;
 import de.uni_bremen.st.model.android.device.ImplicitIntent;
-import de.uni_bremen.st.model.android.device.Intent;
 import de.uni_bremen.st.model.android.device.IntentCall;
 import de.uni_bremen.st.model.android.device.Method;
 
@@ -42,9 +42,11 @@ public class Main {
 				"device", new XMIResourceFactoryImpl());
 		DevicePackage.eINSTANCE.eClass();
 
+		String u = "/home/fthomas/workspace_ba/android_ipc/ri/app-release.device";
+		
 		// hier die app-realese.device
 		final URI modelURI = URI
-				.createFileURI("/home/fthomas/workspace_ba/android_ipc/bcr2/app-release.device");
+				.createFileURI(u);
 
 		final ResourceSet modelResourceSet = new ResourceSetImpl();
 		final Resource modelResource = modelResourceSet.getResource(modelURI,
@@ -61,14 +63,14 @@ public class Main {
 		// file = "AIDL";
 		// file = "AidlClient";
 		// file = "AidlServer";
-		file = "BroadcastReceiver2"; // dyn rec
-		// file = "BroadcastReceiverWithPermission"; //dyn rec
+//		file = "BroadcastReceiver2"; // dyn rec
+//		 file = "BroadcastReceiverWithPermission"; //dyn rec
 		// file = "IntentFilter";
-		// file = "PendingIntent";
-		// file = "RandomIntent";
+//		 file = "PendingIntent";
+		 file = "RandomIntent";
 		// file = "SendBroadcast";
 		// file = "SendBroadcastWithPermission";
-		// file = "StartActivity";
+//		 file = "StartActivity2";
 		// file = "StartBinder";
 //		 file = "StartLinkedActivity";
 		// file = "StartService";
@@ -237,6 +239,13 @@ public class Main {
 			Map<String, String> saveOptions = new HashMap<>();
 			saveOptions.put(XMIResource.OPTION_ENCODING, "UTF-8");
 			modelResource.save(saveOptions);
+			
+//			final URI newModelURI = URI
+//					.createFileURI(u);
+//			
+//			Resource newResource = modelResourceSet.createResource(newModelURI);
+//			modelResource.save(Collections.emptyMap());
+			
 		} catch (IOException e) {
 			LOG.severe("Failed to save model." + e);
 		}
