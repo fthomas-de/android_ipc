@@ -119,7 +119,11 @@ def initialize(rundare=False, debug=False, benchmark=None):
 if __name__ == "__main__":
     #initialize(rundare=True, debug=False)
     #TODO parse input
-    initialize(rundare=True, debug=False, benchmark="StartLinkedActivity2") #reminder: APK neu kompiliert?
+    initialize(rundare=True, debug=False, benchmark="#whatsapp") #reminder: APK neu kompiliert?
+    initialize(rundare=True, debug=False, benchmark="#warnapp")
+    initialize(rundare=True, debug=False, benchmark="#adobereader")
+    initialize(rundare=True, debug=False, benchmark="#facebook")
+    initialize(rundare=True, debug=False, benchmark="#generaladaptive")
     #qt_app = QApplication(sys.argv)
     #label = QLabel('Hello, world!')
     #label.show()
@@ -145,3 +149,9 @@ if __name__ == "__main__":
     #ViewImageViaIntent
     #rasp
     #RandomIntent
+
+    ##whatsapp
+    ##warnapp
+    ##adobereader
+	##facebook
+	##generaladaptive
