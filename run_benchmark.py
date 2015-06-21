@@ -73,9 +73,8 @@ def initialize(rundare=False, debug=False, benchmark=None):
                 file_path = os.path.join(root, file)
                 file_short = file_path[7:]
                 file_name = file_short.split('/')[0]
-
                 if benchmark != None:
-                    if not benchmark in file_short: break
+                    if not benchmark in file_short or not '#' in file_short: break
                 print '[Epic] runnig: ' + file_short
 
                 t_1 = time.time()
@@ -119,11 +118,13 @@ def initialize(rundare=False, debug=False, benchmark=None):
 if __name__ == "__main__":
     #initialize(rundare=True, debug=False)
     #TODO parse input
-    initialize(rundare=True, debug=False, benchmark="#whatsapp") #reminder: APK neu kompiliert?
-    initialize(rundare=True, debug=False, benchmark="#warnapp")
-    initialize(rundare=True, debug=False, benchmark="#adobereader")
-    initialize(rundare=True, debug=False, benchmark="#facebook")
-    initialize(rundare=True, debug=False, benchmark="#generaladaptive")
+    #initialize(rundare=True, debug=False, benchmark="#whatsapp") #reminder: APK neu kompiliert?
+    #initialize(rundare=False, debug=False) #reminder: APK neu kompiliert?
+    #initialize(rundare=False, debug=False, benchmark="#warnapp")
+    #initialize(rundare=True, debug=False, benchmark="#adobereader")
+    initialize(rundare=True, debug=False, benchmark="##securesms")
+    #initialize(rundare=True, debug=False, benchmark="#facebook")
+    #initialize(rundare=True, debug=False, benchmark="#generaladaptive")
     #qt_app = QApplication(sys.argv)
     #label = QLabel('Hello, world!')
     #label.show()

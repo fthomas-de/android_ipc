@@ -1,7 +1,5 @@
 package de.uni_bremen.device.main;
 
-//TODO pro intent einen neuen ipc call
-
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -21,6 +19,7 @@ import ba_parse.Communication;
 import ba_parse.FileParser;
 import ba_parse.StringParser;
 import de.uni_bremen.st.model.android.device.Action;
+import de.uni_bremen.st.model.android.device.AnalysisInformation;
 import de.uni_bremen.st.model.android.device.AndroidDevice;
 import de.uni_bremen.st.model.android.device.Category;
 import de.uni_bremen.st.model.android.device.Component;
@@ -30,6 +29,7 @@ import de.uni_bremen.st.model.android.device.DynamicReceiver;
 import de.uni_bremen.st.model.android.device.ExplicitIntent;
 import de.uni_bremen.st.model.android.device.ImplicitIntent;
 import de.uni_bremen.st.model.android.device.IntentCall;
+import de.uni_bremen.st.model.android.device.IntentList;
 import de.uni_bremen.st.model.android.device.Method;
 
 public class Main {
@@ -78,22 +78,22 @@ public class Main {
 
 		StringParser sp = new StringParser();
 		FileParser fp = new FileParser(path + file + ".txt");
-		ArrayList<Communication> clst = fp.getCommunications();
-		ArrayList<IntentCall> ipcLst = new ArrayList<IntentCall>();
+		ArrayList<Communication> allCommunications = fp.getCommunications();
+		ArrayList<IntentCall> intentCallLst = new ArrayList<IntentCall>();
 
-		if (clst.size() == 0) {
+		if (allCommunications.size() == 0) {
 			System.out.println("no communication found");
 		}
-
+		
 		// intents and its containing data
-		for (Communication communication : clst) {
+		for (Communication communication : allCommunications) {
 			System.out.println("processing: " + communication);
 
 			// get component that belongs to the current communication
 			EList<Component> componentLst = device.getActiveApp()
 					.getComponents();
 			String cmp = communication.getMethodClass();
-			System.out.println("matche: " + cmp); //TODO nullpointer bei normalen java klassen!
+			System.out.println("matche: " + cmp); // nullpointer bei normalen java klassen!
 			Component c = null;
 			for (Component item : componentLst) {
 				String implCls = item.getImplementationClass();
@@ -104,12 +104,26 @@ public class Main {
 					c = item;
 					break;
 				}
-			}
+			} // hier habe ich die Komponente an die dann der IntentCall gehängt wird
 			
 			// method
 			Method method = DeviceFactory.eINSTANCE.createMethod();
 			method.setName(communication.getMethod());
-			c.getMethods().add(method);
+			c.getMethods().add(method); // ist die Methode schon vorh.
+			
+			
+//			EList<Method> mL = c.getMethods();
+//			Boolean isIn = false;
+//			for(Method m : mL) {
+//				if(m.getName().equals(method.getName())){
+//					isIn = true;
+//				}
+//			}
+//			System.out.println(isIn);
+//			if (!isIn) {
+//				c.getMethods().add(method);
+//			}
+			
 			System.out.println("initial method: " + communication.getMethod()
 					+ " in " + communication.getMethodClass());
 
@@ -127,7 +141,7 @@ public class Main {
 
 			}
 
-			// TODO aufruf über mehrere klassen hinweg - geht noch nicht richtig
+			// aufruf über mehrere klassen hinweg - geht noch nicht richtig
 			// da man java klassen noch nicht erkennt
 			// sollte sowas wie der ursprung sein:
 			System.out.println("method parameter: "
@@ -139,9 +153,11 @@ public class Main {
 
 				for (ArrayList<String> iccValue : communication.getIcc()) {
 					// scheme: package / class
-
-					IntentCall ipc = DeviceFactory.eINSTANCE.createIntentCall();
-					ipc.setCaller(method);
+					
+					//TODO 
+					IntentList intentList = DeviceFactory.eINSTANCE.createIntentList();
+					IntentCall intentCall = DeviceFactory.eINSTANCE.createIntentCall();
+					intentCall.setCaller(method);
 
 					ExplicitIntent intent = DeviceFactory.eINSTANCE
 							.createExplicitIntent();
@@ -156,10 +172,34 @@ public class Main {
 
 					System.out.println("cls: " + cls);
 					intent.setComponent(cls);
+					
+					//c.getAnalysisInformation().add(intent);
+					intentCall.setIntent(intent);
+					
+					//TODO callee
+					EList<Component> componentLst2 = device.getActiveApp()
+							.getComponents();
+					Component c2 = null;
+					for (Component item : componentLst) {
 
-					c.getAnalysisInformation().add(intent);
-					ipc.setIntent(intent);
-					ipcLst.add(ipc);
+						if (item.getLabel().equals(cls)) {
+							c2 = item;
+							break;
+						}
+					}
+					intentCall.getCallee().add(c2);
+					
+					intentCallLst.add(intentCall);
+					intentList.getCalls().add(intentCall);
+					//c.getAnalysisInformation().add(intentList); //TODO schon vorhanden?
+					
+					EList<AnalysisInformation> ai = c.getAnalysisInformation();
+					if(ai.size() == 0){
+						c.getAnalysisInformation().add(intentList);
+					}else {
+						IntentList il = (IntentList) ai.get(0);
+						il.getCalls().add(intentCall);
+					}
 				}
 
 			} else { // implicit
@@ -169,8 +209,10 @@ public class Main {
 				for (ArrayList<String> iccValue : communication.getIcc()) {
 					// scheme: action/category/extras
 
-					IntentCall ipc = DeviceFactory.eINSTANCE.createIntentCall();
-					ipc.setCaller(method);
+					IntentList intentList = DeviceFactory.eINSTANCE.createIntentList();
+					IntentCall intentCall = DeviceFactory.eINSTANCE.createIntentCall();
+					//TODO
+					intentCall.setCaller(method);
 
 					ImplicitIntent intent = DeviceFactory.eINSTANCE
 							.createImplicitIntent();
@@ -208,26 +250,37 @@ public class Main {
 
 							if (name != null) {
 								System.out.println("extras: " + name);
-								ipc.getExtras().put(name, name);
+								intentCall.getExtras().put(name, name);
 								// TODO map entry erzeugen mit key/value ???
 							}
 						}
 					}
 					
 					System.out.println("");
-					c.getAnalysisInformation().add(intent);
-					ipc.setIntent(intent);
-					ipcLst.add(ipc);
+					//c.getAnalysisInformation().add(intent);
+					intentCall.setIntent(intent);
+					intentCallLst.add(intentCall);
+					intentList.getCalls().add(intentCall);
+					//c.getAnalysisInformation().add(intentList);
+					
+					EList<AnalysisInformation> ai = c.getAnalysisInformation();
+					if(ai.size() == 0){
+						c.getAnalysisInformation().add(intentList);
+					}else {
+						IntentList il = (IntentList) ai.get(0);
+						il.getCalls().add(intentCall);
+					}
+					
 				}
 			}
 
-			System.out.println("got " + ipcLst.size() + " intent object(s)");
+			System.out.println("got " + intentCallLst.size() + " intent object(s)");
 			System.out.println("");
 
 			// add all Analysisinformation to the corresponding
 			if (c != null) {
-				for (IntentCall ipc : ipcLst) {
-					c.getAnalysisInformation().add(ipc);
+				for (IntentCall intentCall : intentCallLst) {
+					//c.getAnalysisInformation().add(intentCall);
 				}
 			}
 		}
