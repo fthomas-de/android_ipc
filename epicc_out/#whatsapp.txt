@@ -1,0 +1,14 @@
+Solving ICC problem
+Composing values
+
+Manifest file for null
+  Activities:
+
+  Activity Aliases:
+  Services:
+  Receivers:
+  Providers:
+
+
+The following ICC values were found:
+

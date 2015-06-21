@@ -1,0 +1,16 @@
+Possible Broadcast Theft (Sniffing): com/adobe/reader/utils/ARUtils/refreshSystemMediaScanDataBase(Landroid/content/Context;Ljava/lang/String;)@0, Source Line: 0, hasExtras=false, hasRead=false, hasWrite=false
+Possible Activity Hijacking: com/adobe/reader/services/blueheron/ARBlueHeronFileLinkShareView/onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)@0, Source Line: 0, hasExtras=true, hasRead=mixed, hasWrite=mixed
+Possible Activity Hijacking: android/support/v4/app/FragmentActivity/startActivityForResult(Landroid/content/Intent;I)@0, Source Line: 0, hasExtras=mixed, hasRead=mixed, hasWrite=mixed
+Possible Activity Hijacking: com/adobe/reader/utils/ARViewerFileOpenUtils/openNonPDFFile(Ljava/io/File;Landroid/app/Activity;)@0, Source Line: 0, hasExtras=false, hasRead=true, hasWrite=true
+Possible Activity Hijacking: com/adobe/reader/viewer/ARSplitPaneActivity/shareFileBrowserFiles()@0, Source Line: 0, hasExtras=true, hasRead=mixed, hasWrite=mixed
+Possible Activity Hijacking: com/adobe/reader/viewer/ARViewerActivity/shareDocumentInternal(Ljava/lang/String;)@0, Source Line: 0, hasExtras=true, hasRead=mixed, hasWrite=mixed
+Possible Activity Hijacking: com/adobe/reader/viewer/ARViewerActivity/openNonPDFFile(Ljava/lang/String;)@0, Source Line: 0, hasExtras=false, hasRead=true, hasWrite=false
+Possible Activity Hijacking: com/adobe/reader/utils/ARIntentUtils/openSystemFileBrowser(Landroid/app/Activity;Landroid/support/v4/app/Fragment;Z)@0, Source Line: 0, hasExtras=false, hasRead=false, hasWrite=false
+Possible Activity Hijacking: android/support/v4/app/FragmentActivity/startActivityFromFragment(Landroid/support/v4/app/Fragment;Landroid/content/Intent;I)@0, Source Line: 0, hasExtras=false, hasRead=false, hasWrite=false
+Possible Activity Hijacking: android/support/v4/app/FragmentActivity/startActivityFromFragment(Landroid/support/v4/app/Fragment;Landroid/content/Intent;I)@0, Source Line: 0, hasExtras=false, hasRead=false, hasWrite=false
+Possible Activity Hijacking: com/adobe/reader/viewer/ARTextSelectionHandler$TextSelectionMenu/onClick(Landroid/view/View;)@0, Source Line: 0, hasExtras=true, hasRead=false, hasWrite=false
+Possible Activity Hijacking: com/adobe/libs/services/SVServicesBaseWebView$CloudAuthenticationWebViewClient/shouldOverrideUrlLoading(Landroid/webkit/WebView;Ljava/lang/String;)@0, Source Line: 0, hasExtras=false, hasRead=false, hasWrite=false
+Possible Activity Hijacking: com/adobe/reader/help/ARHelpActivity$1/onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)@0, Source Line: 0, hasExtras=false, hasRead=false, hasWrite=false
+Possible Activity Hijacking: com/adobe/reader/filebrowser/ARMobileLinkUIManager$2/onClick(Landroid/view/View;)@0, Source Line: 0, hasExtras=false, hasRead=false, hasWrite=false
+Possible Malicious Activity Launch: com/adobe/reader/services/cpdf/ARCreatePDFActivity, 0
+Protected System Broadcast w/o action check: receiver component:{com/adobe/reader/utils/ARNetworkChangeReceiver} does not check for {0}

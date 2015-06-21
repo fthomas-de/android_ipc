@@ -1,0 +1,14 @@
+Possible Malicious Broadcast Injection: firstpart*com/parse/GcmRegistrar$Request/<init>(Landroid/content/Context;Ljava/lang/String;)@0, 0
+Protected System Broadcast w/o action check: receiver component:{android/content/BroadcastReceiver} does not check for {0}
+Possible Activity Hijacking: com/google/android/gms/internal/zzei/zza(Landroid/content/Context;Lcom/google/android/gms/internal/zzek;Lcom/google/android/gms/internal/zzes;)@0, Source Line: 0, hasExtras=false, hasRead=mixed, hasWrite=mixed
+Possible Activity Hijacking: com/parse/oauth/OAuth1FlowDialog$OAuth1WebViewClient/shouldOverrideUrlLoading(Landroid/webkit/WebView;Ljava/lang/String;)@0, Source Line: 0, hasExtras=false, hasRead=false, hasWrite=false
+Possible Service Hijacking: com/google/android/gms/internal/zzlo/zza(Landroid/content/Context;Ljava/lang/String;Landroid/content/Intent;Landroid/content/ServiceConnection;I)@0, Source Line: 0, hasExtras=mixed, hasRead=false, hasWrite=false
+Protected System Broadcast w/o action check: receiver component:{com/parse/ConnectivityNotifier} does not check for {0}
+Possible Malicious Broadcast Injection: firstpart*com/google/android/gms/analytics/zzu/zzD(Landroid/content/Context;)@0, 0
+Possible Activity Hijacking: com/google/android/gms/internal/zzea$1/onClick(Landroid/content/DialogInterface;I)@0, Source Line: 0, hasExtras=true, hasRead=false, hasWrite=false
+Possible Activity Hijacking: com/google/android/gms/internal/zzif$zza/startActivity(Landroid/content/Intent;)@0, Source Line: 0, hasExtras=false, hasRead=false, hasWrite=false
+Possible Activity Hijacking: com/google/android/gms/internal/zzhs$1/onClick(Landroid/content/DialogInterface;I)@0, Source Line: 0, hasExtras=true, hasRead=mixed, hasWrite=mixed
+Possible Activity Hijacking: com/google/android/gms/dynamic/zza$5/onClick(Landroid/view/View;)@0, Source Line: 0, hasExtras=false, hasRead=false, hasWrite=false
+Possible Activity Hijacking: com/google/android/gms/internal/zzif/onDownloadStart(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;J)@0, Source Line: 0, hasExtras=false, hasRead=false, hasWrite=false
+Possible Activity Hijacking: com/parse/ParsePushBroadcastReceiver/onPushOpen(Landroid/content/Context;Landroid/content/Intent;)@0, Source Line: 0, hasExtras=false, hasRead=false, hasWrite=false
+Possible Malicious Broadcast Injection: com/parse/GcmBroadcastReceiver, 0
