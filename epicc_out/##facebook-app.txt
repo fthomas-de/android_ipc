@@ -1,0 +1,702 @@
+Solving ICC problem
+Composing values
+
+Manifest file for com.facebook.katana version 8742515
+  Activities:
+    com.facebook.katana.push.c2dm.SystemTrayErrorNotificationPostActivity
+    com.facebook.ui.browser.BrowserActivity
+    com.facebook.feed.platformads.DigitalGoodsVideoPlayer
+    com.facebook.auth.qrcodelogin.FacebookQRCodeLoginActivity
+    com.facebook.katana.FacebookLoginActivity
+    com.facebook.katana.nux.ActivateDeviceBasedLoginNuxActivity
+    com.facebook.katana.DeviceBasedLoginActivity
+    com.facebook.katana.DBLLoginSettingsActivity
+    com.facebook.katana.DBLAccountSettingsActivity
+    com.facebook.katana.DBLPinSettingsActivity
+    com.facebook.katana.platform.FacebookAuthenticationActivity
+    com.facebook.work.noworkaccountinterstitial.NoWorkAccountInterstitialActivity
+    com.facebook.work.firststartinterstitial.WorkLoginInterstitialActivity
+    com.facebook.katana.LogoutActivity
+    com.facebook.katana.activity.FB4ASplashScreenActivity
+    com.facebook.katana.activity.codegenerator.CodeGeneratorActivity
+    com.facebook.katana.activity.codegenerator.CodeGeneratorManualProvisionSecretActivity
+    com.facebook.katana.activity.codegenerator.CodeGeneratorAutoProvisionSecretActivity
+    com.facebook.katana.activity.notifications.PushNotificationsSettingsMigrationActivity
+    com.facebook.bugreporter.activity.BugReportActivity
+    com.facebook.katana.activity.photos.PhotosTabActivity
+    com.facebook.photos.pandora.ui.PandoraTabPagerActivity
+    com.facebook.vault.ui.VaultFullScreenGalleryActivity
+    com.facebook.bugreporter.activity.tasklist.ViewTaskActivity
+    com.facebook.katana.activity.media.CreateAlbumActivity
+    com.facebook.katana.activity.media.photoset.PhotoSetActivity
+    com.facebook.messaging.media.mediapicker.MediaPickerActivity
+    com.facebook.vault.ui.VaultSettingsActivity
+    com.facebook.katana.activity.media.ViewVideoActivity
+    com.facebook.orca.contacts.favorites.EditFavoritesActivity
+    com.facebook.rtc.activities.WebrtcIncallActivity
+      Intent filter:
+        Actions: [com.facebook.rtc.fbwebrtc.intent.action.INCOMING_CALL]
+        Categories: [android.intent.category.DEFAULT]
+      Intent filter:
+        Actions: [com.facebook.rtc.fbwebrtc.intent.action.CALL]
+        Categories: [android.intent.category.DEFAULT]
+    com.facebook.adinterfaces.AdInterfacesObjectiveActivity
+    com.facebook.katana.activity.FbMainTabActivity
+    com.facebook.katana.activity.ImmersiveActivity
+      Intent filter:
+        Actions: [com.facebook.intent.action.prod.VIEW_PERMALINK]
+        Categories: [android.intent.category.DEFAULT]
+    com.facebook.nearby.fallback.NearbyPlacesFallbackActivity
+    com.facebook.katana.activity.nearby.NearbyPlacesActivity
+    com.facebook.katana.activity.nearby.SubcategorySelectionActivity
+    com.facebook.katana.activity.nearby.NearbySearchActivity
+    com.facebook.maps.GoogleEmbeddableMapActivity
+    com.facebook.katana.SettingsActivity
+    com.facebook.katana.InternSettingsActivity
+    com.facebook.feed.prefs.FeedRendererSettingsActivity
+    com.facebook.feed.prefs.NativeFeedSettingsActivity
+    com.facebook.video.settings.VideoAutoPlaySettingsActivity
+    com.facebook.video.settings.VideoAutoPlaySettingsGBActivity
+    com.facebook.katana.notification.impl.StickySysTrayNotificationsActivity
+    com.facebook.zero.activity.ZeroInternSettingsActivity
+    com.facebook.katana.view.LoggedOutWebViewActivity
+    com.facebook.katana.RequestsActivity
+    com.facebook.katana.activity.contactpoints.AddContactpointFacewebActivity
+    com.facebook.katana.activity.contactsync.SyncContactsSetupActivity
+    com.facebook.katana.activity.contactsync.SyncContactsChangeActivity
+    com.facebook.katana.IntentUriHandler
+      Intent filter:
+        Actions: [android.intent.action.VIEW]
+        Categories: [android.intent.category.BROWSABLE, android.intent.category.DEFAULT]
+      Intent filter:
+        Actions: [android.intent.action.VIEW]
+        Categories: [android.intent.category.BROWSABLE, android.intent.category.DEFAULT]
+      Intent filter:
+        Actions: [android.intent.action.VIEW]
+        Categories: [android.intent.category.DEFAULT]
+    com.facebook.deeplinking.activity.DeepLinkingLoadingActivity
+    com.facebook.deeplinking.activity.StoryDeepLinkLoadingActivity
+    com.facebook.katana.UriAuthHandler
+      Intent filter:
+        Actions: [android.intent.action.VIEW]
+        Categories: [android.intent.category.BROWSABLE, android.intent.category.DEFAULT]
+    com.facebook.katana.ContactUriHandler
+      Intent filter:
+        Actions: [android.intent.action.VIEW]
+        Categories: [android.intent.category.DEFAULT]
+    com.facebook.katana.ProxyAuthDialog
+    com.facebook.katana.ProxyAuth
+      Intent filter:
+        Actions: [android.intent.action.PROXYAUTH]
+        Categories: [android.intent.category.DEFAULT]
+    com.facebook.platform.common.activity.PlatformWrapperActivity
+    com.facebook.platform.common.activity.PlatformActivity
+      Intent filter:
+        Actions: [com.facebook.platform.PLATFORM_ACTIVITY]
+        Categories: [android.intent.category.DEFAULT]
+    com.facebook.platform.PlatformCanonicalProfileIdActivity
+    com.facebook.intent.thirdparty.ThirdPartyUriActivity
+    com.facebook.katana.activity.profilelist.FriendMultiSelectorActivity
+    com.facebook.photos.photoset.ui.permalink.AlbumPermalinkActivity
+    com.facebook.photos.pandora.ui.PandoraAlbumMediaSetActivity
+    com.facebook.photos.photoset.ui.permalink.edit.EditAlbumPermalinkActivity
+    com.facebook.photos.photoset.ui.permalink.edit.EditContributorsActivity
+    com.facebook.photos.photoset.ui.permalink.edit.EditSharedAlbumPrivacyActivity
+    com.facebook.photos.photoset.ui.permalink.edit.EditLocationActivity
+    com.facebook.photos.albums.video.VideoAlbumPermalinkActivity
+    com.facebook.photos.albums.video.VideoAlbumLaunchPlayerActivity
+    com.facebook.katana.activity.profilelist.FriendSingleSelectorActivity
+    com.facebook.katana.activity.profilelist.GroupSelectorActivity
+    com.facebook.katana.activity.notifications.NotificationsSettingsActivity
+    com.facebook.composer.pages.PageSelectorActivity
+    com.facebook.privacy.edit.EditPrivacyActivity
+    com.facebook.privacy.edit.EditStoryPrivacyActivity
+    com.facebook.katana.FeedComposerActivity
+    com.facebook.appcenter.activity.AppCenterDetailActivity
+    com.facebook.appcenter.activity.AppCenterBrowseActivity
+    com.facebook.katana.activity.payments.AutofillActivity
+    com.facebook.resources.impl.WaitingForStringsActivity
+    com.facebook.orca.threadview.LegacyThreadViewActivityOpener
+    com.facebook.orca.threadview.ThreadViewVideoActivity
+    com.facebook.katana.orca.ThreadListLauncherActivity
+    com.facebook.orca.threadview.ThreadViewActivity
+    com.facebook.orca.creation.CreateThreadActivity
+    com.facebook.orca.threadview.AddMembersActivity
+    com.facebook.orca.photos.view.PhotoViewActivity
+    com.facebook.orca.images.ThreadIconPickerActivity
+    com.facebook.orca.camera.CropImage
+    com.facebook.messaging.imagesearch.ImageSearchActivity
+    com.facebook.katana.orca.InstallMessengerActivity
+    com.facebook.backgroundlocation.nux.BackgroundLocationNuxActivity
+    com.facebook.genericinterstitial.GenericNUXInterstitialActivity
+    com.facebook.stickers.store.StickerStoreActivity
+    com.facebook.video.youtubeplayer.YouTubePlayerActivity
+    com.facebook.survey.activities.SurveyDialogActivity
+    com.facebook.about.AboutActivity
+    com.facebook.abtest.qe.settings.QuickExperimentListActivity
+    com.facebook.abtest.qe.settings.QuickExperimentViewActivity
+    com.facebook.account.recovery.AccountRecoveryActivity
+    com.facebook.adpreview.activity.AdPreviewActivity
+    com.facebook.appfeed.activity.AppFeedActivity
+    com.facebook.appinvites.activity.AppInvitesActivity
+    com.facebook.camera.activity.CameraActivity
+      Intent filter:
+        Actions: [com.facebook.intent.action.prod.com.facebook.katana.OPEN_DEFAULT_CAMERA]
+    com.facebook.camera.activity.VideoCameraActivity
+    com.facebook.camera.activity.CameraFallbackActivity
+    com.facebook.common.init.DefaultSplashScreenActivity
+    com.facebook.common.shortcuts.CreateShortcutActivity
+      Intent filter:
+        Actions: [android.intent.action.VIEW]
+        Categories: [android.intent.category.DEFAULT]
+    com.facebook.composer.activity.ComposerActivity
+    com.facebook.composer.activity.FullScreenQuickCamActivity
+    com.facebook.composer.activity.TargetSelectorActivity
+    com.facebook.composer.datepicker.DatePickerActivity
+    com.facebook.composer.lifeevent.type.ComposerLifeEventTypeActivity
+    com.facebook.composer.lifeevent.interstitial.ComposerLifeEventInterstitialActivity
+    com.facebook.composer.minutiae.MinutiaeTagPickerActivity
+    com.facebook.composer.minutiae.interstitial.RidgeInterstitialActivity
+    com.facebook.composer.minutiae.iconpicker.MinutiaeIconPickerActivity
+    com.facebook.composer.minutiae.iconpicker.MinutiaeNewIconPickerActivity
+    com.facebook.composer.minutiae.intent.MinutiaePrefilledComposerLauncherActivity
+      Intent filter:
+        Actions: [android.intent.action.VIEW]
+        Categories: [android.intent.category.DEFAULT]
+    com.facebook.composer.shareintent.ImplicitShareIntentHandler
+    com.facebook.confirmation.activity.ConfirmAccountActivity
+    com.facebook.confirmation.activity.ChangeContactpointActivity
+    com.facebook.confirmation.activity.AddFriendActivity
+    com.facebook.dash.wallfeed.activities.WallFeedActivity
+      Intent filter:
+        Actions: [com.facebook.intent.action.WALL_FEED]
+    com.facebook.common.keyguard.KeyguardPendingIntentActivity
+    com.facebook.dash.setupflow.ui.SetupActivity
+    com.facebook.dash.setupflow.ui.SetupNotificationsPromptActivity
+      Intent filter:
+        Actions: [com.facebook.intent.action.SETUP_NOTIFICATIONS_PROMPT]
+    com.facebook.dash.activities.DashActivity
+      Intent filter:
+        Actions: [com.facebook.intent.action.DASH_STANDALONE]
+        Categories: [android.intent.category.DEFAULT]
+      Intent filter:
+        Actions: [com.facebook.intent.action.DASH_STANDALONE_LOCKSCREEN]
+        Categories: [android.intent.category.DEFAULT]
+      Intent filter:
+        Actions: [com.facebook.intent.action.DASH]
+        Categories: [android.intent.category.DEFAULT]
+      Intent filter:
+        Actions: [android.intent.action.MAIN]
+      Intent filter:
+        Actions: [com.facebook.intent.action.DASH_ONGOING]
+        Categories: [android.intent.category.DEFAULT]
+    com.facebook.dash.notifications.activity.DelayedSystemNotificationLauncherActivity
+    com.facebook.dash.activities.DashAppFeedSetupActivity
+    com.facebook.dash.activities.DashBackToPreviousTaskActivity
+    com.facebook.dash.feedstore.data.authentication.OAuthWebViewFragment
+    com.facebook.dash.activities.HomeV1BlackholeActivity
+      Intent filter:
+        Actions: [com.facebook.intent.action.HOME]
+        Categories: [android.intent.category.DEFAULT]
+      Intent filter:
+        Actions: [com.facebook.intent.action.HOME_FLAG]
+        Categories: [android.intent.category.DEFAULT]
+      Intent filter:
+        Actions: [com.facebook.intent.action.HOME_ALTERNATIVE]
+        Categories: [android.intent.category.DEFAULT]
+    com.facebook.dash.nodex.NodexHomeSetupSplashActivity
+      Intent filter:
+        Actions: [com.facebook.intent.action.HOME_SETUP]
+        Categories: [com.facebook.intent.category.HOME_SETUP_FROM_SYSTEM_MENU, com.facebook.intent.category.HOME_SETUP_FROM_APP_FEED_UPSELL_FACEBOOK, com.facebook.intent.category.HOME_SETUP_FROM_MEGAPHONE, com.facebook.intent.category.HOME_SETUP_FROM_APP_FEED_NOTIFICATION_FLICKR, android.intent.category.DEFAULT, com.facebook.intent.category.HOME_SETUP_FROM_APP_FEED_NOTIFICATION_INSTAGRAM, com.facebook.intent.category.HOME_SETUP_FROM_APP_FEED_NOTIFICATION_PINTEREST, com.facebook.intent.category.HOME_SETUP_FROM_BOOKMARK, com.facebook.intent.category.HOME_SETUP_FROM_UPSELL_NOTIFICATION, com.facebook.intent.category.HOME_SETUP_FROM_APP_FEED_UPSELL_TUMBLR, com.facebook.intent.category.HOME_SETUP_FROM_APP_FEED_UPSELL_FLICKR, com.facebook.intent.category.HOME_SETUP_FROM_DASH_SETTINGS_MENU, com.facebook.intent.category.HOME_SETUP_FROM_ONGOING_NOTIFICATION, com.facebook.intent.category.HOME_SETUP_FROM_APP_FEED_NOTIFICATION_TUMBLR, com.facebook.intent.category.HOME_SETUP_FROM_APP_FEED_UPSELL_INSTAGRAM, com.facebook.intent.category.HOME_SETUP_FROM_FB4A_SETTINGS, com.facebook.intent.category.HOME_SETUP_FROM_APP_FEED_UPSELL_PINTEREST]
+    com.facebook.dash.activities.HomePreferencesActivity
+    com.facebook.dash.activities.LoadingDebugActivity
+    com.facebook.dash.gating.DashGatingActivity
+    com.facebook.dash.wallpaper.WallpaperSettingsActivity
+      Intent filter:
+        Actions: [android.intent.action.SET_WALLPAPER]
+        Categories: [android.intent.category.DEFAULT]
+    com.facebook.dash.activities.DashSplashScreenActivity
+    com.facebook.keyguardservice.ExecuteThroughKeyguardActivity
+    com.facebook.debug.debugoverlay.DebugOverlaySettingsActivity
+    com.facebook.dialtone.activity.DialtoneUpgradeActivity
+    com.facebook.dialtone.activity.DialtoneModeSelectionActivity
+    com.facebook.dialtone.activity.DialtoneWifiInterstitialActivity
+    com.facebook.dialtone.activity.DialtoneUnsupportedCarrierInterstitialActivity
+    com.facebook.dialtone.activity.DialtoneIntentInterstitialActivity
+    com.facebook.dialtone.nodex.startup.NodexDialtoneSplashActivity
+      Intent filter:
+        Actions: [android.intent.action.VIEW]
+        Categories: [android.intent.category.BROWSABLE, android.intent.category.DEFAULT]
+    com.facebook.entitycards.intent.EntityCardsActivity
+    com.facebook.events.activity.EventCreationActivity
+    com.facebook.events.activity.EventEditActivity
+    com.facebook.events.activity.EventCreationNikumanActivity
+    com.facebook.events.activity.EventEditNikumanActivity
+    com.facebook.events.invite.EventInviteActivity
+    com.facebook.feed.quickcam.QuickCamActivity
+    com.facebook.friending.codes.FriendingCodesActivity
+    com.facebook.friendsharing.raven.ui.RavenEditActivity
+    com.facebook.goodwill.feed.rows.ThrowbackFriendsActivity
+    com.facebook.goodwill.composer.GoodwillComposerActivity
+    com.facebook.greetingcards.create.GreetingCardEditorActivity
+    com.facebook.greetingcards.create.PreviewCardActivity
+    com.facebook.groupcommerce.ui.SelectCategoryActivity
+    com.facebook.growth.nux.ProfileCompletenessNUXActivity
+    com.facebook.growth.nux.UserAccountNUXActivity
+    com.facebook.growth.contactimporter.StepInviteActivity
+    com.facebook.growth.friendfinder.FriendFinderStartActivity
+    com.facebook.growth.friendfinder.ContinuousSyncEnabledActivity
+    com.facebook.growth.friendfinder.FriendFinderHostingActivity
+    com.facebook.growth.friendfinder.FriendFinderLearnMoreActivity
+    com.facebook.growth.promotion.FriendingPossibilitiesActivity
+    com.facebook.growth.promotion.NativeNameActivity
+    com.facebook.growth.promotion.ProfileInfoActivity
+    com.facebook.growth.addcontactpoint.AddContactpointActivity
+    com.facebook.identitygrowth.typeahead.fragment.ProfileInfoTypeaheadActivity
+    com.facebook.iorg.fb4a.IorgFb4aBasicServicesActivity
+    com.facebook.iorg.fb4a.IorgFb4aLauncherActivity
+    com.facebook.languages.switcher.activity.LanguageSwitcherActivity
+    com.facebook.localcontent.menus.PhotoMenuUploadActivity
+    com.facebook.nodex.startup.splashscreen.NodexSplashActivity
+    com.facebook.nodex.startup.splashscreen.NodexErrorActivity
+    com.facebook.notifications.lockscreenservice.LockScreenDismissKeyguardActivity
+    com.facebook.now.standalone.NowStandaloneActivity
+    com.facebook.now.settings.NowSettingsActivity
+    com.facebook.pages.identity.activities.friendinfo.PageFriendsInfoListActivity
+    com.facebook.pages.promotion.ui.TargetingSelectorActivity
+    com.facebook.photos.albumcreator.AlbumCreatorActivity
+    com.facebook.photos.consumptiongallery.ConsumptionPhotoGalleryActivity
+    com.facebook.photos.crop.activity.CropImageActivity
+    com.facebook.photos.mediagallery.MediaGalleryActivity
+    com.facebook.photos.simplepicker.launcher.SimplePickerLauncherActivity
+    com.facebook.photos.taggablegallery.TaggableGalleryActivity
+    com.facebook.photos.taggablegallery.ProductionVideoGalleryActivity
+    com.facebook.photos.upload.dialog.UploadDialogsActivity
+    com.facebook.places.checkin.activity.SelectAtTagActivity
+    com.facebook.places.checkin.PlaceCrowdsourcePhotoActivity
+    com.facebook.places.common.SelectPageTopicActivity
+    com.facebook.places.create.PlaceCreationActivity
+    com.facebook.places.create.NewPlaceCreationActivity
+    com.facebook.places.create.PlaceCreationDupActivity
+    com.facebook.places.create.PlaceCreationCategoryPickerActivity
+    com.facebook.places.create.PlaceCreationCityPickerActivity
+    com.facebook.places.create.LocationPickerActivity
+    com.facebook.places.create.citypicker.CityPickerActivity
+    com.facebook.places.create.home.HomeCreationActivity
+    com.facebook.places.create.home.HomeEditActivity
+    com.facebook.places.create.privacypicker.PrivacyPickerActivity
+    com.facebook.places.suggestions.SuggestPlaceInfoActivity
+    com.facebook.places.suggestions.MarkAsDuplicatesActivity
+    com.facebook.placetips.settings.ui.PlaceTipsBlacklistFeedbackActivity
+    com.facebook.platform.webdialogs.PlatformWebDialogsActivity
+    com.facebook.privacy.educator.AudienceEducatorActivity
+    com.facebook.privacy.educator.DefaultPrivacyTransitionActivity
+    com.facebook.privacy.educator.LearnMoreActivity
+    com.facebook.privacy.educator.LearnMoreInlineVideoActivity
+    com.facebook.profilelist.ProfilesListActivity
+    com.facebook.qrcode.QRCodeActivity
+    com.facebook.quickpromotion.debug.QuickPromotionSettingsActivity
+    com.facebook.quickpromotion.debug.QuickPromotionFiltersActivity
+    com.facebook.quickpromotion.ui.QuickPromotionInterstitialActivity
+    com.facebook.quickpromotion.debug.SeguePreviewSettingsActivity
+    com.facebook.quickpromotion.debug.QuickPromotionTriggersActivity
+    com.facebook.rapidfeedback.debug.DebugRapidFeedbackActivity
+    com.facebook.reaction.externalshare.ReactionExternalShareActivity
+    com.facebook.registration.activity.NewAccountRegistrationActivity
+    com.facebook.registration.simplereg.activity.SimpleAccountRegistrationActivity
+    com.facebook.saved.interstitial.SavedDashboardInterstitialActivity
+    com.facebook.search.filters.FilterSetsActivity
+    com.facebook.search.filters.customfiltervalue.CustomFilterValueListActivity
+    com.facebook.search.debug.SearchDebugActivity
+    com.facebook.selfupdate.SelfUpdateInstallActivity
+    com.facebook.selfupdate.SelfUpdateSettingsActivity
+    com.facebook.tagging.conversion.FriendSuggestionsAndSelectorActivity
+    com.facebook.timeline.coverphoto.CoverPhotoRepositionActivity
+    com.facebook.wallpaper.mainprocessnux.WallFeedHomeNuxActivity
+    com.facebook.wallpaper.mainprocessnux.WallFeedHomeLockScreenActivity
+    com.facebook.wallpaper.mainprocessnux.WallFeedActivateLauncherActivity
+      Intent filter:
+        Actions: [android.intent.action.VIEW]
+        Categories: [android.intent.category.DEFAULT]
+    com.facebook.wallpaper.wallpaperprocess.WallpaperProxyActivity
+    com.facebook.wallpaper.wallpaperprocess.WallpaperSettingsActivity
+    com.facebook.webview.event.FacewebEventActivity
+    com.facebook.zero.activity.ZeroIntentInterstitialActivity
+    com.facebook.zero.upsell.activity.ZeroUpsellBuyConfirmInterstitialActivity
+    com.facebook.zero.activity.NativeOptinInterstitialActivity
+    com.facebook.zero.activity.ZeroOptinInterstitialActivity
+    com.facebook.zero.activity.DialtoneOptinInterstitialActivity
+    com.facebook.zero.activity.ZeroDogfoodingAppActivity
+
+  Activity Aliases:
+    com.facebook.katana.LoginActivity
+      Intent filter:
+        Actions: [android.intent.action.MAIN]
+        Categories: [android.intent.category.LAUNCHER]
+    com.facebook.deeplinking.activity.DeepLinkingLegacyAliasActivity
+      Intent filter:
+        Actions: [android.intent.action.VIEW]
+        Categories: [android.intent.category.BROWSABLE, android.intent.category.DEFAULT]
+    com.facebook.deeplinking.activity.DeepLinkingAliasActivity
+      Intent filter:
+        Actions: [android.intent.action.VIEW]
+        Categories: [android.intent.category.BROWSABLE, android.intent.category.DEFAULT]
+    com.facebook.katana.urimap.LinkSharingNativeComposerAliasActivity
+      Intent filter:
+        Actions: [android.intent.action.VIEW]
+        Categories: [android.intent.category.BROWSABLE, android.intent.category.DEFAULT]
+    com.android.internal.app.ResolverActivity
+    com.facebook.composer.shareintent.ImplicitShareIntentHandlerDefaultAlias
+      Intent filter:
+        Actions: [android.intent.action.SEND]
+        Categories: [android.intent.category.DEFAULT]
+      Intent filter:
+        Actions: [android.intent.action.SEND_MULTIPLE]
+        Categories: [android.intent.category.DEFAULT]
+    com.facebook.composer.shareintent.ImplicitShareIntentHandlerAlphabeticalAlias
+      Intent filter:
+        Actions: [android.intent.action.SEND]
+        Categories: [android.intent.category.DEFAULT]
+      Intent filter:
+        Actions: [android.intent.action.SEND_MULTIPLE]
+        Categories: [android.intent.category.DEFAULT]
+  Services:
+    com.facebook.katana.service.FacebookService
+    com.facebook.attribution.AttributionIdService
+    com.facebook.katana.RemoveRawContactsService
+    com.facebook.vault.service.VaultSyncJobProcessor
+    com.facebook.vault.service.VaultManagerService
+    com.facebook.vault.service.VaultUpdateService
+    com.facebook.vault.service.VaultSyncService
+    com.facebook.vault.service.VaultObserverService
+    com.facebook.common.errorreporting.memory.MemoryDumpUploadService
+    com.facebook.rtc.fbwebrtc.WebrtcIncallNotificationService
+    com.facebook.katana.platform.FacebookAuthenticationService
+      Intent filter:
+        Actions: [android.accounts.AccountAuthenticator]
+    com.facebook.katana.platform.TokenRefreshService
+    com.facebook.platform.common.service.PlatformService
+      Intent filter:
+        Actions: [com.facebook.platform.PLATFORM_SERVICE]
+        Categories: [android.intent.category.DEFAULT]
+    com.facebook.katana.platform.FacebookSyncAdapterService
+      Intent filter:
+        Actions: [android.content.SyncAdapter]
+    com.facebook.videoads.scheduler.VideoAdsFetchService
+    com.facebook.orca.notify.MessagesNotificationService
+    com.facebook.orca.prefs.notifications.NotificationPrefsSyncService
+    com.facebook.contacts.service.ContactLocaleChangeService
+    com.facebook.analytics.service.AnalyticsService
+    com.facebook.analytics2.logger.UploadService
+    com.facebook.backgroundlocation.reporting.BackgroundLocationReportingService
+    com.facebook.backgroundlocation.reporting.BackgroundLocationReportingNewImplService
+    com.facebook.composer.minutiae.widget.RidgeWidgetService
+    com.facebook.composer.publish.ComposerPublishService
+    com.facebook.conditionalworker.ConditionalWorkerService
+    com.facebook.dash.service.DashSsoPreloadService
+    com.facebook.dash.service.DashBlueService
+    com.facebook.dash.service.DisableDashService
+    com.facebook.dash.upsell.OverlayViewService
+    com.facebook.dash.wallpaper.system.WallpaperChangeBroadcastService
+    com.facebook.auth.broadcast.CrossProcessLogoutService
+    com.facebook.dash.homeservice.service.HomeNotificationService
+    com.facebook.dash.homeservice.service.DisableHomeNotificationService
+      Intent filter:
+        Actions: [com.facebook.service.action.HOME_ONGOING_NOTIFICATION_DISABLE]
+    com.facebook.systemnotifications.module.service.SystemNotificationsListenerService
+      Intent filter:
+        Actions: [android.service.notification.NotificationListenerService]
+    com.facebook.systemnotifications.module.service.SystemNotificationsMusicListenerService
+      Intent filter:
+        Actions: [android.service.notification.NotificationListenerService]
+    com.facebook.delayedworker.DelayedWorkerService
+    com.facebook.events.sync.adapter.FacebookCalendarSyncAdapterService
+      Intent filter:
+        Actions: [android.content.SyncAdapter]
+    com.facebook.fbservice.service.DefaultBlueService
+    com.facebook.googleplay.GooglePlayInstallRefererService
+    com.facebook.graphql.executor.GraphQLMutationService
+    com.facebook.keyguardservice.KeyguardService
+    com.facebook.keyguardservice.KeyguardServiceBooterService
+    com.facebook.nodex.startup.crashloop.FixCrashLoopService
+    com.facebook.notifications.service.SystemTrayLogService
+    com.facebook.notifications.systemnotifications.SystemNotificationService
+    com.facebook.notifications.service.SystemTrayInlineLikingService
+    com.facebook.notifications.lockscreenservice.LockScreenService
+      Intent filter:
+        Actions: [com.facebook.notifications.lockscreen.ACTION_LAUNCH_LOCKSCREEN_NOTIFICATIONS]
+    com.facebook.notifications.wearable.samsung.GearCommunicationService
+    com.facebook.photos.upload.service.PhotosUploadHelperService
+    com.facebook.places.suggestions.common.SuggestProfilePicUploadService
+    com.facebook.push.fbpushdata.FbPushDataHandlerService
+    com.facebook.push.adm.ADMRegistrarService
+    com.facebook.push.adm.ADMService
+    com.facebook.push.adm.ADMBroadcastReceiver
+    com.facebook.push.nna.NNAService
+    com.facebook.push.c2dm.C2DMService
+    com.facebook.push.registration.RegistrarHelperService
+    com.facebook.push.fbnslite.FbnsLitePushNotificationHandler
+    com.facebook.push.crossapp.PackageRemoveReceiverInManifestService
+    com.facebook.push.mqtt.service.MqttPushService
+    com.facebook.push.mqtt.service.MqttPushServiceInSeperateProcess
+    com.facebook.push.mqtt.receiver.MqttReceiver
+    com.facebook.push.mqtt.service.MqttPushHelperService
+    com.facebook.reaction.externalshare.ReactionExternalShareService
+    com.facebook.reportaproblem.base.bugreport.BugReportUploadService
+    com.facebook.selfupdate.SelfUpdateFetchService
+    com.facebook.wallpaper.mainprocessnux.WallFeedBannerService
+    com.facebook.wallpaper.wallpaperprocess.FbWallpaperService
+      Intent filter:
+        Actions: [android.service.wallpaper.WallpaperService]
+    com.facebook.wearlistener.DataLayerListenerService
+      Intent filter:
+        Actions: [com.google.android.gms.wearable.BIND_LISTENER]
+  Receivers:
+    com.facebook.katana.FacebookWidgetProvider
+      Intent filter:
+        Actions: [android.appwidget.action.APPWIDGET_UPDATE]
+    com.facebook.katana.FacebookControlWidgetProvider
+      Intent filter:
+        Actions: [android.appwidget.action.APPWIDGET_UPDATE]
+    com.facebook.katana.FacebookAccountReceiver
+      Intent filter:
+        Actions: [android.accounts.LOGIN_ACCOUNTS_CHANGED]
+    com.facebook.nobreak.RecoveryModeHelper$RecoveryProcessReceiver
+    com.facebook.nobreak.RecoveryModeHelper$MainProcessReceiver
+    com.facebook.vault.service.VaultConnectivityChangeReceiver
+      Intent filter:
+        Actions: [android.net.conn.CONNECTIVITY_CHANGE]
+    com.facebook.vault.service.VaultPowerConnectionReceiver
+      Intent filter:
+        Actions: [android.intent.action.ACTION_POWER_CONNECTED]
+    com.facebook.katana.statuswidget.service.StatusWidgetFetchBroadcastReceiver
+      Intent filter:
+        Actions: [com.facebook.katana.statuswidget.service.StatusWidgetFetchBroadcastReceiver.INITIATE_BACKGROUND_FETCH]
+    com.facebook.orca.notify.MessagesNotificationBroadcastReceiver
+      Intent filter:
+        Actions: [com.facebook.orca.notify.ACTION_CLEAR_THREAD, com.facebook.orca.notify.ACTION_CLEAR_FRIEND_INSTALL, com.facebook.orca.notify.ACTION_CLEAR_ALL_NOTIFICATIONS, com.facebook.orca.notify.ACTION_NEW_MESSAGE_V2, com.facebook.orca.notify.ACTION_NEW_BUILD, com.facebook.orca.notify.ACTION_READ_THREAD, com.facebook.orca.notify.ACTION_FAILED_SEND, com.facebook.orca.notify.ACTION_CLEAR_NEW_BUILD_NOTIFICATION, com.facebook.orca.notify.ACTION_NEW_FRIEND_INSTALL, com.facebook.orca.notify.ACTION_P2P_PAYMENT, com.facebook.orca.notify.ACTION_LOGGED_OUT_MESSAGE]
+    com.facebook.prefs.multiprocess.earlystart.ProvidersBroadcastReceiver
+      Intent filter:
+        Actions: [com.facebook.prefs.multiprocess.earlystart.PingProviders]
+    com.facebook.contacts.service.ContactLocaleChangeReceiver
+      Intent filter:
+        Actions: [android.intent.action.LOCALE_CHANGED]
+    com.facebook.backgroundlocation.reporting.BackgroundLocationReportingBroadcastReceiver
+      Intent filter:
+        Actions: [com.facebook.intent.action.prod.BACKGROUND_LOCATION_REPORTING_SETTINGS_CHANGED_ACTION, com.facebook.intent.action.prod.BACKGROUND_LOCATION_REPORTING_ACTION_WRITE_FINISHED, com.facebook.intent.action.prod.BACKGROUND_LOCATION_REPORTING_ACTION_LOCATION_UPDATE, com.facebook.intent.action.prod.BACKGROUND_LOCATION_REPORTING_SETTINGS_REQUEST_REFRESH_ACTION, com.facebook.intent.action.prod.BACKGROUND_LOCATION_REPORTING_ACTION_FETCH_IS_ENABLED_FINISHED, com.facebook.intent.action.prod.BACKGROUND_LOCATION_REPORTING_ACTION_OBTAIN_SINGLE_LOCATION_FINISHED]
+    com.facebook.composer.minutiae.music.MusicBroadcastReceiver
+      Intent filter:
+        Actions: [com.android.music.playbackcomplete, com.jrtstudio.music.playbackcomplete, com.nullsoft.winamp.playstatechanged, com.doubleTwist.androidPlayer.playstatechanged, com.amazon.mp3.playstatechanged, com.spotify.mobile.android.playbackstatechanged, com.tbig.playerpro.metachanged, fm.last.android.playbackcomplete, fm.last.android.metachanged, com.android.music.metachanged, com.tbig.playerpro.queuechanged, com.tbig.playerpro.playstatechanged, com.real.IMP.metachanged, com.lge.music.metachanged, com.spotify.mobile.android.metadatachanged, com.htc.music.metachanged, com.real.IMP.playstatechanged, com.spotify.mobile.android.queuechanged, com.tbig.playerpro.playbackcomplete, com.amazon.mp3.metachanged, com.sonyericsson.music.metachanged, com.sonyericsson.music.playbackcontrol.ACTION_PLAYBACK_PAUSE, com.rdio.android.metachanged, com.amazon.mp3.playbackcomplete, com.real.IMP.playbackcomplete, com.rdio.android.playstatechanged, com.htc.music.playbackcomplete, fm.last.android.playbackpaused, com.miui.player.metachanged, com.samsung.sec.android.MusicPlayer.playstatechanged, com.sonyericsson.music.playbackcontrol.ACTION_PAUSED, com.miui.player.playbackcomplete, com.jrtstudio.music.metachanged, org.iii.romulus.meridian.playbackcomplete, com.android.music.queuechanged, com.rdio.android.playbackcomplete, org.iii.romulus.meridian.metachanged, com.doubleTwist.androidPlayer.metachanged, com.lge.music.endofplayback, com.android.music.playstatechanged, com.htc.music.playstatechanged, com.doubleTwist.androidPlayer.playbackcomplete, com.lge.music.playstatechanged, com.samsung.sec.android.MusicPlayer.playbackcomplete, com.jrtstudio.music.playstatechanged, org.iii.romulus.meridian.playstatechanged, com.nullsoft.winamp.playbackcomplete, com.samsung.sec.android.MusicPlayer.metachanged, com.nullsoft.winamp.metachanged]
+    com.facebook.composer.minutiae.widget.RidgeWidgetProvider
+      Intent filter:
+        Actions: [android.appwidget.action.APPWIDGET_UPDATE]
+    com.facebook.contacts.database.AddressBookPeriodicRunner$LocalBroadcastReceiver
+    com.facebook.credentials.AuthTokenDebugLogger
+      Intent filter:
+        Actions: [com.facebook.credentials.AuthTokenDebugLogger.Trigger]
+    com.facebook.dash.fragment.RerankController$WallFeedRerankControllerReceiver
+      Intent filter:
+        Actions: [com.facebook.dash.fragment.RerankControllerReceiver.RERANK_ACTION]
+    com.facebook.dash.service.DashSsoPreloadReceiver
+      Intent filter:
+        Actions: [com.facebook.intent.action.prod.SSO_LOGIN]
+    com.facebook.dash.wallpaper.system.WallpaperChangeBroadcastReceiver
+      Intent filter:
+        Actions: [android.intent.action.WALLPAPER_CHANGED]
+    com.facebook.dash.fragment.RerankController$DashRerankControllerReceiver
+      Intent filter:
+        Actions: [com.facebook.dash.fragment.RerankControllerReceiver.RERANK_ACTION]
+    com.facebook.dash.receivers.DashPackageUninstallReceiver
+      Intent filter:
+        Actions: [android.intent.action.PACKAGE_REMOVED]
+    com.facebook.dash.nobreak.DisableDashIntentReceiver
+      Intent filter:
+        Actions: [com.facebook.intent.action.prod.ACTION_DISABLE_DASH]
+    com.facebook.dash.nobreak.DisableDashIntentReceiverForDashService
+      Intent filter:
+        Actions: [com.facebook.intent.action.prod.ACTION_DISABLE_DASH]
+    com.facebook.auth.broadcast.CrossProcessLogoutReceiver
+      Intent filter:
+        Actions: [com.facebook.intent.action.prod.AUTH_LOGOUT]
+    com.facebook.dash.notifications.data.FbSystemNotificationsBroadcastReceiver
+      Intent filter:
+        Actions: [com.facebook.system.action.NOTIFICATION]
+    com.facebook.dash.data.loading.DashFeedLoaderScheduler$DashFeedLoaderBroadcastReceiver
+      Intent filter:
+        Actions: [com.facebook.dash.loading.DashFeedLoader.INITIATE_FETCH]
+    com.facebook.device_id.UniqueDeviceIdBroadcastSender$LocalBroadcastReceiver
+    com.facebook.device_id.UniqueIdSupplier
+      Intent filter:
+        Actions: [com.facebook.GET_UNIQUE_ID]
+    com.facebook.googleplay.GooglePlayInstallReferrerReceiver
+      Intent filter:
+        Actions: [com.android.vending.INSTALL_REFERRER]
+    com.facebook.keyguardservice.KeyguardServiceBooter
+      Intent filter:
+        Actions: [android.intent.action.BOOT_COMPLETED, android.intent.action.MY_PACKAGE_REPLACED]
+    com.facebook.nodex.startup.crashloop.CrashLoop$TransactionInProgress
+    com.facebook.nodex.startup.crashloop.CrashLoop$LastState
+    com.facebook.notifications.util.JewelCountFetcher$JewelCountBroadcastReceiver
+      Intent filter:
+        Actions: [com.facebook.notifications.util.JewelCountFetcher.INITIATE_BACKGROUND_FETCH]
+    com.facebook.notifications.wearable.samsung.GearConnectivityBroadcastReceiver
+      Intent filter:
+        Actions: [com.samsung.wmanager.rich_notification.DEVICE_STATE_CHANGED]
+    com.facebook.oxygen.preloads.integration.dogfooding.AuthListener$EmployeeLoggedInMarkerReceiver
+    com.facebook.photos.upload.receiver.ConnectivityChangeReceiver
+      Intent filter:
+        Actions: [android.net.conn.CONNECTIVITY_CHANGE]
+    com.facebook.places.checkin.protocol.PlacesBroadcastReceiverRegistrations$ForegroundLocationReceiver
+      Intent filter:
+        Actions: [com.facebook.intent.action.prod.FOREGROUND_LOCATION_AVAILABLE]
+    com.facebook.placetips.gpscore.PlaceTipsGpsLocationReceiver
+      Intent filter:
+        Actions: [com.facebook.intent.action.prod.FOREGROUND_LOCATION_AVAILABLE]
+    com.facebook.push.PushInitializer$LocalBroadcastReceiver
+    com.facebook.push.adm.ADMBroadcastReceiver$MessageAlertReceiver
+      Intent filter:
+        Actions: [com.amazon.device.messaging.intent.REGISTRATION, com.amazon.device.messaging.intent.RECEIVE]
+        Categories: [com.facebook.katana]
+    com.facebook.push.nna.NNABroadcastReceiver
+      Intent filter:
+        Actions: [com.nokia.pushnotifications.intent.RECEIVE, com.nokia.pushnotifications.intent.REGISTRATION]
+        Categories: [com.facebook.katana]
+    com.facebook.push.c2dm.C2DMBroadcastReceiver
+      Intent filter:
+        Actions: [com.google.android.c2dm.intent.REGISTRATION, com.google.android.c2dm.intent.RECEIVE]
+        Categories: [com.facebook.katana]
+    com.facebook.push.registration.RegistrarHelperReceiver
+      Intent filter:
+        Actions: [com.facebook.push.registration.ACTION_TOKEN_REQUEST_RETRY]
+    com.facebook.push.registration.FacebookPushServerRegistrar$LocalBroadcastReceiver
+      Intent filter:
+        Actions: [com.facebook.push.registration.ACTION_ALARM]
+    com.facebook.push.crossapp.PackageRemoveReceiverInManifest
+      Intent filter:
+        Actions: [android.intent.action.PACKAGE_FULLY_REMOVED]
+    com.facebook.push.fbnslite.FbnsLitePushNotificationHandler$FbnsLiteCallbackReceiver
+      Intent filter:
+        Actions: [com.facebook.rti.fbns.intent.RECEIVE]
+        Categories: [com.facebook.katana]
+    com.facebook.push.mqtt.receiver.CrossProcessMqttBroadcastReceiver
+      Intent filter:
+        Actions: [com.facebook.push.mqtt.ACTION_MQTT_PUBLISH_ARRIVED]
+        Categories: [com.facebook.push.mqtt.category.SAME_APP]
+    com.facebook.push.mqtt.receiver.BootCompleteBroadcastReceiver
+      Intent filter:
+        Actions: [android.intent.action.BOOT_COMPLETED]
+    com.facebook.wallpaper.mainprocess.WallFeedBroadcastReceiver
+      Intent filter:
+        Actions: [com.facebook.wallpaper.intent.action.ACTION_WALL_FEED_ACTIVATED, com.facebook.wallpaper.intent.action.LOAD_FIRST_STORY]
+  Providers:
+    com.facebook.bookmark.provider.BookmarkProvider
+      auth: com.facebook.katana.provider.BookmarkProvider
+    com.facebook.prefetch.provider.TimelinePrefetchContentProvider
+      auth: com.facebook.katana.provider.TimelinePrefetchContentProvider
+    com.facebook.contacts.provider.ContactsConnectionsProvider
+      auth: com.facebook.katana.provider.ContactsConnectionsProvider
+      rPerm: com.facebook.katana.provider.ACCESS
+      wPerm: com.facebook.katana.provider.ACCESS
+    com.facebook.katana.provider.AttributionIdProvider
+      auth: com.facebook.katana.provider.AttributionIdProvider
+    com.facebook.katana.provider.PlatformProvider
+      auth: com.facebook.katana.provider.PlatformProvider
+    com.facebook.katana.provider.orca.FbSharedPreferencesContentProvider
+      auth: com.facebook.katana.provider.FbSharedPrefsProvider
+      rPerm: com.facebook.katana.provider.ACCESS
+      wPerm: com.facebook.katana.provider.ACCESS
+    com.facebook.katana.provider.orca.MessengerForegroundProvider
+      auth: com.facebook.katana.provider.MessagesForegroundProvider
+    com.facebook.katana.app.providers.MessagesDbContentProvider
+      auth: com.facebook.katana.messages
+      rPerm: com.facebook.katana.provider.ACCESS
+      wPerm: com.facebook.katana.provider.ACCESS
+    com.facebook.katana.generated_content_providers.com.facebook.katana.webview.provider.ImageCacheContentProvider
+      auth: com.facebook.katana.webview.provider.imagecache
+      rPerm: com.facebook.katana.provider.ACCESS
+      wPerm: com.facebook.katana.provider.ACCESS
+    com.facebook.katana.generated_content_providers.com.facebook.katana.provider.UserStatusesProvider
+      auth: com.facebook.katana.provider.UserStatusesProvider
+      rPerm: com.facebook.katana.provider.ACCESS
+      wPerm: com.facebook.katana.provider.ACCESS
+    com.facebook.katana.generated_content_providers.com.facebook.katana.provider.UserValuesProvider
+      auth: com.facebook.katana.provider.UserValuesProvider
+      rPerm: com.facebook.katana.provider.ACCESS
+      wPerm: com.facebook.katana.provider.ACCESS
+    com.facebook.katana.generated_content_providers.com.facebook.katana.provider.KeyValueProvider
+      auth: com.facebook.katana.provider.KeyValueProvider
+      rPerm: com.facebook.katana.provider.ACCESS
+      wPerm: com.facebook.katana.provider.ACCESS
+    com.facebook.katana.generated_content_providers.com.facebook.katana.provider.ConnectionsProvider
+      auth: com.facebook.katana.provider.ConnectionsProvider
+      rPerm: com.facebook.katana.provider.ACCESS
+      wPerm: com.facebook.katana.provider.ACCESS
+    com.facebook.katana.generated_content_providers.com.facebook.katana.provider.GraphQLNotificationsContentProvider
+      auth: com.facebook.katana.provider.GraphQLNotificationsProvider
+      rPerm: com.facebook.katana.provider.ACCESS
+      wPerm: com.facebook.katana.provider.ACCESS
+    com.facebook.katana.generated_content_providers.com.facebook.katana.provider.GraphQLNotificationsContentProviderInProvidersProcess
+      auth: com.facebook.katana.provider.GraphQLNotificationsProvider_providers_process
+      rPerm: com.facebook.katana.provider.ACCESS
+      wPerm: com.facebook.katana.provider.ACCESS
+    com.facebook.katana.generated_content_providers.com.facebook.katana.provider.CacheProvider
+      auth: com.facebook.katana.provider.CacheProvider
+      rPerm: com.facebook.katana.provider.ACCESS
+      wPerm: com.facebook.katana.provider.ACCESS
+    com.facebook.katana.generated_content_providers.com.facebook.katana.provider.VaultImageProvider
+      auth: com.facebook.katana.provider.VaultImageProvider
+      rPerm: com.facebook.katana.provider.ACCESS
+      wPerm: com.facebook.katana.provider.ACCESS
+    com.facebook.katana.generated_content_providers.com.facebook.katana.provider.VideosProvider
+      auth: com.facebook.katana.provider.VideosProvider
+      rPerm: com.facebook.katana.provider.ACCESS
+      wPerm: com.facebook.katana.provider.ACCESS
+    com.facebook.katana.generated_content_providers.com.facebook.abtest.qe.db.QuickExperimentContentProvider
+      auth: com.facebook.katana.experiments
+      rPerm: com.facebook.katana.provider.ACCESS
+      wPerm: com.facebook.katana.provider.ACCESS
+    com.facebook.katana.generated_content_providers.com.facebook.contacts.data.FbContactsContentProvider
+      auth: com.facebook.katana.contacts
+      rPerm: com.facebook.katana.provider.ACCESS
+      wPerm: com.facebook.katana.provider.ACCESS
+    com.facebook.dash.nodex.NodexWarmupContentProvider
+      auth: com.facebook.katana.nodex.dash.setup
+      rPerm: com.facebook.permission.prod.FB_APP_COMMUNICATION
+      wPerm: com.facebook.permission.prod.FB_APP_COMMUNICATION
+    com.facebook.dash.launchables_v1.model.LaunchablesProvider
+      auth: com.facebook.katana.provider.LaunchablesProvider
+    com.facebook.katana.generated_content_providers.com.facebook.database.properties.DbPropertiesContentProvider
+      auth: com.facebook.katana.properties
+      rPerm: com.facebook.katana.provider.ACCESS
+      wPerm: com.facebook.katana.provider.ACCESS
+    com.facebook.katana.generated_content_providers.com.facebook.events.data.EventsProvider
+      auth: com.facebook.katana.provider.EventsProvider
+    com.facebook.katana.generated_content_providers.com.facebook.graphql.cursor.provider.GraphCursorContentProvider
+      auth: com.facebook.katana.graphql.cursor.provider
+      rPerm: com.facebook.katana.provider.ACCESS
+      wPerm: com.facebook.katana.provider.ACCESS
+    com.facebook.katana.generated_content_providers.com.facebook.nodex.startup.warmup.NodexWarmupContentProvider
+      auth: com.facebook.katana.nodex.startup.warmup
+      rPerm: com.facebook.katana.provider.ACCESS
+      wPerm: com.facebook.katana.provider.ACCESS
+    com.facebook.katana.generated_content_providers.com.facebook.photos.provider.PhotosProvider
+      auth: com.facebook.katana.provider.PhotosProvider
+      rPerm: com.facebook.katana.provider.ACCESS
+      wPerm: com.facebook.katana.provider.ACCESS
+
+
+The following ICC values were found:
+  - com/facebook/nodex/startup/splashscreen/AbstractNodexSplashActivity/l()
+Intent value: 2 possible value(s):
+Categories: [<any_string>], Package: com/facebook/katana, Class: com.facebook.katana.activity.FbMainTabActivity, Flags: 67108864
+Package: com/facebook/katana, Class: com.facebook.katana.activity.FbMainTabActivity, Flags: 67108864
+
+  - com/facebook/nodex/startup/splashscreen/NodexErrorActivity/c()
+Intent value: 1 possible value(s):
+Action: android.intent.action.DELETE, 
+
+  - com/facebook/nodex/startup/splashscreen/NodexErrorActivity/d()
+Intent value: 1 possible value(s):
+Action: android.settings.MANAGE_APPLICATIONS_SETTINGS, 
+
+

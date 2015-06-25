@@ -124,6 +124,7 @@ if __name__ == "__main__":
     #initialize(rundare=True, debug=False, benchmark="#adobereader")
     initialize(rundare=True, debug=False, benchmark="##securesms")
     #initialize(rundare=True, debug=False, benchmark="#facebook")
+    #initialize(rundare=True, debug=False, benchmark="##facebook-app")
     #initialize(rundare=True, debug=False, benchmark="#generaladaptive")
     #qt_app = QApplication(sys.argv)
     #label = QLabel('Hello, world!')

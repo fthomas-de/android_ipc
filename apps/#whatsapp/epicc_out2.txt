@@ -1,0 +1,60 @@
+Warning: com.amazon.device.messaging.ADM is a phantom class!
+Warning: android.provider.Telephony$Sms is a phantom class!
+Warning: android.provider.Settings$Global is a phantom class!
+Warning: android.hardware.TriggerEventListener is a phantom class!
+Warning: android.view.ViewOutlineProvider is a phantom class!
+Warning: android.content.pm.PackageInstaller is a phantom class!
+Warning: android.content.pm.PackageInstaller$SessionInfo is a phantom class!
+Warning: com.amazon.device.home.HomeManager is a phantom class!
+Warning: com.amazon.device.home.GroupedListHeroWidget is a phantom class!
+Warning: android.transition.Slide is a phantom class!
+Warning: android.transition.Transition is a phantom class!
+Warning: android.transition.TransitionSet is a phantom class!
+Warning: android.hardware.TriggerEvent is a phantom class!
+Warning: android.graphics.Outline is a phantom class!
+Warning: android.net.NetworkCapabilities is a phantom class!
+Warning: android.net.Network is a phantom class!
+Warning: com.amazon.device.messaging.ADMMessageHandlerBase is a phantom class!
+Warning: android.transition.TransitionInflater is a phantom class!
+Warning: com.amazon.device.home.GroupedListHeroWidget$Group is a phantom class!
+Warning: com.amazon.device.home.HeroWidgetIntent is a phantom class!
+Warning: com.amazon.device.home.HeroWidgetActivityStarterIntent is a phantom class!
+Warning: com.amazon.device.home.GroupedListHeroWidget$ListEntry is a phantom class!
+Warning: com.amazon.device.home.GroupedListHeroWidget$VisualStyle is a phantom class!
+Warning: com.amazon.device.home.HeroWidget is a phantom class!
+Warning: android.transition.Fade is a phantom class!
+Warning: android.app.SharedElementCallback is a phantom class!
+Warning: android.view.ViewAnimationUtils is a phantom class!
+Warning: com.google.android.maps.MapActivity is a phantom class!
+Warning: com.google.android.maps.GeoPoint is a phantom class!
+Warning: com.google.android.maps.MyLocationOverlay is a phantom class!
+Warning: com.google.android.maps.MapView is a phantom class!
+Warning: com.google.android.maps.MapController is a phantom class!
+Warning: android.transition.PathMotion is a phantom class!
+Warning: android.transition.TransitionValues is a phantom class!
+Warning: com.google.android.maps.MapView$LayoutParams is a phantom class!
+Warning: com.google.android.maps.Projection is a phantom class!
+Warning: android.transition.TransitionManager is a phantom class!
+Warning: android.transition.Transition$EpicenterCallback is a phantom class!
+Warning: android.view.View$OnApplyWindowInsetsListener is a phantom class!
+Warning: android.view.WindowInsets is a phantom class!
+Warning: com.google.android.maps.ItemizedOverlay is a phantom class!
+Warning: com.google.android.maps.OverlayItem is a phantom class!
+Warning: com.google.android.maps.ItemizedOverlay$OnFocusChangeListener is a phantom class!
+Warning: android.app.RemoteInput$Builder is a phantom class!
+Warning: android.app.RemoteInput is a phantom class!
+Warning: android.app.Notification$Action$Builder is a phantom class!
+Warning: android.app.Notification$Action is a phantom class!
+Warning: android.animation.Animator$AnimatorPauseListener is a phantom class!
+Warning: android.transition.Visibility is a phantom class!
+Warning: android.media.RemoteControlClient$OnGetPlaybackPositionListener is a phantom class!
+Warning: android.media.RemoteControlClient$OnPlaybackPositionUpdateListener is a phantom class!
+Warning: com.amazon.device.messaging.ADMMessageReceiver is a phantom class!
+[Call Graph] For information on where the call graph may be incomplete, use the verbose option to the cg phase.
+[Call Graph] For information on where the call graph may be incomplete, use the verbose option to the cg phase.
+[Spark] Pointer Assignment Graph in 0.9 seconds.
+[Spark] Type masks in 1.1 seconds.
+[Spark] Pointer Graph simplified in 0.0 seconds.
+[Spark] Propagation in 358.9 seconds.
+[Spark] Solution found in 358.9 seconds.
+Solving ICC problem

@@ -2,7 +2,6 @@ package de.uni_bremen.device.main;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.logging.Logger;
@@ -37,16 +36,15 @@ public class Main {
 
 	public static void main(String[] args) {
 		LOG.info("Registering EMF stuff.");
-
+		
 		Resource.Factory.Registry.INSTANCE.getExtensionToFactoryMap().put(
 				"device", new XMIResourceFactoryImpl());
 		DevicePackage.eINSTANCE.eClass();
 
-		String u = "/home/fthomas/workspace_ba/android_ipc/ri/app-release.device";
-		
+		String u = "/home/fthomas/workspace_ba/android_ipc/adobe/app-release.device";
+
 		// hier die app-realese.device
-		final URI modelURI = URI
-				.createFileURI(u);
+		final URI modelURI = URI.createFileURI(u);
 
 		final ResourceSet modelResourceSet = new ResourceSetImpl();
 		final Resource modelResource = modelResourceSet.getResource(modelURI,
@@ -57,22 +55,25 @@ public class Main {
 		// device.getAnalysisInformation().add(arg0) //intentcall
 		// -> app -> component raussuchen und daran hängen
 
+		int errors = 0;
+		
 		String path = "/home/fthomas/git/android_ipc/epicc_out/";
 		String file;
-
+		
+		file = "#adobereader";
 		// file = "AIDL";
 		// file = "AidlClient";
 		// file = "AidlServer";
-//		file = "BroadcastReceiver2"; // dyn rec
-//		 file = "BroadcastReceiverWithPermission"; //dyn rec
+		// file = "BroadcastReceiver2"; // dyn rec
+		// file = "BroadcastReceiverWithPermission"; //dyn rec
 		// file = "IntentFilter";
-//		 file = "PendingIntent";
-		 file = "RandomIntent";
+		// file = "PendingIntent";
+		// file = "RandomIntent";
 		// file = "SendBroadcast";
 		// file = "SendBroadcastWithPermission";
-//		 file = "StartActivity2";
+		// file = "StartActivity2";
 		// file = "StartBinder";
-//		 file = "StartLinkedActivity";
+		// file = "StartLinkedActivity";
 		// file = "StartService";
 		// file = "ViewImageViaIntent";
 
@@ -82,144 +83,175 @@ public class Main {
 		ArrayList<IntentCall> intentCallLst = new ArrayList<IntentCall>();
 
 		if (allCommunications.size() == 0) {
-			System.out.println("no communication found");
+			System.out.println("Error: no communication found");
+		} else {
+			System.out.println("Found " + allCommunications.size()
+					+ " communication objects");
 		}
-		
+
+		// ------- Beginn des Durchlaufs -------
+
+		// ------- Lese Kommunikationsobjekt -------
 		// intents and its containing data
 		for (Communication communication : allCommunications) {
-			System.out.println("processing: " + communication);
+			System.out.println("");
+			System.out.println("==========================================================");
+			System.out.println("");
+			System.out.println("processing comunication: " + communication);
 
 			// get component that belongs to the current communication
-			EList<Component> componentLst = device.getActiveApp()
+			EList<Component> allComponents = device.getActiveApp()
 					.getComponents();
-			String cmp = communication.getMethodClass();
-			System.out.println("matche: " + cmp); // nullpointer bei normalen java klassen!
+			String cmpClassName = communication.getMethodClass();
+			cmpClassName = cmpClassName.split("\\$")[0];
+			System.out.println("suche Komponente: " + cmpClassName);
+			// hier: nullpointer bei normalen java klassen!
+
 			Component c = null;
-			for (Component item : componentLst) {
+			for (Component item : allComponents) {
 				String implCls = item.getImplementationClass();
 				ArrayList<String> res = sp.getParts(implCls, "\\.");
 				String cls = res.get(1);
-
-				if (cmp.equals(cls)) {
-					c = item;
+//				System.out.println(cls);
+				if (cmpClassName.equals(cls)) {
+					c = item; // --- komponente zum anhängen der intenlist ---
 					break;
 				}
-			} // hier habe ich die Komponente an die dann der IntentCall gehängt wird
-			
-			// method
-			Method method = DeviceFactory.eINSTANCE.createMethod();
-			method.setName(communication.getMethod());
-			c.getMethods().add(method); // ist die Methode schon vorh.
-			
-			
-//			EList<Method> mL = c.getMethods();
-//			Boolean isIn = false;
-//			for(Method m : mL) {
-//				if(m.getName().equals(method.getName())){
-//					isIn = true;
-//				}
-//			}
-//			System.out.println(isIn);
-//			if (!isIn) {
-//				c.getMethods().add(method);
-//			}
-			
-			System.out.println("initial method: " + communication.getMethod()
-					+ " in " + communication.getMethodClass());
+			} 
+			if (c == null) {
+				System.out.println("[ERROR] Not found: " + cmpClassName);
+				errors ++;
+				continue;
+			}
 
-			// dynamic receiver
+			// ------- Methode (mit vorhanden check) -------
+			EList<Method> allMethods = c.getMethods();
+			Boolean addMethod = true;
+			Method method = null;
+			for (Method item : allMethods) {
+				if (item.getName().equals(communication.getMethod())) {
+					method = item;
+					addMethod = false;
+				}
+			}
+			if (addMethod) {
+				method = DeviceFactory.eINSTANCE.createMethod();
+				method.setName(communication.getMethod());
+				c.getMethods().add(method); // ist die Methode schon vorh.
+				System.out.println("adding initial method: "
+						+ communication.getMethod() + " in "
+						+ cmpClassName);
+			} else {
+				System.out.println("allrdy added method: " + communication.getMethod());
+			}
+
+			// ------- dynamic receiver -------
 			if (communication.getType() != null
 					&& !communication.getType().equals("")) {
 				System.out.println("dynamic receiver found ("
-						+ method.getName() + " in " + cmp + ")");
+						+ method.getName() + " in " + cmpClassName + ")");
 
 				DynamicReceiver dynamicReceiver = DeviceFactory.eINSTANCE
 						.createDynamicReceiver();
 				dynamicReceiver.setRegistration(method);
-				dynamicReceiver.setLabel(cmp);
+				dynamicReceiver.setLabel(cmpClassName);
 				device.getActiveApp().getComponents().add(dynamicReceiver);
-
 			}
 
-			// aufruf über mehrere klassen hinweg - geht noch nicht richtig
-			// da man java klassen noch nicht erkennt
-			// sollte sowas wie der ursprung sein:
+			/*
+			 * aufruf über mehrere klassen hinweg - geht noch nicht richtig da
+			 * man java klassen noch nicht erkennt sollte sowas wie der ursprung
+			 * sein:
+			 */
+
 			System.out.println("method parameter: "
 					+ communication.getParameter());
 			System.out.println("");
 
-			if (communication.isExplicite()) { // explicit
+			// ------- explicite -------
+			if (communication.isExplicite()) {
 				System.out.println("intent: explicit");
 
 				for (ArrayList<String> iccValue : communication.getIcc()) {
 					// scheme: package / class
-					
-					//TODO 
-					IntentList intentList = DeviceFactory.eINSTANCE.createIntentList();
-					IntentCall intentCall = DeviceFactory.eINSTANCE.createIntentCall();
+
+					// TODO
+					IntentList intentList = DeviceFactory.eINSTANCE
+							.createIntentList();
+					IntentCall intentCall = DeviceFactory.eINSTANCE
+							.createIntentCall();
 					intentCall.setCaller(method);
 
 					ExplicitIntent intent = DeviceFactory.eINSTANCE
 							.createExplicitIntent();
 
-					// package
+					// --- package ---
 					String pkg = iccValue.get(0);
 					System.out.println("package: " + pkg);
 
-					// class
+					// --- class ---
 					String cls = iccValue.get(1).trim();
 					cls = sp.getParts(cls, "/").get(1);
+					cls = cls.split(" ")[0]; // ? split hinzugefügt ?
 
 					System.out.println("cls: " + cls);
 					intent.setComponent(cls);
-					
-					//c.getAnalysisInformation().add(intent);
+
 					intentCall.setIntent(intent);
-					
-					//TODO callee
+
+					// TODO --- callee ---
 					EList<Component> componentLst2 = device.getActiveApp()
 							.getComponents();
 					Component c2 = null;
-					for (Component item : componentLst) {
-
-						if (item.getLabel().equals(cls)) {
-							c2 = item;
-							break;
+					for (Component item : allComponents) {
+						if (!(item.getImplementationClass() == null)) {
+							String [] s = item.getImplementationClass().split("\\.");
+							int l = s.length;
+							if (s[l-1].equals(cls)) {
+								c2 = item;
+								break;
+							}
 						}
 					}
-					intentCall.getCallee().add(c2);
-					
+					if (!(c2 == null)) {
+						intentCall.getCallee().add(c2);
+						System.out.println("added callee: " + c2.getImplementationClass());
+					} else {
+						System.out.println("no callee added: " + c2 + " - was looking for: >" + cls + "<");
+					}
+
 					intentCallLst.add(intentCall);
 					intentList.getCalls().add(intentCall);
-					//c.getAnalysisInformation().add(intentList); //TODO schon vorhanden?
-					
+
 					EList<AnalysisInformation> ai = c.getAnalysisInformation();
-					if(ai.size() == 0){
+					if (ai.size() == 0) {
 						c.getAnalysisInformation().add(intentList);
-					}else {
+					} else {
 						IntentList il = (IntentList) ai.get(0);
 						il.getCalls().add(intentCall);
 					}
 				}
 
-			} else { // implicit
+				// ------- implicit -------
+			} else {
 				System.out.println("intent: implicit");
 				System.out.println("");
-
+				System.out.println(cmpClassName);
 				for (ArrayList<String> iccValue : communication.getIcc()) {
 					// scheme: action/category/extras
 
-					IntentList intentList = DeviceFactory.eINSTANCE.createIntentList();
-					IntentCall intentCall = DeviceFactory.eINSTANCE.createIntentCall();
-					//TODO
+					IntentList intentList = DeviceFactory.eINSTANCE
+							.createIntentList();
+					IntentCall intentCall = DeviceFactory.eINSTANCE
+							.createIntentCall();
+					// TODO
 					intentCall.setCaller(method);
-
 					ImplicitIntent intent = DeviceFactory.eINSTANCE
 							.createImplicitIntent();
 
 					for (int i = 0; i < iccValue.size(); i++) {
 						if (i == 0) {
-							// action
+							// --- action ---
 							String name = iccValue.get(i);
 
 							if (name != null) {
@@ -232,7 +264,7 @@ public class Main {
 							}
 
 						} else if (i == 1) {
-							// category
+							// --- category ---
 							String name = iccValue.get(i);
 
 							if (name != null) {
@@ -245,60 +277,64 @@ public class Main {
 							}
 
 						} else if (i == 2) {
-							// extras
+							// --- extras ---
 							String name = iccValue.get(i);
 
 							if (name != null) {
 								System.out.println("extras: " + name);
 								intentCall.getExtras().put(name, name);
-								// TODO map entry erzeugen mit key/value ???
 							}
 						}
 					}
-					
+
 					System.out.println("");
-					//c.getAnalysisInformation().add(intent);
 					intentCall.setIntent(intent);
 					intentCallLst.add(intentCall);
 					intentList.getCalls().add(intentCall);
-					//c.getAnalysisInformation().add(intentList);
-					
+
 					EList<AnalysisInformation> ai = c.getAnalysisInformation();
-					if(ai.size() == 0){
+					if (ai.size() == 0) {
 						c.getAnalysisInformation().add(intentList);
-					}else {
+					} else {
 						IntentList il = (IntentList) ai.get(0);
 						il.getCalls().add(intentCall);
 					}
-					
+
 				}
 			}
 
-			System.out.println("got " + intentCallLst.size() + " intent object(s)");
+//			System.out.println("got " + intentCallLst.size()
+//					+ " intent object(s)");
 			System.out.println("");
 
 			// add all Analysisinformation to the corresponding
 			if (c != null) {
 				for (IntentCall intentCall : intentCallLst) {
-					//c.getAnalysisInformation().add(intentCall);
+					// c.getAnalysisInformation().add(intentCall);
 				}
 			}
 		}
+		
+		System.out.println("");
+		System.out.println(">>> " + errors + " Errors found <<<");
 
-		// neue resource erzeugen und unter neuem namen speichern, damit die
-		// sich nicht überschreiben/voll schreiben
+		/*
+		 * neue resource erzeugen und unter neuem namen speichern, damit diesich
+		 * nicht überschreiben/voll schreiben
+		 */
 
 		try {
 			Map<String, String> saveOptions = new HashMap<>();
 			saveOptions.put(XMIResource.OPTION_ENCODING, "UTF-8");
 			modelResource.save(saveOptions);
-			
-//			final URI newModelURI = URI
-//					.createFileURI(u);
-//			
-//			Resource newResource = modelResourceSet.createResource(newModelURI);
-//			modelResource.save(Collections.emptyMap());
-			
+
+			// final URI newModelURI = URI
+			// .createFileURI(u);
+			//
+			// Resource newResource =
+			// modelResourceSet.createResource(newModelURI);
+			// modelResource.save(Collections.emptyMap());
+
 		} catch (IOException e) {
 			LOG.severe("Failed to save model." + e);
 		}

@@ -1,0 +1,307 @@
+Solving ICC problem
+Composing values
+
+Manifest file for com.adobe.reader version 116303
+  Activities:
+    com.adobe.reader.AdobeReader
+      Intent filter:
+        Actions: [android.intent.action.VIEW]
+        Categories: [android.intent.category.BROWSABLE, android.intent.category.DEFAULT]
+      Intent filter:
+        Actions: [android.intent.action.MAIN]
+        Categories: [android.intent.category.MULTIWINDOW_LAUNCHER, android.intent.category.LAUNCHER]
+      Intent filter:
+        Actions: [android.intent.action.VIEW]
+        Categories: [android.intent.category.DEFAULT]
+      Intent filter:
+        Actions: [android.intent.action.VIEW]
+        Categories: [android.intent.category.DEFAULT]
+    com.adobe.reader.viewer.ARViewerActivity
+    com.adobe.reader.viewer.ARSplitPaneActivity
+    com.adobe.reader.services.ARUserAccountsActivity
+    com.adobe.reader.help.ARHelpActivity
+    com.adobe.reader.help.AROnboardingHelpActivity
+    com.adobe.reader.services.epdf.ARExportPDFOptionsActivity
+    com.adobe.libs.services.auth.SVServicesLoginActivity
+    com.adobe.reader.services.cpdf.ARCreatePDFActivity
+      Intent filter:
+        Actions: [android.intent.action.SEND]
+        Categories: [android.intent.category.DEFAULT]
+      Intent filter:
+        Actions: [android.intent.action.SEND]
+        Categories: [android.intent.category.DEFAULT]
+      Intent filter:
+        Actions: [android.intent.action.SEND]
+        Categories: [android.intent.category.DEFAULT]
+    com.adobe.reader.misc.ARFileURLDownloadActivity
+    com.adobe.reader.services.ARBlueHeronFileTransferActivity
+    com.adobe.reader.services.blueheron.ARBlueHeronFileShareActivity
+    com.adobe.reader.misc.ARAboutActivity
+    com.adobe.reader.misc.ARCloudPrintActivity
+    com.adobe.reader.misc.ARSettingsActivity
+
+  Activity Aliases:
+  Services:
+    com.adobe.reader.misc.ARFileURLDownloadService
+    com.adobe.reader.services.ARFileTransferService
+  Receivers:
+    com.adobe.reader.utils.ARNetworkChangeReceiver
+      Intent filter:
+        Actions: [android.net.conn.CONNECTIVITY_CHANGE]
+  Providers:
+    com.adobe.reader.misc.ARFileProvider
+      auth: com.adobe.reader.fileprovider
+
+
+The following ICC values were found:
+  - android/support/v4/app/FragmentActivity/startActivityForResult(Landroid/content/Intent;I)
+Intent value: 27 possible value(s):
+Package: com/adobe/reader, Class: com/adobe/reader/services/ARBlueHeronFileTransferActivity, Extras: [FILE_ENTRY_key, IS_MODAL_key], 
+Package: com/adobe/reader, Class: com/adobe/reader/misc/ARFileURLDownloadActivity, Extras: [FILE_PATH_key], 
+Package: com/adobe/reader, Class: com/adobe/reader/services/ARBlueHeronFileTransferActivity, Extras: [FILE_ENTRY_key, com.adobe.reader.ARSplitPane.currentTabSelected], 
+Package: com/adobe/reader, Class: com/adobe/reader/misc/ARAboutActivity, 
+Package: com/adobe/reader, Class: com/adobe/reader/test/ARUnitTestActivity, 
+Package: com/adobe/reader, Class: com/adobe/reader/help/AROnboardingHelpActivity, 
+Package: com/adobe/reader, Class: com/adobe/reader/test/ARAutomationListActivity, 
+Package: com/adobe/reader, Class: com/adobe/reader/help/ARHelpActivity, 
+Package: com/adobe/reader, Class: com/adobe/reader/misc/ARSettingsActivity, 
+Action: android.intent.action.CHOOSER, Extras: [android.intent.extra.INTENT, android.intent.extra.TITLE], 
+Action: android.intent.action.CHOOSER, Extras: [android.intent.extra.INTENT, android.intent.extra.TITLE], Flags: -1
+Package: com/adobe/reader, Class: com/adobe/libs/services/auth/SVServicesLoginActivity, Extras: [is_entitlement_check_required_bofore_subscription_check, service_variant], 
+Package: com/adobe/reader, Class: com/adobe/reader/services/ARBlueHeronFileTransferActivity, Extras: [FILE_ENTRY_key], 
+Package: com/adobe/reader, Class: com/adobe/reader/services/ARBlueHeronFileTransferActivity, Extras: [FOLDER_ID_key, FILE_ENTRY_key], 
+Package: com/adobe/reader, Class: com/adobe/reader/viewer/ARSplitPaneActivity, Extras: [com.adobe.reader.ARSplitPane.CreatePDFDocPath], Flags: 67108864
+Package: com/adobe/reader, Class: com/adobe/reader/viewer/ARViewerActivity, Extras: [com.adobe.reader.CloudFileID, com.adobe.reader.CloudFileSource, com.adobe.reader.FileBrowserReturnData, com.adobe.reader.ARSplitPane.currentTabSelected], 
+Action: android.intent.action.CHOOSER, Extras: [android.intent.extra.INTENT], 
+Package: com/adobe/reader, Class: com/adobe/reader/viewer/ARSplitPaneActivity, 
+Action: android.intent.action.CHOOSER, Extras: [android.intent.extra.INTENT], Flags: -1
+Package: com/adobe/reader, Class: com/adobe/reader/viewer/ARViewerActivity, Extras: [com.adobe.reader.CloudFileID, com.adobe.reader.CloudFileSource, com.adobe.reader.FileBrowserReturnData], 
+Package: com/adobe/reader, Class: com/adobe/reader/viewer/ARViewerActivity, Extras: [com.adobe.reader.ExternalContentData], 
+Action: android.intent.action.VIEW, 
+Action: android.intent.action.GET_CONTENT, Categories: [android.intent.category.OPENABLE], Type: application/pdf, 
+Package: com/adobe/reader, Class: com/adobe/reader/services/ARUserAccountsActivity, 
+Package: com/adobe/reader, Class: com/adobe/libs/services/auth/SVServicesLoginActivity, Extras: [rfe_toggle_status, is_entitlement_check_required_bofore_subscription_check, service_variant, rfe_toggled_source_view], 
+Action: android.intent.action.VIEW, Flags: -1
+Action: android.intent.action.GET_CONTENT, Categories: [android.intent.category.OPENABLE], Type: */*, 
+
+  - android/support/v4/app/FragmentActivity/startActivityFromFragment(Landroid/support/v4/app/Fragment;Landroid/content/Intent;I)
+Intent value: 3 possible value(s):
+Action: android.intent.action.VIEW, 
+Action: android.intent.action.GET_CONTENT, Categories: [android.intent.category.OPENABLE], Type: application/pdf, 
+Action: android.intent.action.GET_CONTENT, Categories: [android.intent.category.OPENABLE], Type: */*, 
+
+  - android/support/v4/app/FragmentActivity/startActivityFromFragment(Landroid/support/v4/app/Fragment;Landroid/content/Intent;I)
+Intent value: 3 possible value(s):
+Action: android.intent.action.VIEW, 
+Action: android.intent.action.GET_CONTENT, Categories: [android.intent.category.OPENABLE], Type: application/pdf, 
+Action: android.intent.action.GET_CONTENT, Categories: [android.intent.category.OPENABLE], Type: */*, 
+
+  - com/adobe/libs/services/SVServicesBaseWebView$CloudAuthenticationWebViewClient/shouldOverrideUrlLoading(Landroid/webkit/WebView;Ljava/lang/String;)
+Intent value: 1 possible value(s):
+Action: android.intent.action.VIEW, 
+
+  - com/adobe/reader/AdobeReader/doActionAfterGettingDocPath(Landroid/content/Intent;Ljava/lang/String;)
+Intent value: 1 possible value(s):
+Package: com/adobe/reader, Class: com/adobe/reader/viewer/ARSplitPaneActivity, 
+
+  - com/adobe/reader/AdobeReader/doActionAfterGettingDocPath(Landroid/content/Intent;Ljava/lang/String;)
+Intent value: 1 possible value(s):
+Package: com/adobe/reader, Class: com/adobe/reader/viewer/ARViewerActivity, Extras: [com.adobe.reader.ExternalContentData], 
+
+  - com/adobe/reader/AdobeReader/handleIntent(Landroid/content/Intent;)
+Intent value: 1 possible value(s):
+Package: com/adobe/reader, Class: com/adobe/reader/misc/ARFileURLDownloadActivity, Extras: [FILE_PATH_key], 
+
+  - com/adobe/reader/filebrowser/ARMobileLinkUIManager$2/onClick(Landroid/view/View;)
+Intent value: 1 possible value(s):
+Action: android.intent.action.VIEW, 
+
+  - com/adobe/reader/filebrowser/ARMobileLinkUIManager/initiateRFEPrefsToggle(ZLcom/adobe/reader/filebrowser/ARMobileLinkUIManager$RFE_TOGGLE_SOURCE;)
+Intent value: 1 possible value(s):
+Package: com/adobe/reader, Class: com/adobe/libs/services/auth/SVServicesLoginActivity, Extras: [rfe_toggle_status, is_entitlement_check_required_bofore_subscription_check, service_variant, rfe_toggled_source_view], 
+
+  - com/adobe/reader/fillandsign/ARFillAndSignUtils/launchFillAndSignApplication(Landroid/content/Context;Ljava/lang/String;ZLcom/adobe/reader/analytics/ARAnalytics;)
+No value found.
+  - com/adobe/reader/help/ARHelpActivity$1/onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)
+Intent value: 1 possible value(s):
+Action: android.intent.action.VIEW, 
+
+  - com/adobe/reader/help/ARHelpActivity/onOptionsItemSelected(Landroid/view/MenuItem;)
+Intent value: 1 possible value(s):
+Package: com/adobe/reader, Class: com/adobe/reader/misc/ARAboutActivity, 
+
+  - com/adobe/reader/misc/ARFileTransferActivity/openFile(Ljava/io/File;)
+Intent value: 1 possible value(s):
+Package: com/adobe/reader, Class: com/adobe/reader/viewer/ARViewerActivity, Extras: [com.adobe.reader.ExternalContentData], 
+
+  - com/adobe/reader/misc/ARFileTransferActivity/openFile(Ljava/io/File;Ljava/lang/String;Ljava/lang/String;)
+Intent value: 2 possible value(s):
+Package: com/adobe/reader, Class: com/adobe/reader/viewer/ARViewerActivity, Extras: [com.adobe.reader.CloudFileID, com.adobe.reader.CloudFileSource, com.adobe.reader.FileBrowserReturnData, com.adobe.reader.ARSplitPane.currentTabSelected], 
+Package: com/adobe/reader, Class: com/adobe/reader/viewer/ARViewerActivity, Extras: [com.adobe.reader.CloudFileID, com.adobe.reader.CloudFileSource, com.adobe.reader.FileBrowserReturnData], 
+
+  - com/adobe/reader/misc/ARFileURLDownloadActivity/onCreate(Landroid/os/Bundle;)
+Intent value: 2 possible value(s):
+Package: com/adobe/reader, Class: com/adobe/reader/misc/ARFileURLDownloadService, 
+Package: com/adobe/reader, Class: com/adobe/reader/misc/ARFileURLDownloadService, Extras: [FILE_ID_key, FILE_PATH_key], 
+
+  - com/adobe/reader/services/ARBlueHeronFileTransferActivity/onCreate(Landroid/os/Bundle;)
+Intent value: 1 possible value(s):
+Package: com/adobe/reader, Class: com/adobe/libs/services/auth/SVServicesLoginActivity, Extras: [is_entitlement_check_required_bofore_subscription_check, service_variant], 
+
+  - com/adobe/reader/services/ARBlueHeronFileTransferActivity/performClass3Upload(Landroid/app/Activity;Ljava/lang/String;ILjava/lang/String;)
+Intent value: 1 possible value(s):
+Package: com/adobe/reader, Class: com/adobe/reader/services/ARBlueHeronFileTransferActivity, Extras: [FILE_ENTRY_key], 
+
+  - com/adobe/reader/services/ARBlueHeronFileTransferActivity/performUploadInFolder(Landroid/app/Activity;Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;)
+Intent value: 1 possible value(s):
+Package: com/adobe/reader, Class: com/adobe/reader/services/ARBlueHeronFileTransferActivity, Extras: [FOLDER_ID_key, FILE_ENTRY_key], 
+
+  - com/adobe/reader/services/AROutboxTransferManager$ExecutePendingTransfersAsyncTask/onPostExecute(Landroid/os/Bundle;)
+Intent value: 1 possible value(s):
+Package: com/adobe/reader, Class: com/adobe/reader/services/ARFileTransferService, 
+
+  - com/adobe/reader/services/ARUserAccountsActivity$4/onCheckedChanged(Landroid/widget/CompoundButton;Z)
+Intent value: 1 possible value(s):
+Package: com/adobe/reader, Class: com/adobe/libs/services/auth/SVServicesLoginActivity, Extras: [is_entitlement_check_required_bofore_subscription_check, service_variant], 
+
+  - com/adobe/reader/services/blueheron/ARBlueHeronFileLinkShareView/onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)
+Intent value: 12 possible value(s):
+Action: android.intent.action.CHOOSER, Extras: [android.intent.extra.INTENT, android.intent.extra.TITLE], 
+Action: android.intent.action.CHOOSER, Extras: [android.intent.extra.INTENT], 
+Action: android.intent.action.CHOOSER, Extras: [android.intent.extra.INTENT, android.intent.extra.TITLE], Flags: -1
+Action: android.intent.action.CHOOSER, Extras: [android.intent.extra.INTENT], Flags: -1
+Action: android.intent.action.SEND, Type: text/plain, Extras: [android.intent.extra.SUBJECT, android.intent.extra.TEXT, android.intent.extra.INTENT, android.intent.extra.TITLE], 
+Action: android.intent.action.SEND, Type: text/plain, Extras: [android.intent.extra.SUBJECT, android.intent.extra.TEXT, android.intent.extra.INTENT, android.intent.extra.TITLE], Flags: -1
+Action: android.intent.action.SEND, Type: text/plain, Extras: [android.intent.extra.SUBJECT, android.intent.extra.TEXT, android.intent.extra.INTENT], Flags: -1
+Action: android.intent.action.SEND, Type: text/plain, Extras: [android.intent.extra.SUBJECT, android.intent.extra.TEXT, android.intent.extra.INTENT], 
+Action: android.intent.action.SEND, Type: text/plain, Extras: [android.intent.extra.SUBJECT, android.intent.extra.TEXT, android.intent.extra.TITLE], 
+Action: android.intent.action.SEND, Type: text/plain, Extras: [android.intent.extra.SUBJECT, android.intent.extra.TEXT], 
+Action: android.intent.action.SEND, Type: text/plain, Extras: [android.intent.extra.SUBJECT, android.intent.extra.TEXT], Flags: -1
+Action: android.intent.action.SEND, Type: text/plain, Extras: [android.intent.extra.SUBJECT, android.intent.extra.TEXT, android.intent.extra.TITLE], Flags: -1
+
+  - com/adobe/reader/services/blueheron/ARBlueHeronFileShareHandler$ARBlueHeronFileShareStatusFetchAsyncTask/onPostExecute(Ljava/lang/String;)
+Intent value: 1 possible value(s):
+Package: com/adobe/reader, Class: com/adobe/reader/services/blueheron/ARBlueHeronFileShareActivity, Extras: [com.adobe.reader.services.blueheron.ARBlueHeronFileShareActivity,cloudAssetID, com.adobe.reader.services.blueheron.ARBlueHeronFileShareActivity.cloudFilePreviewURL, com.adobe.reader.services.blueheron.ARBlueHeronFileShareActivity,cloudSource], 
+
+  - com/adobe/reader/services/cpdf/ARCreatePDFActivity/doActionAfterGettingDocPath(Ljava/lang/String;)
+Intent value: 1 possible value(s):
+Package: com/adobe/reader, Class: com/adobe/reader/viewer/ARSplitPaneActivity, Extras: [com.adobe.reader.ARSplitPane.CreatePDFDocPath], Flags: 67108864
+
+  - com/adobe/reader/test/AdobeReaderTest/handleNavigation(Ljava/io/File;)
+Intent value: 1 possible value(s):
+Package: com/adobe/reader, Class: com/adobe/reader/viewer/ARViewerActivity, Extras: [com.adobe.reader.ExternalContentData], Flags: 268435456
+
+  - com/adobe/reader/test/AdobeReaderTest/testPinchZoom(Ljava/io/File;)
+Intent value: 1 possible value(s):
+Package: com/adobe/reader, Class: com/adobe/reader/viewer/ARViewerActivity, Extras: [com.adobe.reader.ExternalContentData], Flags: 268435456
+
+  - com/adobe/reader/test/AdobeReaderTest/testRandom(Ljava/io/File;)
+Intent value: 1 possible value(s):
+Package: com/adobe/reader, Class: com/adobe/reader/viewer/ARViewerActivity, Extras: [com.adobe.reader.ExternalContentData], Flags: 268435456
+
+  - com/adobe/reader/ui/ARBaseActivity/loadHelpView()
+Intent value: 1 possible value(s):
+Package: com/adobe/reader, Class: com/adobe/reader/help/ARHelpActivity, 
+
+  - com/adobe/reader/ui/ARBaseActivity/onOptionsItemSelected(Landroid/view/MenuItem;)
+Intent value: 1 possible value(s):
+Package: com/adobe/reader, Class: com/adobe/reader/misc/ARSettingsActivity, 
+
+  - com/adobe/reader/ui/ARBaseSwitcherActivity$1/onClick(Landroid/view/View;)
+Intent value: 1 possible value(s):
+Package: com/adobe/reader, Class: com/adobe/libs/services/auth/SVServicesLoginActivity, Extras: [is_entitlement_check_required_bofore_subscription_check, service_variant], 
+
+  - com/adobe/reader/ui/ARBaseSwitcherActivity/loadHelpView()
+Intent value: 1 possible value(s):
+Package: com/adobe/reader, Class: com/adobe/reader/help/ARHelpActivity, 
+
+  - com/adobe/reader/ui/ARBaseSwitcherActivity/loadUserAccountsView()
+Intent value: 1 possible value(s):
+Package: com/adobe/reader, Class: com/adobe/reader/services/ARUserAccountsActivity, 
+
+  - com/adobe/reader/ui/ARBaseSwitcherActivity/onOptionsItemSelected(Landroid/view/MenuItem;)
+Intent value: 1 possible value(s):
+Package: com/adobe/reader, Class: com/adobe/reader/misc/ARSettingsActivity, 
+
+  - com/adobe/reader/utils/ARIntentUtils/openSystemFileBrowser(Landroid/app/Activity;Landroid/support/v4/app/Fragment;Z)
+Intent value: 2 possible value(s):
+Action: android.intent.action.GET_CONTENT, Categories: [android.intent.category.OPENABLE], Type: application/pdf, 
+Action: android.intent.action.GET_CONTENT, Categories: [android.intent.category.OPENABLE], Type: */*, 
+
+  - com/adobe/reader/utils/ARUtils/refreshSystemMediaScanDataBase(Landroid/content/Context;Ljava/lang/String;)
+Intent value: 1 possible value(s):
+Action: android.intent.action.MEDIA_SCANNER_SCAN_FILE, 
+
+  - com/adobe/reader/utils/ARViewerFileOpenUtils/downloadCloudFile(Ljava/lang/String;Ljava/lang/String;ZLandroid/app/Activity;Ljava/lang/String;)
+Intent value: 2 possible value(s):
+Package: com/adobe/reader, Class: com/adobe/reader/services/ARBlueHeronFileTransferActivity, Extras: [FILE_ENTRY_key, com.adobe.reader.ARSplitPane.currentTabSelected], 
+Package: com/adobe/reader, Class: com/adobe/reader/services/ARBlueHeronFileTransferActivity, Extras: [FILE_ENTRY_key], 
+
+  - com/adobe/reader/utils/ARViewerFileOpenUtils/openFile(Ljava/lang/String;Ljava/lang/String;ZLandroid/app/Activity;Ljava/lang/String;)
+Intent value: 2 possible value(s):
+Package: com/adobe/reader, Class: com/adobe/reader/viewer/ARViewerActivity, Extras: [com.adobe.reader.CloudFileID, com.adobe.reader.CloudFileSource, com.adobe.reader.FileBrowserReturnData, com.adobe.reader.ARSplitPane.currentTabSelected], 
+Package: com/adobe/reader, Class: com/adobe/reader/viewer/ARViewerActivity, Extras: [com.adobe.reader.CloudFileID, com.adobe.reader.CloudFileSource, com.adobe.reader.FileBrowserReturnData], 
+
+  - com/adobe/reader/utils/ARViewerFileOpenUtils/openNonPDFFile(Ljava/io/File;Landroid/app/Activity;)
+Intent value: 1 possible value(s):
+Action: android.intent.action.VIEW, Flags: -1
+
+  - com/adobe/reader/viewer/ARDocShareMenu/print(Lcom/adobe/reader/viewer/ARViewerActivity;)
+Intent value: 1 possible value(s):
+Package: com/adobe/reader, Class: com/adobe/reader/misc/ARCloudPrintActivity, Extras: [wasFlattened, filePath], 
+
+  - com/adobe/reader/viewer/ARSplitPaneActivity/onCreate(Landroid/os/Bundle;)
+Intent value: 1 possible value(s):
+Package: com/adobe/reader, Class: com/adobe/reader/help/AROnboardingHelpActivity, 
+
+  - com/adobe/reader/viewer/ARSplitPaneActivity/onOptionsItemSelected(Landroid/view/MenuItem;)
+Intent value: 1 possible value(s):
+Package: com/adobe/reader, Class: com/adobe/reader/test/ARAutomationListActivity, 
+
+  - com/adobe/reader/viewer/ARSplitPaneActivity/onOptionsItemSelected(Landroid/view/MenuItem;)
+Intent value: 1 possible value(s):
+Package: com/adobe/reader, Class: com/adobe/reader/test/ARUnitTestActivity, 
+
+  - com/adobe/reader/viewer/ARSplitPaneActivity/shareFileBrowserFiles()
+Intent value: 4 possible value(s):
+Action: android.intent.action.CHOOSER, Extras: [android.intent.extra.INTENT, android.intent.extra.TITLE], 
+Action: android.intent.action.CHOOSER, Extras: [android.intent.extra.INTENT], 
+Action: android.intent.action.CHOOSER, Extras: [android.intent.extra.INTENT, android.intent.extra.TITLE], Flags: -1
+Action: android.intent.action.CHOOSER, Extras: [android.intent.extra.INTENT], Flags: -1
+
+  - com/adobe/reader/viewer/ARTextSelectionHandler$TextSelectionMenu/onClick(Landroid/view/View;)
+Intent value: 1 possible value(s):
+Action: android.intent.action.WEB_SEARCH, Extras: [query], 
+
+  - com/adobe/reader/viewer/ARViewerActivity$17/enterTool(I)
+Intent value: 2 possible value(s):
+Package: com/adobe/reader, Class: com/adobe/reader/viewer/ARSplitPaneActivity, Extras: [com.adobe.reader.ARSplitPane.initialTabSelected, com.adobe.reader.ARViewer.viewerLaunchedFromOthers], 
+Package: com/adobe/reader, Class: com/adobe/reader/viewer/ARSplitPaneActivity, Extras: [com.adobe.reader.ARViewer.viewerLaunchedFromOthers], 
+
+  - com/adobe/reader/viewer/ARViewerActivity/initiateSaveToAcrobatDotCom(IZ)
+Intent value: 2 possible value(s):
+Package: com/adobe/reader, Class: com/adobe/reader/services/ARBlueHeronFileTransferActivity, Extras: [FILE_ENTRY_key, IS_MODAL_key], 
+Package: com/adobe/reader, Class: com/adobe/reader/services/ARBlueHeronFileTransferActivity, Extras: [FILE_ENTRY_key], 
+
+  - com/adobe/reader/viewer/ARViewerActivity/onOptionsItemSelected(Landroid/view/MenuItem;)
+Intent value: 1 possible value(s):
+Package: com/adobe/reader, Class: com/adobe/reader/misc/ARSettingsActivity, 
+
+  - com/adobe/reader/viewer/ARViewerActivity/openNonPDFFile(Ljava/lang/String;)
+Intent value: 1 possible value(s):
+Action: android.intent.action.VIEW, Flags: 268435457
+
+  - com/adobe/reader/viewer/ARViewerActivity/shareDocumentInternal(Ljava/lang/String;)
+Intent value: 4 possible value(s):
+Action: android.intent.action.CHOOSER, Extras: [android.intent.extra.INTENT, android.intent.extra.TITLE], 
+Action: android.intent.action.CHOOSER, Extras: [android.intent.extra.INTENT], 
+Action: android.intent.action.CHOOSER, Extras: [android.intent.extra.INTENT, android.intent.extra.TITLE], Flags: -1
+Action: android.intent.action.CHOOSER, Extras: [android.intent.extra.INTENT], Flags: -1
+
+  - com/adobe/reader/viewer/ARViewerActivity/updateDocumentToCloud(Z)
+Intent value: 1 possible value(s):
+Package: com/adobe/reader, Class: com/adobe/reader/services/ARBlueHeronFileTransferActivity, Extras: [FILE_ENTRY_key, IS_MODAL_key], 
+
+  - com/android/vending/billing/IabHelper/startSetup(Lcom/android/vending/billing/IabHelper$OnIabSetupFinishedListener;)
+No value found.
+

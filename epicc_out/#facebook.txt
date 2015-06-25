@@ -1,0 +1,342 @@
+Solving ICC problem
+Composing values
+
+Manifest file for com.facebook.orca version 11256437
+  Activities:
+    com.facebook.messaging.auth.StartScreenActivity
+    com.facebook.messenger.app.MessengerSplashScreenActivity
+    com.facebook.orca.chatheads.view.ChatHeadForegroundActivity
+    com.facebook.messaging.about.MessengerAboutLicenseActivity
+    com.facebook.orca.search.SearchMessagesViewActivity
+    com.facebook.messaging.neue.nux.NeueNuxActivity
+    com.facebook.messaging.neue.threadsettings.notifications.ThreadSettingsNotificationsActivity
+    com.facebook.orca.threadview.ThreadViewActivity
+    com.facebook.messenger.neue.MainActivity
+    com.facebook.orca.contacts.favorites.EditFavoritesActivity
+    com.facebook.messaging.conversationrequests.ConversationRequestsActivity
+    com.facebook.orca.creation.CreateThreadActivity
+    com.facebook.orca.voipsearch.OrcaVoipSearchActivity
+    com.facebook.messenger.neue.pinnedgroups.createflow.CreatePinnedGroupActivity
+    com.facebook.messenger.neue.NeueContactPickerActivity
+    com.facebook.orca.threadview.AddMembersActivity
+    com.facebook.orca.photos.view.PhotoViewActivity
+    com.facebook.orca.compose.PreviewPictureAttachmentActivity
+    com.facebook.orca.compose.QuickCamActivity
+    com.facebook.messaging.commerceui.views.CommerceBubbleDetailActivity
+    com.facebook.messaging.commerceui.views.CommerceOrderHistoryActivity
+    com.facebook.messaging.payment.method.input.AddPaymentMethodsActivity
+    com.facebook.messaging.payment.method.input.EditPaymentMethodsActivity
+    com.facebook.messaging.payment.value.input.EnterPaymentValueActivity
+    com.facebook.messaging.payment.thread.robotext.PaymentGroupRobotextActivity
+    com.facebook.messaging.payment.prefs.transactions.PaymentTransactionHistoryActivity
+    com.facebook.messaging.payment.prefs.receipts.PaymentReceiptActivity
+    com.facebook.messaging.payment.pin.PaymentPinCreationActivity
+    com.facebook.messaging.payment.pin.PaymentPinChangeActivity
+    com.facebook.messaging.payment.pin.PaymentPinConfirmActivity
+    com.facebook.messaging.payment.pin.PaymentPinResetActivity
+    com.facebook.messaging.payment.pin.PaymentPinDeletionActivity
+    com.facebook.messaging.payment.prefs.PaymentsPreferenceActivity
+    com.facebook.messaging.payment.prefs.PaymentPinPreferenceActivity
+    com.facebook.orca.prefs.OrcaNotificationPreferenceActivity
+    com.facebook.messenger.neue.NeueAboutPreferenceActivity
+    com.facebook.messenger.neue.NeueContactsPreferenceActivity
+    com.facebook.messenger.neue.NeuePhotosPreferenceActivity
+    com.facebook.orca.prefs.OrcaChatHeadsPreferenceActivity
+    com.facebook.orca.images.ThreadIconPickerActivity
+    com.facebook.orca.camera.CropImage
+    com.facebook.messaging.location.renderer.LocationMapViewActivity
+    com.facebook.messenger.intents.IntentHandlerActivity
+      Intent filter:
+        Actions: [android.intent.action.VIEW]
+        Categories: [android.intent.category.BROWSABLE, android.intent.category.DEFAULT]
+    com.facebook.messenger.intents.SecureIntentHandlerActivity
+      Intent filter:
+        Actions: [android.intent.action.VIEW]
+        Categories: [android.intent.category.DEFAULT]
+      Intent filter:
+        Actions: [com.facebook.orca.notify.ACTION_LIKE]
+        Categories: [android.intent.category.DEFAULT]
+      Intent filter:
+        Actions: [com.facebook.orca.notify.SECURE_VIEW]
+        Categories: [android.intent.category.DEFAULT]
+    com.facebook.messenger.intents.SecureSameTaskIntentHandlerActivity
+      Intent filter:
+        Actions: [com.facebook.orca.notify.SECURE_VIEW]
+        Categories: [android.intent.category.DEFAULT]
+    com.facebook.messenger.intents.SameTaskIntentHandlerActivity
+      Intent filter:
+        Actions: [android.intent.action.VIEW]
+        Categories: [android.intent.category.DEFAULT]
+    com.facebook.messaging.sharing.ShareLauncherActivity
+    com.facebook.messaging.invites.InviteFriendsActivity
+    com.facebook.messenger.intents.ShareIntentHandler
+      Intent filter:
+        Actions: [android.intent.action.SEND]
+        Categories: [android.intent.category.DEFAULT]
+      Intent filter:
+        Actions: [android.intent.action.SEND_MULTIPLE]
+        Categories: [android.intent.category.DEFAULT]
+    com.facebook.messaging.attribution.ChatHeadsReplyFlowHandlerActivity
+    com.facebook.orca.phone.IncallActivity
+    com.facebook.stickers.store.StickerStoreActivity
+    com.facebook.rtc.activities.WebrtcIncallActivity
+      Intent filter:
+        Actions: [com.facebook.rtc.fbwebrtc.intent.action.INCOMING_CALL]
+        Categories: [android.intent.category.DEFAULT]
+      Intent filter:
+        Actions: [com.facebook.rtc.fbwebrtc.intent.action.CALL]
+        Categories: [android.intent.category.DEFAULT]
+    com.facebook.bugreporter.activity.BugReportActivity
+    com.facebook.bugreporter.activity.tasklist.ViewTaskActivity
+    com.facebook.common.keyguard.KeyguardPendingIntentActivity
+    com.facebook.orca.chatheads.activity.TrayNotificationDelegatingActivity
+    com.facebook.orca.threadview.ThreadViewVideoActivity
+    com.facebook.orca.chatheads.activity.ChatHeadsVideoViewActivity
+    com.facebook.messaging.media.mediapicker.MediaPickerActivity
+    com.facebook.messaging.media.picking.MessengerVideoEditActivity
+    com.facebook.memes.MemeActivity
+    com.facebook.orca.mutators.ThreadNotificationsDialogActivity
+    com.facebook.orca.sharedimagelog.SharedImageHistoryActivity
+    com.facebook.orca.chatheads.activity.ChatHeadsCreateThreadActivity
+    com.facebook.camera.activity.CameraFragmentActivity
+    com.facebook.messaging.neue.threadsettings.MessengerThreadSettingsActivity
+    com.facebook.platform.common.activity.PlatformWrapperActivity
+    com.facebook.platform.common.activity.PlatformActivity
+      Intent filter:
+        Actions: [com.facebook.platform.PLATFORM_ACTIVITY]
+        Categories: [android.intent.category.DEFAULT]
+    com.facebook.messaging.selfupdate.StartUpdateInstallActivity
+    com.facebook.abtest.qe.settings.QuickExperimentListActivity
+    com.facebook.abtest.qe.settings.QuickExperimentViewActivity
+    com.facebook.camera.activity.CameraActivity
+      Intent filter:
+        Actions: [com.facebook.intent.action.prod.com.facebook.orca.OPEN_DEFAULT_CAMERA]
+    com.facebook.camera.activity.VideoCameraActivity
+    com.facebook.camera.activity.CameraFallbackActivity
+    com.facebook.common.init.DefaultSplashScreenActivity
+    com.facebook.common.shortcuts.CreateShortcutActivity
+      Intent filter:
+        Actions: [android.intent.action.VIEW]
+        Categories: [android.intent.category.DEFAULT]
+    com.facebook.debug.debugoverlay.DebugOverlaySettingsActivity
+    com.facebook.dialtone.activity.DialtoneModeTransitionInterstitialActivity
+    com.facebook.dialtone.activity.DialtoneModeSelectionActivity
+    com.facebook.dialtone.activity.DialtoneWifiInterstitialActivity
+    com.facebook.dialtone.activity.DialtoneUnsupportedCarrierInterstitialActivity
+    com.facebook.dialtone.activity.DialtoneIntentInterstitialActivity
+    com.facebook.messaging.contactsync.learn.ContactSyncLearnMoreActivity
+    com.facebook.messaging.internalprefs.MessengerInternalPreferenceActivity
+    com.facebook.messaging.internalprefs.MessengerInternalCachesSettingsActivity
+    com.facebook.messaging.internalprefs.MessengerInternalPerformancePreferenceActivity
+    com.facebook.messaging.internalprefs.MessengerInternalSandboxSettingsActivity
+    com.facebook.messaging.internalprefs.MessengerInternalFeaturesPreferenceActivity
+    com.facebook.messaging.internalprefs.MessengerInternalWebRTCPreferenceActivity
+    com.facebook.messaging.internalprefs.MessengerInternalVoipPreferencesActivity
+    com.facebook.messaging.internalprefs.MessengerInternalPushNotificationPreferenceActivity
+    com.facebook.messaging.internalprefs.MessengerInternalSharedPrefListActivity
+    com.facebook.messaging.internalprefs.MessengerInternalContactsPreferenceActivity
+    com.facebook.messaging.internalprefs.MessengerTesterPreferenceActivity
+    com.facebook.messaging.internalprefs.MessengerInternalManageOmnistoreCollectionsActivity
+    com.facebook.messaging.neue.survey.SurveyActivity
+    com.facebook.nodex.startup.splashscreen.NodexSplashActivity
+    com.facebook.nodex.startup.splashscreen.NodexErrorActivity
+    com.facebook.quickpromotion.debug.QuickPromotionSettingsActivity
+    com.facebook.quickpromotion.debug.QuickPromotionFiltersActivity
+    com.facebook.quickpromotion.ui.QuickPromotionInterstitialActivity
+    com.facebook.quickpromotion.debug.SeguePreviewSettingsActivity
+    com.facebook.quickpromotion.debug.QuickPromotionTriggersActivity
+    com.facebook.rapidfeedback.debug.DebugRapidFeedbackActivity
+    com.facebook.selfupdate.SelfUpdateInstallActivity
+    com.facebook.selfupdate.SelfUpdateSettingsActivity
+    com.facebook.webview.event.FacewebEventActivity
+    com.facebook.zero.activity.ZeroIntentInterstitialActivity
+    com.facebook.zero.upsell.activity.ZeroUpsellBuyConfirmInterstitialActivity
+    com.facebook.zero.activity.NativeOptinInterstitialActivity
+    com.facebook.zero.activity.ZeroOptinInterstitialActivity
+    com.facebook.zero.activity.DialtoneOptinInterstitialActivity
+    com.facebook.zero.activity.ZeroDogfoodingAppActivity
+    com.facebook.zero.activity.ZeroInternStatusActivity
+
+  Activity Aliases:
+    com.facebook.orca.auth.StartScreenActivity
+      Intent filter:
+        Actions: [android.intent.action.MAIN]
+        Categories: [android.intent.category.LAUNCHER]
+  Services:
+    com.facebook.rtc.fbwebrtc.WebrtcIncallNotificationService
+    com.facebook.common.errorreporting.memory.MemoryDumpUploadService
+    com.facebook.orca.prefs.notifications.NotificationPrefsSyncService
+    com.facebook.orca.chatheads.service.ChatHeadService
+    com.facebook.contacts.service.ContactLocaleChangeService
+    com.facebook.orca.chatheads.service.ChatHeadsBooterService
+    com.facebook.orca.notify.MessagesNotificationService
+    com.facebook.analytics.service.AnalyticsService
+    com.facebook.analytics2.logger.LollipopUploadService
+    com.facebook.analytics2.logger.PreLollipopUploadService
+    com.facebook.conditionalworker.ConditionalWorkerService
+    com.facebook.delayedworker.DelayedWorkerService
+    com.facebook.fbservice.service.DefaultBlueService
+    com.facebook.graphql.executor.GraphQLMutationService
+    com.facebook.mqttlite.MqttService
+    com.facebook.nodex.startup.crashloop.FixCrashLoopService
+    com.facebook.push.fbpushdata.FbPushDataHandlerService
+    com.facebook.push.adm.ADMRegistrarService
+    com.facebook.push.adm.ADMService
+    com.facebook.push.adm.ADMBroadcastReceiver
+    com.facebook.push.nna.NNAService
+    com.facebook.push.c2dm.C2DMService
+    com.facebook.push.registration.RegistrarHelperService
+    com.facebook.push.fbnslite.FbnsLitePushNotificationHandler
+    com.facebook.push.crossapp.PackageRemoveReceiverInManifestService
+    com.facebook.push.mqtt.service.MqttPushService
+    com.facebook.push.mqtt.service.MqttPushServiceInSeperateProcess
+    com.facebook.push.mqtt.receiver.MqttReceiver
+    com.facebook.push.mqtt.service.MqttPushHelperService
+    com.facebook.reportaproblem.base.bugreport.BugReportUploadService
+    com.facebook.rti.push.service.FbnsService
+    com.facebook.rti.config.ConfigProxyService
+    com.facebook.selfupdate.SelfUpdateFetchService
+    com.facebook.wearlistener.DataLayerListenerService
+      Intent filter:
+        Actions: [com.google.android.gms.wearable.BIND_LISTENER]
+  Receivers:
+    com.facebook.messenger.app.LoginReminderManager$AlarmBroadcastReceiver
+    com.facebook.messenger.app.LoginReminderManager$NotificationBroadcastReceiver
+    com.facebook.orca.chatheads.service.ChatHeadsServiceBroadcastReceiver
+      Intent filter:
+        Actions: [com.facebook.orca.chatheads.ACTION_SHOW_CHATHEADS, com.facebook.orca.chatheads.ACTION_HIDE_CHATHEADS, com.facebook.orca.chatheads.ACTION_SET_CHATHEADS_POLICY]
+    com.facebook.contacts.service.ContactLocaleChangeReceiver
+      Intent filter:
+        Actions: [android.intent.action.LOCALE_CHANGED]
+    com.facebook.orca.chatheads.service.ChatHeadsBooter
+      Intent filter:
+        Actions: [android.intent.action.BOOT_COMPLETED, android.intent.action.MY_PACKAGE_REPLACED]
+    com.facebook.orca.notify.MessagesNotificationBroadcastReceiver
+      Intent filter:
+        Actions: [com.facebook.orca.notify.ACTION_CLEAR_THREAD, com.facebook.orca.notify.ACTION_CLEAR_ALL_NOTIFICATIONS, com.facebook.orca.notify.ACTION_MESSENGER_PROMOTION, com.facebook.orca.notify.ACTION_NEW_BUILD, com.facebook.orca.notify.ACTION_NUX_SKIPPABLE, com.facebook.orca.notify.ACTION_CLEAR_NUX_SKIPPABLE_NOTIFICATION, com.facebook.orca.notify.ACTION_NEW_FRIEND_INSTALL, com.facebook.orca.notify.ACTION_P2P_PAYMENT, com.facebook.orca.notify.ACTION_LOGGED_OUT_MESSAGE, com.facebook.orca.notify.ACTION_INTERNAL_MESSAGE, com.facebook.orca.notify.ACTION_CLEAR_FRIEND_INSTALL, com.facebook.orca.notify.ACTION_NEW_MESSAGE_V2, com.facebook.orca.notify.ACTION_READ_THREAD, com.facebook.orca.notify.ACTION_FAILED_SEND, com.facebook.orca.notify.ACTION_CLEAR_NEW_BUILD_NOTIFICATION, com.facebook.orca.notify.ACTION_MESSENGER_STALE]
+    com.facebook.rtc.receivers.WebrtcReminderReceiver
+      Intent filter:
+        Actions: [com.facebook.intent.action.prod.WEBRTC_REMINDER_NOTIFICATION_ACTION]
+    com.facebook.contacts.database.AddressBookPeriodicRunner$LocalBroadcastReceiver
+    com.facebook.contacts.service.ContactChatContextRefreshReceiver
+      Intent filter:
+        Actions: [com.facebook.intent.action.prod.NEARBY_FRIENDS_SETTINGS_CHANGED_ACTION]
+    com.facebook.device_id.UniqueDeviceIdBroadcastSender$LocalBroadcastReceiver
+    com.facebook.device_id.UniqueIdSupplier
+      Intent filter:
+        Actions: [com.facebook.GET_UNIQUE_ID]
+    com.facebook.device_id.DefaultPhoneIdRequestReceiver
+      Intent filter:
+        Actions: [com.facebook.GET_PHONE_ID]
+    com.facebook.nodex.startup.crashloop.CrashLoop$TransactionInProgress
+    com.facebook.nodex.startup.crashloop.CrashLoop$LastState
+    com.facebook.push.PushInitializer$LocalBroadcastReceiver
+    com.facebook.push.adm.ADMBroadcastReceiver$MessageAlertReceiver
+      Intent filter:
+        Actions: [com.amazon.device.messaging.intent.REGISTRATION, com.amazon.device.messaging.intent.RECEIVE]
+        Categories: [com.facebook.orca]
+    com.facebook.push.nna.NNABroadcastReceiver
+      Intent filter:
+        Actions: [com.nokia.pushnotifications.intent.RECEIVE, com.nokia.pushnotifications.intent.REGISTRATION]
+        Categories: [com.facebook.orca]
+    com.facebook.push.c2dm.C2DMBroadcastReceiver
+      Intent filter:
+        Actions: [com.google.android.c2dm.intent.REGISTRATION, com.google.android.c2dm.intent.RECEIVE]
+        Categories: [com.facebook.orca]
+    com.facebook.push.registration.RegistrarHelperReceiver
+      Intent filter:
+        Actions: [com.facebook.push.registration.ACTION_TOKEN_REQUEST_RETRY]
+    com.facebook.push.registration.FacebookPushServerRegistrar$LocalBroadcastReceiver
+      Intent filter:
+        Actions: [com.facebook.push.registration.ACTION_ALARM]
+    com.facebook.push.crossapp.PackageRemoveReceiverInManifest
+      Intent filter:
+        Actions: [android.intent.action.PACKAGE_FULLY_REMOVED]
+    com.facebook.push.fbnslite.FbnsLitePushNotificationHandler$FbnsLiteCallbackReceiver
+      Intent filter:
+        Actions: [com.facebook.rti.fbns.intent.RECEIVE]
+        Categories: [com.facebook.orca]
+    com.facebook.push.mqtt.receiver.CrossProcessMqttBroadcastReceiver
+      Intent filter:
+        Actions: [com.facebook.push.mqtt.ACTION_MQTT_PUBLISH_ARRIVED]
+        Categories: [com.facebook.push.mqtt.category.SAME_APP]
+    com.facebook.push.mqtt.receiver.BootCompleteBroadcastReceiver
+      Intent filter:
+        Actions: [android.intent.action.BOOT_COMPLETED]
+    com.facebook.rti.orca.PackageReplacedBroadcastReceiver
+      Intent filter:
+        Actions: [android.intent.action.MY_PACKAGE_REPLACED]
+    com.facebook.rti.orca.BootCompleteBroadcastReceiver
+      Intent filter:
+        Actions: [android.intent.action.BOOT_COMPLETED]
+    com.facebook.rti.orca.UserPresentBroadcastReceiver
+      Intent filter:
+        Actions: [android.intent.action.USER_PRESENT]
+    com.facebook.rti.orca.KeepAliveBroadcastReceiver
+      Intent filter:
+        Actions: [android.net.conn.CONNECTIVITY_CHANGE]
+    com.facebook.rti.orca.NetworkBroadcastReceiver
+      Intent filter:
+        Actions: [android.net.conn.CONNECTIVITY_CHANGE]
+    com.facebook.rti.orca.NetworkChangeImmediateBroadcastReceiver
+      Intent filter:
+        Actions: [android.net.conn.CONNECTIVITY_CHANGE_IMMEDIATE]
+    com.facebook.sms.receiver.SmsLowPriBroadcastReceiver
+      Intent filter:
+        Actions: [android.provider.Telephony.SMS_RECEIVED]
+  Providers:
+    com.facebook.messaging.platform.MessengerPlatformProvider
+      auth: com.facebook.orca.provider.MessengerPlatformProvider
+    com.facebook.orca.notify.MessengerForegroundProvider
+      auth: com.facebook.orca.notify.MessengerForegroundProvider
+    com.facebook.orca.notify.MessengerLoggedInUserProvider
+      auth: com.facebook.orca.notify.MessengerLoggedInUserProvider
+      rPerm: com.facebook.orca.provider.ACCESS
+      wPerm: com.facebook.orca.provider.ACCESS
+    com.facebook.prefs.shared.FbSharedPreferencesContentProvider
+      auth: com.facebook.orca.prefs
+      rPerm: com.facebook.orca.provider.ACCESS
+      wPerm: com.facebook.orca.provider.ACCESS
+    com.facebook.messenger.providers.MessagesDbContentProvider
+      auth: com.facebook.orca.messages
+      rPerm: com.facebook.orca.provider.ACCESS
+      wPerm: com.facebook.orca.provider.ACCESS
+    com.facebook.messenger.providers.DbPropertiesContentProvider
+      auth: com.facebook.orca.properties
+      rPerm: com.facebook.orca.provider.ACCESS
+      wPerm: com.facebook.orca.provider.ACCESS
+    com.facebook.orca.provider.PlatformProvider
+      auth: com.facebook.orca.provider.PlatformProvider
+    com.facebook.orca.generated_content_providers.com.facebook.abtest.qe.db.QuickExperimentContentProvider
+      auth: com.facebook.orca.experiments
+      rPerm: com.facebook.orca.provider.ACCESS
+      wPerm: com.facebook.orca.provider.ACCESS
+    com.facebook.orca.generated_content_providers.com.facebook.contacts.data.FbContactsContentProvider
+      auth: com.facebook.orca.contacts
+      rPerm: com.facebook.orca.provider.ACCESS
+      wPerm: com.facebook.orca.provider.ACCESS
+    com.facebook.orca.generated_content_providers.com.facebook.database.properties.DbPropertiesContentProvider
+      auth: com.facebook.orca.properties
+      rPerm: com.facebook.orca.provider.ACCESS
+      wPerm: com.facebook.orca.provider.ACCESS
+    com.facebook.orca.generated_content_providers.com.facebook.nodex.startup.warmup.NodexWarmupContentProvider
+      auth: com.facebook.orca.nodex.startup.warmup
+      rPerm: com.facebook.orca.provider.ACCESS
+      wPerm: com.facebook.orca.provider.ACCESS
+
+
+The following ICC values were found:
+  - com/facebook/nodex/startup/splashscreen/NodexErrorActivity/c()
+Intent value: 1 possible value(s):
+Action: android.intent.action.DELETE, 
+
+  - com/facebook/nodex/startup/splashscreen/NodexErrorActivity/d()
+Intent value: 1 possible value(s):
+Action: android.settings.MANAGE_APPLICATIONS_SETTINGS, 
+
+  - com/facebook/nodex/startup/splashscreen/a/r()
+Intent value: 2 possible value(s):
+Categories: [<any_string>], Package: com/facebook/orca, Class: com.facebook.katana.activity.FbMainTabActivity, Flags: 67108864
+Package: com/facebook/orca, Class: com.facebook.katana.activity.FbMainTabActivity, Flags: 67108864
+
+
