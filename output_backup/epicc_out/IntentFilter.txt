@@ -1,0 +1,21 @@
+Solving ICC problem
+Composing values
+
+Manifest file for com.mensa.unibremen.mensa_no_pager version 1
+  Activities:
+    com.mensa.unibremen.nfc_intent.MainActivity
+      Intent filter:
+        Actions: [android.nfc.action.TECH_DISCOVERED]
+        Categories: [android.intent.category.DEFAULT]
+      Intent filter:
+        Actions: [android.intent.action.MAIN]
+        Categories: [android.intent.category.LAUNCHER]
+
+  Activity Aliases:
+  Services:
+  Receivers:
+  Providers:
+
+
+The following ICC values were found:
+

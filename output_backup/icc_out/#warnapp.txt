@@ -1,0 +1,7 @@
+Possible Activity Hijacking: de/dwd/warnapp/j$1/shouldOverrideUrlLoading(Landroid/webkit/WebView;Ljava/lang/String;)@0, Source Line: 0, hasExtras=false, hasRead=false, hasWrite=false
+Possible Activity Hijacking: com/google/android/gms/b/b$5/onClick(Landroid/view/View;)@0, Source Line: 0, hasExtras=false, hasRead=false, hasWrite=false
+Possible Malicious Broadcast Injection: firstpart*com/google/android/gms/analytics/an/z(Landroid/content/Context;)@0, 0
+Possible Activity Hijacking: com/google/android/gms/internal/bm/onDownloadStart(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;J)@0, Source Line: 0, hasExtras=false, hasRead=false, hasWrite=false
+Possible Activity Hijacking: com/google/android/gms/internal/aa$1/onClick(Landroid/content/DialogInterface;I)@0, Source Line: 0, hasExtras=true, hasRead=false, hasWrite=false
+Possible Activity Hijacking: com/google/android/gms/internal/bm$a/startActivity(Landroid/content/Intent;)@0, Source Line: 0, hasExtras=false, hasRead=false, hasWrite=false
+Possible Malicious Broadcast Injection: de/dwd/warnapp/net/push/GcmBroadcastReceiver, 0

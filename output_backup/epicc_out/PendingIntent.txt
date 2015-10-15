@@ -1,0 +1,18 @@
+Solving ICC problem
+Composing values
+
+Manifest file for com.intent.unibremen.pendingintent version 1
+  Activities:
+    com.intent.unibremen.pendingintent.activity
+      Intent filter:
+        Actions: [android.intent.action.MAIN]
+        Categories: [android.intent.category.LAUNCHER]
+
+  Activity Aliases:
+  Services:
+  Receivers:
+  Providers:
+
+
+The following ICC values were found:
+

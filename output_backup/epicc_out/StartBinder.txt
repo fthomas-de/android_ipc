@@ -1,0 +1,23 @@
+Solving ICC problem
+Composing values
+
+Manifest file for com.binder.unibremen.startbinder version 1
+  Activities:
+    com.binder.unibremen.startbinder.BindingActivity
+      Intent filter:
+        Actions: [android.intent.action.MAIN]
+        Categories: [android.intent.category.LAUNCHER]
+
+  Activity Aliases:
+  Services:
+    com.binder.unibremen.startbinder.LocalService
+  Receivers:
+  Providers:
+
+
+The following ICC values were found:
+  - com/binder/unibremen/startbinder/BindingActivity/onStart()
+Intent value: 1 possible value(s):
+Package: com/binder/unibremen/startbinder, Class: com/binder/unibremen/startbinder/LocalService, 
+
+

@@ -1,0 +1,166 @@
+Solving ICC problem
+Composing values
+
+Manifest file for com.aa.generaladaptiveapps version 32
+  Activities:
+    com.aa.generaladaptiveapps.BaseActivity
+      Intent filter:
+        Actions: [android.intent.action.MAIN]
+        Categories: [android.intent.category.LAUNCHER]
+    com.google.android.gms.ads.AdActivity
+
+  Activity Aliases:
+  Services:
+    com.parse.PushService
+  Receivers:
+    com.parse.ParseBroadcastReceiver
+      Intent filter:
+        Actions: [android.intent.action.USER_PRESENT, android.intent.action.BOOT_COMPLETED]
+    com.parse.GcmBroadcastReceiver
+      Intent filter:
+        Actions: [com.google.android.c2dm.intent.REGISTRATION, com.google.android.c2dm.intent.RECEIVE]
+        Categories: [com.aa.generaladaptiveapps]
+    com.aa.generaladaptiveapps.Receiver
+      Intent filter:
+        Actions: [com.parse.push.intent.RECEIVE, com.parse.push.intent.DELETE, com.parse.push.intent.OPEN]
+  Providers:
+
+
+The following ICC values were found:
+  - com/aa/generaladaptiveapps/BaseActivity/setupDataInits()
+Intent value: 1 possible value(s):
+Action: com.android.vending.billing.InAppBillingService.BIND, Package: com.android.vending, 
+
+  - com/google/android/gms/analytics/zzu/zzD(Landroid/content/Context;)
+Type: com.google.android.gms.analytics.zzu
+No permission
+Intent Filter value: 1 possible value(s):
+Actions: [android.net.conn.CONNECTIVITY_CHANGE], 
+
+  - com/google/android/gms/analytics/zzu/zzD(Landroid/content/Context;)
+Type: com.google.android.gms.analytics.zzu
+No permission
+Intent Filter value: 1 possible value(s):
+Actions: [com.google.analytics.RADIO_POWERED], Categories: [<any_string>], 
+
+  - com/google/android/gms/common/internal/zzg/onClick(Landroid/content/DialogInterface;I)
+Found top element
+
+  - com/google/android/gms/dynamic/zza$5/onClick(Landroid/view/View;)
+Intent value: 3 possible value(s):
+Action: android.settings.APPLICATION_DETAILS_SETTINGS, 
+Action: android.intent.action.VIEW, Package: com.android.vending, Flags: 524288
+Action: com.google.android.clockwork.home.UPDATE_ANDROID_WEAR_ACTION, Package: com.google.android.wearable.app, 
+
+  - com/google/android/gms/gcm/GoogleCloudMessaging$1/handleMessage(Landroid/os/Message;)
+Found top element
+
+  - com/google/android/gms/internal/zzaf/zzbb()
+Type: android.content.BroadcastReceiver
+No permission
+Intent Filter value: 1 possible value(s):
+Actions: [android.intent.action.SCREEN_OFF, android.intent.action.SCREEN_ON], 
+
+  - com/google/android/gms/internal/zzea$1/onClick(Landroid/content/DialogInterface;I)
+Intent value: 1 possible value(s):
+Action: android.intent.action.EDIT, Extras: [eventLocation, description, title], Flags: 268435456
+
+  - com/google/android/gms/internal/zzei/zza(Landroid/content/Context;Lcom/google/android/gms/internal/zzek;Lcom/google/android/gms/internal/zzes;)
+Intent value: 6 possible value(s):
+Action: android.intent.action.VIEW, Package: <any_string>, 
+Action: android.intent.action.VIEW, Package: <any_string>, Class: <any_string>, 
+Action: android.intent.action.VIEW, Package: <any_string>, Class: <any_string>, Flags: -1
+Action: android.intent.action.VIEW, 
+Action: android.intent.action.VIEW, Flags: -1
+Action: android.intent.action.VIEW, Package: <any_string>, Flags: -1
+
+  - com/google/android/gms/internal/zzem/zza(Landroid/content/Context;Lcom/google/android/gms/internal/zzeo;Z)
+Intent value: 4 possible value(s):
+Package: com/aa/generaladaptiveapps, Class: com.google.android.gms.ads.AdActivity, Extras: [com.google.android.gms.ads.inernal.overlay.AdOverlayInfo, com.google.android.gms.ads.internal.overlay.useClientJar, shouldCallOnOverlayOpened], Flags: 524288
+Package: com/aa/generaladaptiveapps, Class: com.google.android.gms.ads.AdActivity, Extras: [com.google.android.gms.ads.inernal.overlay.AdOverlayInfo, com.google.android.gms.ads.internal.overlay.useClientJar, shouldCallOnOverlayOpened], Flags: 268959744
+Package: com/aa/generaladaptiveapps, Class: com.google.android.gms.ads.AdActivity, Extras: [com.google.android.gms.ads.inernal.overlay.AdOverlayInfo, com.google.android.gms.ads.internal.overlay.useClientJar, shouldCallOnOverlayOpened], 
+Package: com/aa/generaladaptiveapps, Class: com.google.android.gms.ads.AdActivity, Extras: [com.google.android.gms.ads.inernal.overlay.AdOverlayInfo, com.google.android.gms.ads.internal.overlay.useClientJar, shouldCallOnOverlayOpened], Flags: 268435456
+
+  - com/google/android/gms/internal/zzho/zzu(Landroid/content/Context;)
+Type: com.google.android.gms.internal.zzho$zza
+No permission
+Intent Filter value: 1 possible value(s):
+Actions: [android.intent.action.USER_PRESENT, android.intent.action.SCREEN_OFF], 
+
+  - com/google/android/gms/internal/zzhs$1/onClick(Landroid/content/DialogInterface;I)
+Intent value: 12 possible value(s):
+Action: android.intent.action.SEND, Type: text/plain, Extras: [android.intent.extra.TEXT], 
+Action: android.intent.action.SEND, Type: text/plain, Extras: [android.intent.extra.TEXT], Flags: -1
+Action: android.intent.action.SEND, Type: text/plain, Extras: [android.intent.extra.TEXT, android.intent.extra.INTENT], Flags: -1
+Action: android.intent.action.SEND, Type: text/plain, Extras: [android.intent.extra.TEXT, android.intent.extra.INTENT], 
+Action: android.intent.action.SEND, Type: text/plain, Extras: [android.intent.extra.TEXT, android.intent.extra.INTENT, android.intent.extra.TITLE], 
+Action: android.intent.action.CHOOSER, Extras: [android.intent.extra.INTENT, android.intent.extra.TITLE], 
+Action: android.intent.action.SEND, Type: text/plain, Extras: [android.intent.extra.TEXT, android.intent.extra.TITLE], 
+Action: android.intent.action.CHOOSER, Extras: [android.intent.extra.INTENT], 
+Action: android.intent.action.CHOOSER, Extras: [android.intent.extra.INTENT, android.intent.extra.TITLE], Flags: -1
+Action: android.intent.action.SEND, Type: text/plain, Extras: [android.intent.extra.TEXT, android.intent.extra.TITLE], Flags: -1
+Action: android.intent.action.CHOOSER, Extras: [android.intent.extra.INTENT], Flags: -1
+Action: android.intent.action.SEND, Type: text/plain, Extras: [android.intent.extra.TEXT, android.intent.extra.INTENT, android.intent.extra.TITLE], Flags: -1
+
+  - com/google/android/gms/internal/zzif$zza/startActivity(Landroid/content/Intent;)
+Found top element
+
+  - com/google/android/gms/internal/zzif$zza/startActivity(Landroid/content/Intent;)
+Intent value: 1 possible value(s):
+Flags: 268435456
+
+  - com/google/android/gms/internal/zzif/onDownloadStart(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;J)
+Intent value: 1 possible value(s):
+Action: android.intent.action.VIEW, 
+
+  - com/google/android/gms/internal/zzlo/zza(Landroid/content/Context;Landroid/content/ServiceConnection;Ljava/lang/String;Landroid/content/Intent;Ljava/lang/String;)
+Intent value: 1 possible value(s):
+Package: com.google.android.gms, Class: com.google.android.gms.common.stats.GmsCoreStatsService, Extras: [com.google.android.gms.common.stats.EXTRA_LOG_EVENT], 
+
+  - com/google/android/gms/internal/zzlo/zza(Landroid/content/Context;Ljava/lang/String;Landroid/content/Intent;Landroid/content/ServiceConnection;I)
+Intent value: 3 possible value(s):
+Action: <any_string>, Package: com.google.android.gms, 
+No field set
+Action: com.google.android.gms.analytics.service.START, Package: com.google.android.gms, Class: com.google.android.gms.analytics.service.AnalyticsService, Extras: [app_package_name], 
+
+  - com/google/android/gms/plus/PlusOneButton$DefaultOnPlusOneClickListener/onPlusOneClick(Landroid/content/Intent;)
+Found top element
+
+  - com/parse/ConnectivityNotifier/tryToRegisterForNetworkStatusNotifications()
+Type: com.parse.ConnectivityNotifier
+No permission
+Intent Filter value: 1 possible value(s):
+Actions: [android.net.conn.CONNECTIVITY_CHANGE], 
+
+  - com/parse/GcmRegistrar$Request/<init>(Landroid/content/Context;Ljava/lang/String;)
+Type: android.content.BroadcastReceiver
+No permission
+Intent Filter value: 1 possible value(s):
+Actions: [com.parse.RetryGcmRegistration], Categories: [<any_string>], 
+
+  - com/parse/GcmRegistrar$Request/send()
+Intent value: 1 possible value(s):
+Action: com.google.android.c2dm.intent.REGISTER, Package: com.google.android.gsf, Extras: [app, sender], 
+
+  - com/parse/ParsePushBroadcastReceiver/onPushOpen(Landroid/content/Context;Landroid/content/Intent;)
+Intent value: 2 possible value(s):
+Action: android.intent.action.VIEW, Flags: 335544320
+Package: com/aa/generaladaptiveapps, Class: <any_class>, Flags: 335544320
+
+  - com/parse/ParsePushBroadcastReceiver/onPushReceive(Landroid/content/Context;Landroid/content/Intent;)
+Intent value: 1 possible value(s):
+Action: <any_string>, Package: <any_string>, 
+
+  - com/parse/ServiceUtils/runIntentInService(Landroid/content/Context;Landroid/content/Intent;Ljava/lang/Class;)
+Intent value: 2 possible value(s):
+Package: com/aa/generaladaptiveapps, Class: com/parse/PushService, Extras: [parseWakeLockId], 
+Action: com.parse.PushService.startIfRequired, Package: com/aa/generaladaptiveapps, Class: com/parse/PushService, 
+
+  - com/parse/oauth/OAuth1FlowDialog$OAuth1WebViewClient/shouldOverrideUrlLoading(Landroid/webkit/WebView;Ljava/lang/String;)
+Intent value: 1 possible value(s):
+Action: android.intent.action.VIEW, 
+
+  - dummyMainClass4607/dummyMainMethod()
+Found top element
+
+

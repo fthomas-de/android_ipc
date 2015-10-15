@@ -1,0 +1,22 @@
+Solving ICC problem
+Composing values
+
+Manifest file for com.example.aidlserver version 1
+  Activities:
+    com.example.aidlserver.MainActivity
+      Intent filter:
+        Actions: [android.intent.action.MAIN]
+        Categories: [android.intent.category.LAUNCHER]
+
+  Activity Aliases:
+  Services:
+    com.example.aidlserver.ArithmeticService
+      Intent filter:
+        Actions: [com.remote.service.CALCULATOR]
+        Categories: [android.intent.category.LAUNCHER]
+  Receivers:
+  Providers:
+
+
+The following ICC values were found:
+

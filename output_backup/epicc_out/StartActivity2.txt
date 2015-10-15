@@ -1,0 +1,117 @@
+Solving ICC problem
+Composing values
+
+Manifest file for com.example.root.startactivity version 1
+  Activities:
+    com.example.root.startactivity2.MainActivity
+      Intent filter:
+        Actions: [android.intent.action.MAIN]
+        Categories: [android.intent.category.LAUNCHER]
+    com.example.root.startactivity2.MainActivity2
+    com.example.root.startactivity2.MainActivity3
+
+  Activity Aliases:
+  Services:
+  Receivers:
+  Providers:
+
+
+The following ICC values were found:
+  - android/support/v4/app/FragmentActivity/startActivityForResult(Landroid/content/Intent;I)
+Intent value: 2 possible value(s):
+Package: com/example/root/startactivity, Class: com/example/root/startactivity2/MainActivity3, 
+Package: com/example/root/startactivity, Class: com/example/root/startactivity2/MainActivity2, 
+
+  - android/support/v7/internal/widget/ActivityChooserView$Callbacks/onClick(Landroid/view/View;)
+No value found.
+  - android/support/v7/internal/widget/ActivityChooserView$Callbacks/onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)
+No value found.
+  - android/support/v7/widget/SearchView/launchIntent(Landroid/content/Intent;)
+Intent value: 32 possible value(s):
+Action: <any_class>, Extras: [action_key, intent_extra_data_key, user_query, query, app_data, action_msg], Flags: 268435456
+Action: <any_class>, Extras: [intent_extra_data_key, user_query, query, app_data], Flags: 268435456
+Action: <any_class>, Extras: [action_key, user_query, app_data, action_msg], Flags: 268435456
+Action: <any_class>, Extras: [action_key, intent_extra_data_key, user_query, action_msg], Flags: 268435456
+Action: <any_class>, Extras: [action_key, user_query, app_data, action_msg], Flags: 268435456
+Action: <any_class>, Extras: [intent_extra_data_key, user_query], Flags: 268435456
+Action: <any_class>, Extras: [intent_extra_data_key, user_query, app_data], Flags: 268435456
+Action: <any_class>, Extras: [action_key, user_query, action_msg], Flags: 268435456
+Action: <any_class>, Extras: [user_query, query, app_data], Flags: 268435456
+Action: <any_class>, Extras: [action_key, intent_extra_data_key, user_query, query, action_msg], Flags: 268435456
+Action: <any_class>, Extras: [action_key, intent_extra_data_key, user_query, action_msg], Flags: 268435456
+Action: <any_class>, Extras: [intent_extra_data_key, user_query, query, app_data], Flags: 268435456
+Action: <any_class>, Extras: [action_key, user_query, action_msg], Flags: 268435456
+Action: <any_class>, Extras: [user_query, app_data], Flags: 268435456
+Action: <any_class>, Extras: [user_query, app_data], Flags: 268435456
+Action: <any_class>, Extras: [action_key, intent_extra_data_key, user_query, query, action_msg], Flags: 268435456
+Action: <any_class>, Extras: [action_key, user_query, query, action_msg], Flags: 268435456
+Action: <any_class>, Extras: [user_query, query, app_data], Flags: 268435456
+Action: <any_class>, Extras: [user_query, query], Flags: 268435456
+Action: <any_class>, Extras: [intent_extra_data_key, user_query, app_data], Flags: 268435456
+Action: <any_class>, Extras: [action_key, user_query, query, action_msg], Flags: 268435456
+Action: <any_class>, Extras: [action_key, user_query, query, app_data, action_msg], Flags: 268435456
+Action: <any_class>, Extras: [action_key, user_query, query, app_data, action_msg], Flags: 268435456
+Action: <any_class>, Extras: [intent_extra_data_key, user_query], Flags: 268435456
+Action: <any_class>, Extras: [action_key, intent_extra_data_key, user_query, app_data, action_msg], Flags: 268435456
+Action: <any_class>, Extras: [user_query], Flags: 268435456
+Action: <any_class>, Extras: [intent_extra_data_key, user_query, query], Flags: 268435456
+Action: <any_class>, Extras: [user_query, query], Flags: 268435456
+Action: <any_class>, Extras: [action_key, intent_extra_data_key, user_query, app_data, action_msg], Flags: 268435456
+Action: <any_class>, Extras: [action_key, intent_extra_data_key, user_query, query, app_data, action_msg], Flags: 268435456
+Action: <any_class>, Extras: [intent_extra_data_key, user_query, query], Flags: 268435456
+Action: <any_class>, Extras: [user_query], Flags: 268435456
+
+  - android/support/v7/widget/SearchView/launchQuerySearch(ILjava/lang/String;Ljava/lang/String;)
+Intent value: 32 possible value(s):
+Action: <any_class>, Extras: [action_key, intent_extra_data_key, user_query, query, app_data, action_msg], Flags: 268435456
+Action: <any_class>, Extras: [intent_extra_data_key, user_query, query, app_data], Flags: 268435456
+Action: <any_class>, Extras: [action_key, user_query, app_data, action_msg], Flags: 268435456
+Action: <any_class>, Extras: [action_key, intent_extra_data_key, user_query, action_msg], Flags: 268435456
+Action: <any_class>, Extras: [action_key, user_query, app_data, action_msg], Flags: 268435456
+Action: <any_class>, Extras: [intent_extra_data_key, user_query], Flags: 268435456
+Action: <any_class>, Extras: [intent_extra_data_key, user_query, app_data], Flags: 268435456
+Action: <any_class>, Extras: [action_key, user_query, action_msg], Flags: 268435456
+Action: <any_class>, Extras: [user_query, query, app_data], Flags: 268435456
+Action: <any_class>, Extras: [action_key, intent_extra_data_key, user_query, query, action_msg], Flags: 268435456
+Action: <any_class>, Extras: [action_key, intent_extra_data_key, user_query, action_msg], Flags: 268435456
+Action: <any_class>, Extras: [intent_extra_data_key, user_query, query, app_data], Flags: 268435456
+Action: <any_class>, Extras: [action_key, user_query, action_msg], Flags: 268435456
+Action: <any_class>, Extras: [user_query, app_data], Flags: 268435456
+Action: <any_class>, Extras: [user_query, app_data], Flags: 268435456
+Action: <any_class>, Extras: [action_key, intent_extra_data_key, user_query, query, action_msg], Flags: 268435456
+Action: <any_class>, Extras: [action_key, user_query, query, action_msg], Flags: 268435456
+Action: <any_class>, Extras: [user_query, query, app_data], Flags: 268435456
+Action: <any_class>, Extras: [user_query, query], Flags: 268435456
+Action: <any_class>, Extras: [intent_extra_data_key, user_query, app_data], Flags: 268435456
+Action: <any_class>, Extras: [action_key, user_query, query, action_msg], Flags: 268435456
+Action: <any_class>, Extras: [action_key, user_query, query, app_data, action_msg], Flags: 268435456
+Action: <any_class>, Extras: [action_key, user_query, query, app_data, action_msg], Flags: 268435456
+Action: <any_class>, Extras: [intent_extra_data_key, user_query], Flags: 268435456
+Action: <any_class>, Extras: [action_key, intent_extra_data_key, user_query, app_data, action_msg], Flags: 268435456
+Action: <any_class>, Extras: [user_query], Flags: 268435456
+Action: <any_class>, Extras: [intent_extra_data_key, user_query, query], Flags: 268435456
+Action: <any_class>, Extras: [user_query, query], Flags: 268435456
+Action: <any_class>, Extras: [action_key, intent_extra_data_key, user_query, app_data, action_msg], Flags: 268435456
+Action: <any_class>, Extras: [action_key, intent_extra_data_key, user_query, query, app_data, action_msg], Flags: 268435456
+Action: <any_class>, Extras: [intent_extra_data_key, user_query, query], Flags: 268435456
+Action: <any_class>, Extras: [user_query], Flags: 268435456
+
+  - android/support/v7/widget/SearchView/onVoiceClicked()
+Intent value: 1 possible value(s):
+Extras: [android.speech.extra.LANGUAGE_MODEL, android.speech.extra.MAX_RESULTS, android.speech.extra.PROMPT, android.speech.extra.LANGUAGE, android.speech.extra.RESULTS_PENDINGINTENT, android.speech.extra.RESULTS_PENDINGINTENT_BUNDLE, calling_package], 
+
+  - android/support/v7/widget/SearchView/onVoiceClicked()
+Intent value: 1 possible value(s):
+Extras: [calling_package], 
+
+  - android/support/v7/widget/ShareActionProvider$ShareMenuItemOnMenuItemClickListener/onMenuItemClick(Landroid/view/MenuItem;)
+Intent value: 2 possible value(s):
+Flags: 524288
+Package: <any_string>, Class: <any_string>, Flags: 524288
+
+  - com/example/root/startactivity2/MainActivity/startActivity(Landroid/view/View;)
+Intent value: 2 possible value(s):
+Package: com/example/root/startactivity, Class: com/example/root/startactivity2/MainActivity3, 
+Package: com/example/root/startactivity, Class: com/example/root/startactivity2/MainActivity2, 
+
+

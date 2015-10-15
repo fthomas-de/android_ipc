@@ -1,0 +1,22 @@
+Solving ICC problem
+Composing values
+
+Manifest file for com.broadcast.unibremen.sendbroadcast version 1
+  Activities:
+    com.broadcast.unibremen.sendbroadcast.SendBroadcastActivity
+      Intent filter:
+        Actions: [android.intent.action.MAIN]
+        Categories: [android.intent.category.LAUNCHER]
+
+  Activity Aliases:
+  Services:
+  Receivers:
+  Providers:
+
+
+The following ICC values were found:
+  - com/broadcast/unibremen/sendbroadcast/SendBroadcastActivity/broadcastIntent(Landroid/view/View;)
+Intent value: 1 possible value(s):
+Action: _myAction-2_, Categories: [_myCategory_], Extras: [_myIdentifier_], 
+
+

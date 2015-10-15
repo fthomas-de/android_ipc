@@ -1,0 +1,592 @@
+Solving ICC problem
+Composing values
+
+Manifest file for org.thoughtcrime.securesms version 124
+  Activities:
+    org.thoughtcrime.securesms.CountrySelectionActivity
+    org.thoughtcrime.securesms.ImportExportActivity
+    org.thoughtcrime.securesms.PromptMmsActivity
+    org.thoughtcrime.securesms.DeviceProvisioningActivity
+      Intent filter:
+        Actions: [android.intent.action.VIEW]
+        Categories: [android.intent.category.BROWSABLE, android.intent.category.DEFAULT]
+    org.thoughtcrime.securesms.preferences.MmsPreferencesActivity
+    org.thoughtcrime.securesms.ShareActivity
+      Intent filter:
+        Actions: [android.intent.action.SEND]
+        Categories: [android.intent.category.DEFAULT]
+    org.thoughtcrime.securesms.ConversationListActivity
+    org.thoughtcrime.securesms.ConversationActivity
+    org.thoughtcrime.securesms.MessageDetailsActivity
+    org.thoughtcrime.securesms.GroupCreateActivity
+    org.thoughtcrime.securesms.DatabaseMigrationActivity
+    org.thoughtcrime.securesms.DatabaseUpgradeActivity
+    org.thoughtcrime.securesms.PassphraseCreateActivity
+    org.thoughtcrime.securesms.PassphrasePromptActivity
+    org.thoughtcrime.securesms.NewConversationActivity
+    org.thoughtcrime.securesms.PushContactSelectionActivity
+    org.thoughtcrime.securesms.ViewIdentityActivity
+    org.thoughtcrime.securesms.ViewLocalIdentityActivity
+    org.thoughtcrime.securesms.PassphraseChangeActivity
+    org.thoughtcrime.securesms.VerifyIdentityActivity
+    org.thoughtcrime.securesms.ApplicationPreferencesActivity
+    org.thoughtcrime.securesms.RegistrationActivity
+    org.thoughtcrime.securesms.RegistrationProgressActivity
+    org.thoughtcrime.securesms.LogSubmitActivity
+    org.thoughtcrime.securesms.MediaPreviewActivity
+    org.thoughtcrime.securesms.MediaOverviewActivity
+    org.thoughtcrime.securesms.DummyActivity
+    org.thoughtcrime.securesms.PlayServicesProblemActivity
+    org.thoughtcrime.securesms.SmsSendtoActivity
+      Intent filter:
+        Actions: [android.intent.action.SENDTO, android.intent.action.VIEW]
+        Categories: [android.intent.category.BROWSABLE, android.intent.category.DEFAULT]
+    com.soundcloud.android.crop.CropImageActivity
+    android.support.v7.widget.TestActivity
+
+  Activity Aliases:
+    org.thoughtcrime.securesms.RoutingActivity
+      Intent filter:
+        Actions: [android.intent.action.MAIN]
+        Categories: [android.intent.category.LAUNCHER]
+  Services:
+    org.thoughtcrime.securesms.service.ApplicationMigrationService
+    org.thoughtcrime.securesms.service.KeyCachingService
+    org.thoughtcrime.securesms.service.RegistrationService
+    org.thoughtcrime.securesms.service.MessageRetrievalService
+    org.thoughtcrime.securesms.service.QuickResponseService
+      Intent filter:
+        Actions: [android.intent.action.RESPOND_VIA_MESSAGE]
+        Categories: [android.intent.category.DEFAULT]
+  Receivers:
+    org.thoughtcrime.securesms.gcm.GcmBroadcastReceiver
+      Intent filter:
+        Actions: [com.google.android.c2dm.intent.RECEIVE]
+        Categories: [org.thoughtcrime.securesms]
+    org.thoughtcrime.securesms.service.SmsListener
+      Intent filter:
+        Actions: [android.provider.Telephony.SMS_RECEIVED]
+      Intent filter:
+        Actions: [android.provider.Telephony.SMS_DELIVER]
+    org.thoughtcrime.securesms.service.SmsDeliveryListener
+      Intent filter:
+        Actions: [org.thoughtcrime.securesms.services.MESSAGE_SENT]
+    org.thoughtcrime.securesms.service.MmsListener
+      Intent filter:
+        Actions: [android.provider.Telephony.WAP_PUSH_DELIVER]
+      Intent filter:
+        Actions: [android.provider.Telephony.WAP_PUSH_RECEIVED]
+    org.thoughtcrime.securesms.notifications.MarkReadReceiver
+      Intent filter:
+        Actions: [org.thoughtcrime.securesms.notifications.CLEAR]
+    org.thoughtcrime.securesms.service.RegistrationNotifier
+      Intent filter:
+        Actions: [org.thoughtcrime.securesms.REGISTRATION_EVENT]
+    org.thoughtcrime.securesms.service.DirectoryRefreshListener
+      Intent filter:
+        Actions: [android.intent.action.BOOT_COMPLETED, org.whispersystems.whisperpush.DIRECTORY_REFRESH]
+    org.thoughtcrime.securesms.notifications.MessageNotifier$ReminderReceiver
+      Intent filter:
+        Actions: [org.thoughtcrime.securesms.MessageNotifier.REMINDER_ACTION]
+    org.thoughtcrime.securesms.notifications.MessageNotifier$DeleteReceiver
+      Intent filter:
+        Actions: [org.thoughtcrime.securesms.MessageNotifier.DELETE_REMINDER_ACTION]
+  Providers:
+    org.thoughtcrime.securesms.providers.PartProvider
+      auth: org.thoughtcrime.provider.securesms
+    org.thoughtcrime.securesms.providers.MmsBodyProvider
+      auth: org.thoughtcrime.provider.securesms.mms
+
+
+The following ICC values were found:
+  - android/support/v4/app/FragmentActivity/startActivityForResult(Landroid/content/Intent;I)
+Intent value: 32 possible value(s):
+No field set
+Package: org/thoughtcrime/securesms, Class: org/thoughtcrime/securesms/PromptMmsActivity, 
+Package: org/thoughtcrime/securesms, Class: org/thoughtcrime/securesms/LogSubmitActivity, 
+Package: org/thoughtcrime/securesms, Class: org/thoughtcrime/securesms/ImportExportActivity, 
+Package: org/thoughtcrime/securesms, Class: org/thoughtcrime/securesms/RegistrationActivity, Extras: [cancel_button, master_secret], 
+Package: org/thoughtcrime/securesms, Class: org/thoughtcrime/securesms/RegistrationProgressActivity, Extras: [master_secret, e164number], 
+Package: org/thoughtcrime/securesms, Class: org/thoughtcrime/securesms/ConversationActivity, Extras: [recipients, distribution_type], 
+Package: org/thoughtcrime/securesms, Class: org/thoughtcrime/securesms/DatabaseMigrationActivity, Extras: [master_secret, next_intent], 
+Package: org/thoughtcrime/securesms, Class: org/thoughtcrime/securesms/ConversationActivity, Extras: [draft_text, recipients], 
+Action: android.intent.action.OPEN_DOCUMENT, Type: <any_class>, 
+Extras: [draft_text], 
+Package: org/thoughtcrime/securesms, Class: org/thoughtcrime/securesms/NewConversationActivity, Extras: [draft_text], 
+Action: android.intent.action.GET_CONTENT, Type: <any_class>, 
+Package: org/thoughtcrime/securesms, Class: org/thoughtcrime/securesms/CountrySelectionActivity, 
+Package: org/thoughtcrime/securesms, Class: org/thoughtcrime/securesms/RegistrationActivity, Extras: [master_secret], 
+Extras: [draft_text, recipients], 
+Package: org/thoughtcrime/securesms, Class: org/thoughtcrime/securesms/NewConversationActivity, Extras: [draft_text, draft_video], 
+Package: org/thoughtcrime/securesms, Class: org/thoughtcrime/securesms/DatabaseMigrationActivity, Extras: [next_intent], 
+Package: org/thoughtcrime/securesms, Class: org/thoughtcrime/securesms/GroupCreateActivity, 
+Package: org/thoughtcrime/securesms, Class: org/thoughtcrime/securesms/NewConversationActivity, Extras: [draft_text, draft_audio], 
+Package: org/thoughtcrime/securesms, Class: org/thoughtcrime/securesms/ConversationListActivity, 
+Package: org/thoughtcrime/securesms, Class: org/thoughtcrime/securesms/ConversationListActivity, Flags: 67108864
+Package: org/thoughtcrime/securesms, Class: org/thoughtcrime/securesms/ApplicationPreferencesActivity, 
+Action: android.provider.Telephony.ACTION_CHANGE_DEFAULT, Extras: [package], 
+Package: org/thoughtcrime/securesms, Class: org/thoughtcrime/securesms/VerifyIdentityActivity, 
+Package: org/thoughtcrime/securesms, Class: org/thoughtcrime/securesms/ViewLocalIdentityActivity, 
+Action: android.intent.action.PICK, 
+Extras: [recipients], 
+Package: org/thoughtcrime/securesms, Class: org/thoughtcrime/securesms/MediaOverviewActivity, 
+Action: android.intent.action.INSERT_OR_EDIT, Type: vnd.android.cursor.item/contact, Extras: [phone], 
+Package: org/thoughtcrime/securesms, Class: org/thoughtcrime/securesms/NewConversationActivity, Extras: [draft_text, draft_image], 
+Action: android.intent.action.DIAL, 
+
+  - android/support/v4/app/FragmentActivity/startActivityFromFragment(Landroid/support/v4/app/Fragment;Landroid/content/Intent;I)
+Intent value: 5 possible value(s):
+Package: org/thoughtcrime/securesms, Class: org/thoughtcrime/securesms/NewConversationActivity, 
+Action: android.intent.action.PICK, Type: vnd.android.cursor.dir/contact, 
+Package: org/thoughtcrime/securesms, Class: org/thoughtcrime/securesms/LogSubmitActivity, 
+Package: org/thoughtcrime/securesms, Class: org/thoughtcrime/securesms/PassphraseChangeActivity, 
+Package: org/thoughtcrime/securesms, Class: org/thoughtcrime/securesms/RegistrationActivity, Extras: [cancel_button, master_secret, next_intent], 
+
+  - android/support/v4/app/FragmentActivity/startActivityFromFragment(Landroid/support/v4/app/Fragment;Landroid/content/Intent;I)
+Intent value: 5 possible value(s):
+Package: org/thoughtcrime/securesms, Class: org/thoughtcrime/securesms/NewConversationActivity, 
+Action: android.intent.action.PICK, Type: vnd.android.cursor.dir/contact, 
+Package: org/thoughtcrime/securesms, Class: org/thoughtcrime/securesms/LogSubmitActivity, 
+Package: org/thoughtcrime/securesms, Class: org/thoughtcrime/securesms/PassphraseChangeActivity, 
+Package: org/thoughtcrime/securesms, Class: org/thoughtcrime/securesms/RegistrationActivity, Extras: [cancel_button, master_secret, next_intent], 
+
+  - android/support/v7/internal/widget/ActivityChooserView$Callbacks/onClick(Landroid/view/View;)
+No value found.
+  - android/support/v7/internal/widget/ActivityChooserView$Callbacks/onItemClick(Landroid/widget/AdapterView;Landroid/view/View;IJ)
+No value found.
+  - android/support/v7/widget/SearchView/launchIntent(Landroid/content/Intent;)
+Intent value: 32 possible value(s):
+Action: <any_class>, Extras: [user_query, query], Flags: 268435456
+Action: <any_class>, Extras: [action_key, user_query, app_data, action_msg], Flags: 268435456
+Action: <any_class>, Extras: [action_key, intent_extra_data_key, user_query, action_msg], Flags: 268435456
+Action: <any_class>, Extras: [action_key, user_query, query, app_data, action_msg], Flags: 268435456
+Action: <any_class>, Extras: [intent_extra_data_key, user_query], Flags: 268435456
+Action: <any_class>, Extras: [user_query, query, app_data], Flags: 268435456
+Action: <any_class>, Extras: [action_key, user_query, query, action_msg], Flags: 268435456
+Action: <any_class>, Extras: [intent_extra_data_key, user_query, app_data], Flags: 268435456
+Action: <any_class>, Extras: [action_key, intent_extra_data_key, user_query, query, action_msg], Flags: 268435456
+Action: <any_class>, Extras: [action_key, user_query, action_msg], Flags: 268435456
+Action: <any_class>, Extras: [intent_extra_data_key, user_query, query, app_data], Flags: 268435456
+Action: <any_class>, Extras: [intent_extra_data_key, user_query, app_data], Flags: 268435456
+Action: <any_class>, Extras: [action_key, user_query, action_msg], Flags: 268435456
+Action: <any_class>, Extras: [action_key, intent_extra_data_key, user_query, action_msg], Flags: 268435456
+Action: <any_class>, Extras: [user_query, app_data], Flags: 268435456
+Action: <any_class>, Extras: [action_key, intent_extra_data_key, user_query, query, action_msg], Flags: 268435456
+Action: <any_class>, Extras: [intent_extra_data_key, user_query, query, app_data], Flags: 268435456
+Action: <any_class>, Extras: [user_query, query, app_data], Flags: 268435456
+Action: <any_class>, Extras: [user_query, app_data], Flags: 268435456
+Action: <any_class>, Extras: [action_key, user_query, app_data, action_msg], Flags: 268435456
+Action: <any_class>, Extras: [action_key, intent_extra_data_key, user_query, query, app_data, action_msg], Flags: 268435456
+Action: <any_class>, Extras: [action_key, user_query, query, action_msg], Flags: 268435456
+Action: <any_class>, Extras: [action_key, user_query, query, app_data, action_msg], Flags: 268435456
+Action: <any_class>, Extras: [action_key, intent_extra_data_key, user_query, app_data, action_msg], Flags: 268435456
+Action: <any_class>, Extras: [user_query], Flags: 268435456
+Action: <any_class>, Extras: [intent_extra_data_key, user_query, query], Flags: 268435456
+Action: <any_class>, Extras: [intent_extra_data_key, user_query], Flags: 268435456
+Action: <any_class>, Extras: [user_query, query], Flags: 268435456
+Action: <any_class>, Extras: [user_query], Flags: 268435456
+Action: <any_class>, Extras: [action_key, intent_extra_data_key, user_query, query, app_data, action_msg], Flags: 268435456
+Action: <any_class>, Extras: [intent_extra_data_key, user_query, query], Flags: 268435456
+Action: <any_class>, Extras: [action_key, intent_extra_data_key, user_query, app_data, action_msg], Flags: 268435456
+
+  - android/support/v7/widget/SearchView/launchQuerySearch(ILjava/lang/String;Ljava/lang/String;)
+Intent value: 32 possible value(s):
+Action: <any_class>, Extras: [user_query, query], Flags: 268435456
+Action: <any_class>, Extras: [action_key, user_query, app_data, action_msg], Flags: 268435456
+Action: <any_class>, Extras: [action_key, intent_extra_data_key, user_query, action_msg], Flags: 268435456
+Action: <any_class>, Extras: [action_key, user_query, query, app_data, action_msg], Flags: 268435456
+Action: <any_class>, Extras: [intent_extra_data_key, user_query], Flags: 268435456
+Action: <any_class>, Extras: [user_query, query, app_data], Flags: 268435456
+Action: <any_class>, Extras: [action_key, user_query, query, action_msg], Flags: 268435456
+Action: <any_class>, Extras: [intent_extra_data_key, user_query, app_data], Flags: 268435456
+Action: <any_class>, Extras: [action_key, intent_extra_data_key, user_query, query, action_msg], Flags: 268435456
+Action: <any_class>, Extras: [action_key, user_query, action_msg], Flags: 268435456
+Action: <any_class>, Extras: [intent_extra_data_key, user_query, query, app_data], Flags: 268435456
+Action: <any_class>, Extras: [intent_extra_data_key, user_query, app_data], Flags: 268435456
+Action: <any_class>, Extras: [action_key, user_query, action_msg], Flags: 268435456
+Action: <any_class>, Extras: [action_key, intent_extra_data_key, user_query, action_msg], Flags: 268435456
+Action: <any_class>, Extras: [user_query, app_data], Flags: 268435456
+Action: <any_class>, Extras: [action_key, intent_extra_data_key, user_query, query, action_msg], Flags: 268435456
+Action: <any_class>, Extras: [intent_extra_data_key, user_query, query, app_data], Flags: 268435456
+Action: <any_class>, Extras: [user_query, query, app_data], Flags: 268435456
+Action: <any_class>, Extras: [user_query, app_data], Flags: 268435456
+Action: <any_class>, Extras: [action_key, user_query, app_data, action_msg], Flags: 268435456
+Action: <any_class>, Extras: [action_key, intent_extra_data_key, user_query, query, app_data, action_msg], Flags: 268435456
+Action: <any_class>, Extras: [action_key, user_query, query, action_msg], Flags: 268435456
+Action: <any_class>, Extras: [action_key, user_query, query, app_data, action_msg], Flags: 268435456
+Action: <any_class>, Extras: [action_key, intent_extra_data_key, user_query, app_data, action_msg], Flags: 268435456
+Action: <any_class>, Extras: [user_query], Flags: 268435456
+Action: <any_class>, Extras: [intent_extra_data_key, user_query, query], Flags: 268435456
+Action: <any_class>, Extras: [intent_extra_data_key, user_query], Flags: 268435456
+Action: <any_class>, Extras: [user_query, query], Flags: 268435456
+Action: <any_class>, Extras: [user_query], Flags: 268435456
+Action: <any_class>, Extras: [action_key, intent_extra_data_key, user_query, query, app_data, action_msg], Flags: 268435456
+Action: <any_class>, Extras: [intent_extra_data_key, user_query, query], Flags: 268435456
+Action: <any_class>, Extras: [action_key, intent_extra_data_key, user_query, app_data, action_msg], Flags: 268435456
+
+  - android/support/v7/widget/SearchView/onVoiceClicked()
+Intent value: 1 possible value(s):
+Extras: [android.speech.extra.LANGUAGE_MODEL, android.speech.extra.MAX_RESULTS, android.speech.extra.PROMPT, android.speech.extra.LANGUAGE, android.speech.extra.RESULTS_PENDINGINTENT, android.speech.extra.RESULTS_PENDINGINTENT_BUNDLE, calling_package], 
+
+  - android/support/v7/widget/SearchView/onVoiceClicked()
+Intent value: 1 possible value(s):
+Extras: [calling_package], 
+
+  - android/support/v7/widget/ShareActionProvider$ShareMenuItemOnMenuItemClickListener/onMenuItemClick(Landroid/view/MenuItem;)
+Intent value: 5 possible value(s):
+Package: <any_string>, Class: <any_string>, 
+Flags: 134742016
+Flags: 524288
+Package: <any_string>, Class: <any_string>, Flags: 134742016
+Package: <any_string>, Class: <any_string>, Flags: 524288
+
+  - com/bumptech/glide/manager/DefaultConnectivityMonitor/register()
+Type: android.content.BroadcastReceiver
+No permission
+Intent Filter value: 1 possible value(s):
+Actions: [android.net.conn.CONNECTIVITY_CHANGE], 
+
+  - com/google/android/gms/gcm/GoogleCloudMessaging/mU()
+Intent value: 2 possible value(s):
+Action: com.google.android.c2dm.intent.UNREGISTER, Package: com.google.android.gms, Extras: [app, google.messenger], 
+Action: com.google.android.c2dm.intent.UNREGISTER, Package: com.google.android.gms, Extras: [google.messenger], 
+
+  - com/google/android/gms/internal/jh/onClick(Landroid/content/DialogInterface;I)
+Found top element
+
+  - com/soundcloud/android/crop/Crop/start(Landroid/app/Activity;)
+Found top element
+
+  - me/leolin/shortcutbadger/impl/AdwHomeBadger/executeBadge(I)
+Intent value: 1 possible value(s):
+Action: org.adw.launcher.counter.SEND, Extras: [PNAME, COUNT], 
+
+  - me/leolin/shortcutbadger/impl/ApexHomeBadger/executeBadge(I)
+Intent value: 1 possible value(s):
+Action: com.anddoes.launcher.COUNTER_CHANGED, Extras: [package, count, class], 
+
+  - me/leolin/shortcutbadger/impl/AsusHomeLauncher/executeBadge(I)
+Intent value: 1 possible value(s):
+Action: android.intent.action.BADGE_COUNT_UPDATE, Extras: [badge_count_class_name, badge_count, badge_count_package_name, badge_vip_count], 
+
+  - me/leolin/shortcutbadger/impl/LGHomeBadger/executeBadge(I)
+Intent value: 1 possible value(s):
+Action: android.intent.action.BADGE_COUNT_UPDATE, Extras: [badge_count_class_name, badge_count, badge_count_package_name], 
+
+  - me/leolin/shortcutbadger/impl/NewHtcHomeBadger/executeBadge(I)
+Intent value: 1 possible value(s):
+Action: com.htc.launcher.action.SET_NOTIFICATION, Extras: [com.htc.launcher.extra.COUNT, com.htc.launcher.extra.COMPONENT], 
+
+  - me/leolin/shortcutbadger/impl/NewHtcHomeBadger/executeBadge(I)
+Intent value: 1 possible value(s):
+Action: com.htc.launcher.action.UPDATE_SHORTCUT, Extras: [packagename, count], 
+
+  - me/leolin/shortcutbadger/impl/SolidHomeBadger/executeBadge(I)
+Intent value: 1 possible value(s):
+Action: com.majeur.launcher.intent.action.UPDATE_BADGE, Extras: [com.majeur.launcher.intent.extra.BADGE_PACKAGE, com.majeur.launcher.intent.extra.BADGE_CLASS, com.majeur.launcher.intent.extra.BADGE_COUNT], 
+
+  - me/leolin/shortcutbadger/impl/SonyHomeBadger/executeBadge(I)
+Intent value: 1 possible value(s):
+Action: com.sonyericsson.home.action.UPDATE_BADGE, Extras: [com.sonyericsson.home.intent.extra.badge.SHOW_MESSAGE, com.sonyericsson.home.intent.extra.badge.ACTIVITY_NAME, com.sonyericsson.home.intent.extra.badge.MESSAGE, com.sonyericsson.home.intent.extra.badge.PACKAGE_NAME], 
+
+  - me/leolin/shortcutbadger/impl/XiaomiHomeBadger/executeBadge(I)
+Intent value: 1 possible value(s):
+Extras: [android.intent.extra.update_application_component_name, android.intent.extra.update_application_message_text], 
+
+  - org/thoughtcrime/securesms/ApplicationPreferencesActivity/onSharedPreferenceChanged(Landroid/content/SharedPreferences;Ljava/lang/String;)
+Intent value: 1 possible value(s):
+Action: org.thoughtcrime.securesms.service.action.LOCALE_CHANGE_EVENT, Package: org/thoughtcrime/securesms, Class: org/thoughtcrime/securesms/service/KeyCachingService, 
+
+  - org/thoughtcrime/securesms/ConfirmIdentityDialog$VerifySpan/onClick(Landroid/view/View;)
+Intent value: 1 possible value(s):
+Package: org/thoughtcrime/securesms, Class: org/thoughtcrime/securesms/VerifyIdentityActivity, Extras: [master_secret, remote_identity], 
+
+  - org/thoughtcrime/securesms/ConversationActivity/handleAddToContacts()
+Intent value: 1 possible value(s):
+Action: android.intent.action.INSERT_OR_EDIT, Type: vnd.android.cursor.item/contact, Extras: [phone], 
+
+  - org/thoughtcrime/securesms/ConversationActivity/handleDial(Lorg/thoughtcrime/securesms/recipients/Recipient;)
+Intent value: 1 possible value(s):
+Action: android.intent.action.DIAL, 
+
+  - org/thoughtcrime/securesms/ConversationActivity/handleEditPushGroup()
+Intent value: 1 possible value(s):
+Package: org/thoughtcrime/securesms, Class: org/thoughtcrime/securesms/GroupCreateActivity, 
+
+  - org/thoughtcrime/securesms/ConversationActivity/handleManualMmsRequired()
+Intent value: 1 possible value(s):
+Package: org/thoughtcrime/securesms, Class: org/thoughtcrime/securesms/PromptMmsActivity, 
+
+  - org/thoughtcrime/securesms/ConversationActivity/handleReturnToConversationList()
+Intent value: 1 possible value(s):
+Package: org/thoughtcrime/securesms, Class: org/thoughtcrime/securesms/ConversationListActivity, Flags: 67108864
+
+  - org/thoughtcrime/securesms/ConversationActivity/handleVerifyIdentity()
+Intent value: 1 possible value(s):
+Package: org/thoughtcrime/securesms, Class: org/thoughtcrime/securesms/VerifyIdentityActivity, 
+
+  - org/thoughtcrime/securesms/ConversationActivity/handleViewMedia()
+Intent value: 1 possible value(s):
+Package: org/thoughtcrime/securesms, Class: org/thoughtcrime/securesms/MediaOverviewActivity, 
+
+  - org/thoughtcrime/securesms/ConversationItem$ClickListener/onClick(Landroid/view/View;)
+Intent value: 1 possible value(s):
+Package: org/thoughtcrime/securesms, Class: org/thoughtcrime/securesms/MessageDetailsActivity, Extras: [is_push_group, master_secret, type], 
+
+  - org/thoughtcrime/securesms/ConversationItem$MmsPreferencesClickListener/onClick(Landroid/view/View;)
+Intent value: 1 possible value(s):
+Package: org/thoughtcrime/securesms, Class: org/thoughtcrime/securesms/PromptMmsActivity, Extras: [automatic], 
+
+  - org/thoughtcrime/securesms/ConversationItem$ThumbnailClickListener/fireIntent(Lorg/thoughtcrime/securesms/mms/Slide;)
+Intent value: 1 possible value(s):
+Action: android.intent.action.VIEW, Flags: 1
+
+  - org/thoughtcrime/securesms/ConversationListActivity/createGroup()
+Intent value: 1 possible value(s):
+Package: org/thoughtcrime/securesms, Class: org/thoughtcrime/securesms/GroupCreateActivity, 
+
+  - org/thoughtcrime/securesms/ConversationListActivity/handleClearPassphrase()
+Intent value: 1 possible value(s):
+Action: org.thoughtcrime.securesms.service.action.CLEAR_KEY, Package: org/thoughtcrime/securesms, Class: org/thoughtcrime/securesms/service/KeyCachingService, 
+
+  - org/thoughtcrime/securesms/ConversationListActivity/handleDisplaySettings()
+Intent value: 1 possible value(s):
+Package: org/thoughtcrime/securesms, Class: org/thoughtcrime/securesms/ApplicationPreferencesActivity, 
+
+  - org/thoughtcrime/securesms/ConversationListActivity/handleImportExport()
+Intent value: 1 possible value(s):
+Package: org/thoughtcrime/securesms, Class: org/thoughtcrime/securesms/ImportExportActivity, 
+
+  - org/thoughtcrime/securesms/ConversationListActivity/handleMyIdentity()
+Intent value: 1 possible value(s):
+Package: org/thoughtcrime/securesms, Class: org/thoughtcrime/securesms/ViewLocalIdentityActivity, 
+
+  - org/thoughtcrime/securesms/DatabaseMigrationActivity/handleImportComplete()
+Found top element
+
+  - org/thoughtcrime/securesms/DatabaseMigrationActivity/handleImportComplete()
+Intent value: 1 possible value(s):
+Package: org/thoughtcrime/securesms, Class: org/thoughtcrime/securesms/ConversationListActivity, 
+
+  - org/thoughtcrime/securesms/DatabaseMigrationActivity/registerForCompletedNotification()
+Type: android.content.BroadcastReceiver
+No permission
+Intent Filter value: 1 possible value(s):
+Actions: [org.thoughtcrime.securesms.ApplicationMigrationService.COMPLETED], 
+
+  - org/thoughtcrime/securesms/DatabaseUpgradeActivity$DatabaseUpgradeTask/onPostExecute(Ljava/lang/Void;)
+Found top element
+
+  - org/thoughtcrime/securesms/DatabaseUpgradeActivity/onCreate(Landroid/os/Bundle;)
+Found top element
+
+  - org/thoughtcrime/securesms/GroupCreateActivity$CreateMmsGroupAsyncTask/onPostExecute(Ljava/lang/Long;)
+Intent value: 1 possible value(s):
+Package: org/thoughtcrime/securesms, Class: org/thoughtcrime/securesms/ConversationActivity, Extras: [recipients, distribution_type], 
+
+  - org/thoughtcrime/securesms/GroupCreateActivity$CreateWhisperGroupAsyncTask/onPostExecute(Landroid/util/Pair;)
+Intent value: 1 possible value(s):
+Package: org/thoughtcrime/securesms, Class: org/thoughtcrime/securesms/ConversationActivity, Extras: [recipients, distribution_type], 
+
+  - org/thoughtcrime/securesms/GroupMembersDialog$GroupMembersOnClickListener/onClick(Landroid/content/DialogInterface;I)
+Intent value: 1 possible value(s):
+Action: android.intent.action.INSERT_OR_EDIT, Type: vnd.android.cursor.item/contact, Extras: [phone], 
+
+  - org/thoughtcrime/securesms/ImageMediaAdapter$OnMediaClickListener/onClick(Landroid/view/View;)
+Intent value: 1 possible value(s):
+Package: org/thoughtcrime/securesms, Class: org/thoughtcrime/securesms/MediaPreviewActivity, 
+
+  - org/thoughtcrime/securesms/ImportFragment$4/onClick(Landroid/content/DialogInterface;I)
+Intent value: 1 possible value(s):
+Action: org.thoughtcrime.securesms.ApplicationMigration.MIGRATE_DATABSE, Package: org/thoughtcrime/securesms, Class: org/thoughtcrime/securesms/service/ApplicationMigrationService, Extras: [master_secret], 
+
+  - org/thoughtcrime/securesms/ImportFragment$4/onClick(Landroid/content/DialogInterface;I)
+Intent value: 1 possible value(s):
+Package: org/thoughtcrime/securesms, Class: org/thoughtcrime/securesms/DatabaseMigrationActivity, Extras: [next_intent], 
+
+  - org/thoughtcrime/securesms/ImportFragment$ImportEncryptedBackupTask/onPostExecute(Ljava/lang/Integer;)
+Intent value: 1 possible value(s):
+Action: org.thoughtcrime.securesms.service.action.CLEAR_KEY, Package: org/thoughtcrime/securesms, Class: org/thoughtcrime/securesms/service/KeyCachingService, 
+
+  - org/thoughtcrime/securesms/PassphraseActivity$1/onServiceConnected(Landroid/content/ComponentName;Landroid/os/IBinder;)
+Found top element
+
+  - org/thoughtcrime/securesms/PassphraseActivity/setMasterSecret(Lorg/thoughtcrime/securesms/crypto/MasterSecret;)
+Intent value: 1 possible value(s):
+Package: org/thoughtcrime/securesms, Class: org/thoughtcrime/securesms/service/KeyCachingService, 
+
+  - org/thoughtcrime/securesms/PassphraseActivity/setMasterSecret(Lorg/thoughtcrime/securesms/crypto/MasterSecret;)
+Intent value: 1 possible value(s):
+Package: org/thoughtcrime/securesms, Class: org/thoughtcrime/securesms/service/KeyCachingService, 
+
+  - org/thoughtcrime/securesms/PassphrasePromptActivity/handleLogSubmit()
+Intent value: 1 possible value(s):
+Package: org/thoughtcrime/securesms, Class: org/thoughtcrime/securesms/LogSubmitActivity, 
+
+  - org/thoughtcrime/securesms/ReceiveKeyDialog$1/onClick(Landroid/view/View;)
+Intent value: 1 possible value(s):
+Package: org/thoughtcrime/securesms, Class: org/thoughtcrime/securesms/VerifyIdentityActivity, Extras: [remote_identity], 
+
+  - org/thoughtcrime/securesms/RegistrationActivity$1/onTouch(Landroid/view/View;Landroid/view/MotionEvent;)
+Intent value: 1 possible value(s):
+Package: org/thoughtcrime/securesms, Class: org/thoughtcrime/securesms/CountrySelectionActivity, 
+
+  - org/thoughtcrime/securesms/RegistrationActivity$CancelButtonListener/onClick(Landroid/view/View;)
+Intent value: 1 possible value(s):
+Package: org/thoughtcrime/securesms, Class: org/thoughtcrime/securesms/ConversationListActivity, 
+
+  - org/thoughtcrime/securesms/RegistrationActivity$CreateButtonListener$1/onClick(Landroid/content/DialogInterface;I)
+Intent value: 1 possible value(s):
+Package: org/thoughtcrime/securesms, Class: org/thoughtcrime/securesms/RegistrationProgressActivity, Extras: [master_secret, e164number], 
+
+  - org/thoughtcrime/securesms/RegistrationProgressActivity$CallClickListener$1/onPostExecute(Ljava/lang/Integer;)
+Intent value: 1 possible value(s):
+Action: org.thoughtcrime.securesms.RegistrationService.VOICE_REQUESTED, Package: org/thoughtcrime/securesms, Class: org/thoughtcrime/securesms/service/RegistrationService, Extras: [password, master_secret, e164number], 
+
+  - org/thoughtcrime/securesms/RegistrationProgressActivity$EditButtonListener/onClick(Landroid/view/View;)
+Intent value: 1 possible value(s):
+Package: org/thoughtcrime/securesms, Class: org/thoughtcrime/securesms/RegistrationActivity, Extras: [master_secret], 
+
+  - org/thoughtcrime/securesms/RegistrationProgressActivity$VerifyClickListener$1/onPostExecute(Ljava/lang/Integer;)
+Intent value: 1 possible value(s):
+Action: org.thoughtcrime.securesms.RegistrationService.VOICE_REGISTER, Package: org/thoughtcrime/securesms, Class: org/thoughtcrime/securesms/service/RegistrationService, Extras: [password, master_secret, signaling_key, e164number], 
+
+  - org/thoughtcrime/securesms/RegistrationProgressActivity/handleActivityVisible()
+Type: org.thoughtcrime.securesms.RegistrationProgressActivity$RegistrationReceiver
+No permission
+Intent Filter value: 1 possible value(s):
+Actions: [org.thoughtcrime.securesms.REGISTRATION_EVENT], 
+
+  - org/thoughtcrime/securesms/RegistrationProgressActivity/handleStateIdle()
+Intent value: 1 possible value(s):
+Action: org.thoughtcrime.securesms.RegistrationService.REGISTER_NUMBER, Package: org/thoughtcrime/securesms, Class: org/thoughtcrime/securesms/service/RegistrationService, Extras: [master_secret, e164number], 
+
+  - org/thoughtcrime/securesms/RegistrationProgressActivity/handleStateIdle()
+Intent value: 1 possible value(s):
+Package: org/thoughtcrime/securesms, Class: org/thoughtcrime/securesms/RegistrationActivity, Extras: [master_secret], 
+
+  - org/thoughtcrime/securesms/RegistrationProgressActivity/handleVerificationComplete()
+Intent value: 1 possible value(s):
+Package: org/thoughtcrime/securesms, Class: org/thoughtcrime/securesms/ConversationListActivity, 
+
+  - org/thoughtcrime/securesms/RegistrationProgressActivity/initializeServiceBinding()
+Intent value: 1 possible value(s):
+Package: org/thoughtcrime/securesms, Class: org/thoughtcrime/securesms/service/RegistrationService, 
+
+  - org/thoughtcrime/securesms/ShareActivity/handleNewConversation()
+Intent value: 4 possible value(s):
+Package: org/thoughtcrime/securesms, Class: org/thoughtcrime/securesms/NewConversationActivity, Extras: [draft_text, draft_video], 
+Package: org/thoughtcrime/securesms, Class: org/thoughtcrime/securesms/NewConversationActivity, Extras: [draft_text], 
+Package: org/thoughtcrime/securesms, Class: org/thoughtcrime/securesms/NewConversationActivity, Extras: [draft_text, draft_image], 
+Package: org/thoughtcrime/securesms, Class: org/thoughtcrime/securesms/NewConversationActivity, Extras: [draft_text, draft_audio], 
+
+  - org/thoughtcrime/securesms/SmsSendtoActivity/onCreate(Landroid/os/Bundle;)
+Intent value: 6 possible value(s):
+No field set
+Extras: [draft_text, recipients], 
+Extras: [draft_text], 
+Package: org/thoughtcrime/securesms, Class: org/thoughtcrime/securesms/NewConversationActivity, Extras: [draft_text], 
+Extras: [recipients], 
+Package: org/thoughtcrime/securesms, Class: org/thoughtcrime/securesms/ConversationActivity, Extras: [draft_text, recipients], 
+
+  - org/thoughtcrime/securesms/components/AvatarImageView$1/onClick(Landroid/view/View;)
+Intent value: 1 possible value(s):
+Action: android.intent.action.INSERT_OR_EDIT, Type: vnd.android.cursor.item/contact, Extras: [phone], 
+
+  - org/thoughtcrime/securesms/components/DefaultSmsReminder$1/onClick(Landroid/view/View;)
+Intent value: 1 possible value(s):
+Action: android.provider.Telephony.ACTION_CHANGE_DEFAULT, Extras: [package], 
+
+  - org/thoughtcrime/securesms/components/PushRegistrationReminder$1/onClick(Landroid/view/View;)
+Intent value: 1 possible value(s):
+Package: org/thoughtcrime/securesms, Class: org/thoughtcrime/securesms/RegistrationActivity, Extras: [cancel_button, master_secret], 
+
+  - org/thoughtcrime/securesms/components/SystemSmsImportReminder$1/onClick(Landroid/view/View;)
+Intent value: 1 possible value(s):
+Action: org.thoughtcrime.securesms.ApplicationMigration.MIGRATE_DATABSE, Package: org/thoughtcrime/securesms, Class: org/thoughtcrime/securesms/service/ApplicationMigrationService, Extras: [master_secret], 
+
+  - org/thoughtcrime/securesms/components/SystemSmsImportReminder$1/onClick(Landroid/view/View;)
+Intent value: 1 possible value(s):
+Package: org/thoughtcrime/securesms, Class: org/thoughtcrime/securesms/DatabaseMigrationActivity, Extras: [master_secret, next_intent], 
+
+  - org/thoughtcrime/securesms/database/GroupDatabase/notifyDatabaseListeners()
+Intent value: 1 possible value(s):
+Action: org.thoughtcrime.securesms.database.GroupDatabase.UPDATE, 
+
+  - org/thoughtcrime/securesms/jobs/requirements/MasterSecretRequirementProvider/<init>(Landroid/content/Context;)
+Type: android.content.BroadcastReceiver
+Possible permissions: [org.thoughtcrime.securesms.ACCESS_SECRETS]
+Intent Filter value: 1 possible value(s):
+Actions: [org.thoughtcrime.securesms.service.action.NEW_KEY_EVENT], 
+
+  - org/thoughtcrime/securesms/mms/AttachmentManager/selectContactInfo(Landroid/app/Activity;I)
+Intent value: 1 possible value(s):
+Action: android.intent.action.PICK, 
+
+  - org/thoughtcrime/securesms/mms/AttachmentManager/selectMediaType(Landroid/app/Activity;Ljava/lang/String;I)
+Intent value: 1 possible value(s):
+Action: android.intent.action.GET_CONTENT, Type: <any_class>, 
+
+  - org/thoughtcrime/securesms/mms/AttachmentManager/selectMediaType(Landroid/app/Activity;Ljava/lang/String;I)
+Intent value: 1 possible value(s):
+Action: android.intent.action.OPEN_DOCUMENT, Type: <any_class>, 
+
+  - org/thoughtcrime/securesms/preferences/AppProtectionPreferenceFragment$DisablePassphraseClickListener$1/onClick(Landroid/content/DialogInterface;I)
+Intent value: 1 possible value(s):
+Action: org.thoughtcrime.securesms.service.action.DISABLE, Package: org/thoughtcrime/securesms, Class: org/thoughtcrime/securesms/service/KeyCachingService, 
+
+  - org/thoughtcrime/securesms/service/ApplicationMigrationService/registerCompletedReceiver()
+Type: android.content.BroadcastReceiver
+No permission
+Intent Filter value: 1 possible value(s):
+Actions: [org.thoughtcrime.securesms.ApplicationMigrationService.COMPLETED], 
+
+  - org/thoughtcrime/securesms/service/KeyCachingService/broadcastNewSecret()
+Intent value: 1 possible value(s):
+Action: org.thoughtcrime.securesms.service.action.NEW_KEY_EVENT, Package: <any_string>, 
+
+  - org/thoughtcrime/securesms/service/KeyCachingService/getMasterSecret(Landroid/content/Context;)
+Intent value: 1 possible value(s):
+Package: org/thoughtcrime/securesms, Class: org/thoughtcrime/securesms/service/KeyCachingService, 
+
+  - org/thoughtcrime/securesms/service/KeyCachingService/handleClearKey()
+Intent value: 1 possible value(s):
+Action: org.thoughtcrime.securesms.service.action.CLEAR_KEY_EVENT, Package: <any_string>, 
+
+  - org/thoughtcrime/securesms/service/KeyCachingService/onTaskRemoved(Landroid/content/Intent;)
+Intent value: 1 possible value(s):
+Package: org/thoughtcrime/securesms, Class: org/thoughtcrime/securesms/DummyActivity, Flags: 268435456
+
+  - org/thoughtcrime/securesms/service/KeyCachingService/registerPassphraseActivityStarted(Landroid/content/Context;)
+Intent value: 1 possible value(s):
+Action: org.thoughtcrime.securesms.service.action.ACTIVITY_START_EVENT, Package: org/thoughtcrime/securesms, Class: org/thoughtcrime/securesms/service/KeyCachingService, 
+
+  - org/thoughtcrime/securesms/service/KeyCachingService/registerPassphraseActivityStopped(Landroid/content/Context;)
+Intent value: 1 possible value(s):
+Action: org.thoughtcrime.securesms.service.action.ACTIVITY_STOP_EVENT, Package: org/thoughtcrime/securesms, Class: org/thoughtcrime/securesms/service/KeyCachingService, 
+
+  - org/thoughtcrime/securesms/service/MessageRetrievalService/registerActivityStarted(Landroid/content/Context;)
+Intent value: 1 possible value(s):
+Action: ACTIVITY_STARTED, Package: org/thoughtcrime/securesms, Class: org/thoughtcrime/securesms/service/MessageRetrievalService, 
+
+  - org/thoughtcrime/securesms/service/MessageRetrievalService/registerActivityStopped(Landroid/content/Context;)
+Intent value: 1 possible value(s):
+Action: ACTIVITY_FINISHED, Package: org/thoughtcrime/securesms, Class: org/thoughtcrime/securesms/service/MessageRetrievalService, 
+
+  - org/thoughtcrime/securesms/service/SmsListener/onReceive(Landroid/content/Context;Landroid/content/Intent;)
+Intent value: 1 possible value(s):
+Action: org.thoughtcrime.securesms.CHALLENGE_EVENT, Extras: [CAAChallenge], 
+
+  - org/thoughtcrime/securesms/util/DynamicLanguage/onResume(Landroid/app/Activity;)
+Found top element
+
+  - org/thoughtcrime/securesms/util/DynamicTheme/onResume(Landroid/app/Activity;)
+Found top element
+
+  - org/whispersystems/jobqueue/requirements/NetworkRequirementProvider/<init>(Landroid/content/Context;)
+Type: org.whispersystems.jobqueue.requirements.NetworkRequirementProvider$1
+No permission
+Intent Filter value: 1 possible value(s):
+Actions: [android.net.conn.CONNECTIVITY_CHANGE], 
+
+

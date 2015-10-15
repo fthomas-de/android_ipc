@@ -1,0 +1,22 @@
+Solving ICC problem
+Composing values
+
+Manifest file for com.example.aidlclient version 1
+  Activities:
+    com.example.aidlclient.MainActivity
+      Intent filter:
+        Actions: [android.intent.action.MAIN]
+        Categories: [android.intent.category.LAUNCHER]
+
+  Activity Aliases:
+  Services:
+  Receivers:
+  Providers:
+
+
+The following ICC values were found:
+  - com/example/aidlclient/MainActivity/initConnection()
+Intent value: 1 possible value(s):
+Action: com.remote.service.CALCULATOR, 
+
+

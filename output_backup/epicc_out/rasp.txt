@@ -1,0 +1,18 @@
+Solving ICC problem
+Composing values
+
+Manifest file for com.example.rasp_home version 1
+  Activities:
+    com.example.rasp_home.Home
+      Intent filter:
+        Actions: [android.intent.action.MAIN]
+        Categories: [android.intent.category.LAUNCHER]
+
+  Activity Aliases:
+  Services:
+  Receivers:
+  Providers:
+
+
+The following ICC values were found:
+

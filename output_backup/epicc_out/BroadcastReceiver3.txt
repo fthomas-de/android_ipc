@@ -1,0 +1,18 @@
+Solving ICC problem
+Composing values
+
+Manifest file for com.example.root.broadcastreceiver3 version 1
+  Activities:
+
+  Activity Aliases:
+  Services:
+  Receivers:
+    com.example.root.broadcastreceiver3.MyReceiver
+      Intent filter:
+        Actions: [_myAction_]
+        Categories: [_myCategory_]
+  Providers:
+
+
+The following ICC values were found:
+

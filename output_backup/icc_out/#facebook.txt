@@ -1,0 +1,2 @@
+Possible Activity Hijacking: com/facebook/nodex/startup/splashscreen/NodexErrorActivity/d()@0, Source Line: 0, hasExtras=false, hasRead=false, hasWrite=false
+Possible Activity Hijacking: com/facebook/nodex/startup/splashscreen/NodexErrorActivity/c()@0, Source Line: 0, hasExtras=false, hasRead=false, hasWrite=false

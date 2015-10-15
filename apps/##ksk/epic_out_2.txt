@@ -1,0 +1,24 @@
+Warning: android.app.SharedElementCallback is a phantom class!
+Warning: com.google.android.maps.MapActivity is a phantom class!
+Warning: android.transition.TransitionManager is a phantom class!
+Warning: android.transition.Transition$EpicenterCallback is a phantom class!
+Warning: android.transition.Transition is a phantom class!
+Warning: android.transition.TransitionSet is a phantom class!
+Warning: android.app.Notification$Action is a phantom class!
+Warning: android.app.RemoteInput$Builder is a phantom class!
+Warning: android.app.RemoteInput is a phantom class!
+Warning: android.app.Notification$Action$Builder is a phantom class!
+Warning: android.view.View$OnApplyWindowInsetsListener is a phantom class!
+Warning: android.view.WindowInsets is a phantom class!
+Warning: com.google.android.maps.OverlayItem is a phantom class!
+Warning: com.google.android.maps.GeoPoint is a phantom class!
+Warning: com.google.android.maps.MapView is a phantom class!
+[Call Graph] For information on where the call graph may be incomplete, use the verbose option to the cg phase.
+[Call Graph] For information on where the call graph may be incomplete, use the verbose option to the cg phase.
+[Spark] Pointer Assignment Graph in 0.3 seconds.
+[Spark] Type masks in 0.8 seconds.
+[Spark] Pointer Graph simplified in 0.0 seconds.
+[Spark] Propagation in 426.9 seconds.
+[Spark] Solution found in 427.0 seconds.
+Solving ICC problem
+Putting composedAction field

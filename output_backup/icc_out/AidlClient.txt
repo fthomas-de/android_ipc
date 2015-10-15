@@ -1,0 +1,1 @@
+Possible Service Hijacking: com/example/aidlclient/MainActivity/initConnection()@0, Source Line: 0, hasExtras=false, hasRead=false, hasWrite=false
